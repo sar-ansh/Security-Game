@@ -1,7 +1,7 @@
 body {
 	margin-top: 50px;
 	margin-bottom: 50px;
-	background: #666;
+	background: none;
     font-family: "Lato", sans-serif;
 }
 
@@ -114,12 +114,28 @@ ul.tab li a {
 }
 
 .left-menu {
-  background: #222;
-  width: 200px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  bottom: 50px;
+    background: #222;
+    width: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 51px;
+}
+
+.left-menu  a:link {color: #FFFFFF;}
+.left-menu  a:visited {color: #FFFFFF; text-decoration: none;}
+.left-menu  a:hover {color: #21CCFC; }
+.left-menu  a:focus {color: #21CCFC;}
+.left-menu  a:active {color: #21CCFC; }
+
+.screen {
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    bottom: 51px;
+    right: 0px;
+    border:0px solid #FF0000;
 }
 
 .accordion {
@@ -156,7 +172,6 @@ ul.tab li a {
   color: #21CCFC;
 }
 
-
 .logo {
   padding: 30px 10px;
   width: 200px;
@@ -168,4 +183,3 @@ ul.tab li a {
   font-size: 70px;
   color: #21CCFC;
 }
-
