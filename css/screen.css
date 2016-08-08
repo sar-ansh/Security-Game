@@ -1,5 +1,5 @@
 .browser-mockup {
-  border-top: 2.5em solid rgba(230, 230, 230, 0.7);
+  border-top: 3em solid rgba(230, 230, 230, 0.7);
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 20px 20px 0 0
@@ -23,7 +23,7 @@ input[type=text], select {
     position: absolute;
     top: 0.5em;
     left: 6em;
-    width: calc(100% - 15em);
+    width: calc(100% - 12em);
     padding: 9px 20px;
     margin: 0px 0;
     display: inline-block;
@@ -33,6 +33,7 @@ input[type=text], select {
 }
 
 body {
+  background: linear-gradient(to right, #8e44ad, #c0392b);
   display: flex;
 }
 
@@ -40,3 +41,10 @@ body {
   margin: 2em;
   flex: 1;
 }
+
+.tab-pane .list-group-item:first-child {border-top-right-radius: 0px;border-top-left-radius: 0px;}
+.tab-pane .list-group-item:last-child {border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;}
+.tab-pane .list-group .checkbox { display: inline-block;margin: 0px; }
+.tab-pane .list-group input[type="checkbox"]{ margin-top: 8px; }
+
+a.list-group-item.read { color: #222;background-color: #F3F3F3; }

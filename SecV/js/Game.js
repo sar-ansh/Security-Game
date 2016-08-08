@@ -20,7 +20,7 @@ SecV.Game.prototype = {
         
         hero.body.collideWorldBounds = true;
         
-        this.game.camera.follow(hero);
+        //this.game.camera.follow(hero);
     },
 
     update: function() {
