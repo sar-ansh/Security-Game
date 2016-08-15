@@ -1,0 +1,22 @@
+<% include layouts/header %>
+    
+    <% if (user != null) { %>
+        <div id="Gamec" style="display:none;">
+            <div id="base" style="margin: auto; height: 650px; width: 1280px; border:1px solid #000000;">
+                <script src="SecV/js/main.js"></script>
+            </div>
+        </div>
+    
+        <div id="Computerc">
+             <div id="comp"> 
+                <% include computer %>
+            </div>
+        </div>
+
+        <div id="Aboutc" style="display:none;">
+          <h3>About</h3>
+          <p>About the game.</p>
+        </div>    
+    <% } %>
+
+<% include layouts/footer %>
