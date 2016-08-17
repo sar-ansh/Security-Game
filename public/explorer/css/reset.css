@@ -1,118 +1,117 @@
-/* `XHTML, HTML4, HTML5 Reset
+.explorer {
+  /* `XHTML, HTML4, HTML5 Reset
 ----------------------------------------------------------------------------------------------------*/
-
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-dialog,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-font,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-meter,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video,
-xmp {
+}
+.explorer a,
+.explorer abbr,
+.explorer acronym,
+.explorer address,
+.explorer applet,
+.explorer article,
+.explorer aside,
+.explorer audio,
+.explorer b,
+.explorer big,
+.explorer blockquote,
+.explorer body,
+.explorer canvas,
+.explorer caption,
+.explorer center,
+.explorer cite,
+.explorer code,
+.explorer dd,
+.explorer del,
+.explorer details,
+.explorer dfn,
+.explorer dialog,
+.explorer div,
+.explorer dl,
+.explorer dt,
+.explorer em,
+.explorer embed,
+.explorer fieldset,
+.explorer figcaption,
+.explorer figure,
+.explorer font,
+.explorer footer,
+.explorer form,
+.explorer h1,
+.explorer h2,
+.explorer h3,
+.explorer h4,
+.explorer h5,
+.explorer h6,
+.explorer header,
+.explorer hgroup,
+.explorer hr,
+.explorer html,
+.explorer i,
+.explorer iframe,
+.explorer img,
+.explorer ins,
+.explorer kbd,
+.explorer label,
+.explorer legend,
+.explorer li,
+.explorer mark,
+.explorer menu,
+.explorer meter,
+.explorer nav,
+.explorer object,
+.explorer ol,
+.explorer output,
+.explorer p,
+.explorer pre,
+.explorer progress,
+.explorer q,
+.explorer rp,
+.explorer rt,
+.explorer ruby,
+.explorer s,
+.explorer samp,
+.explorer section,
+.explorer small,
+.explorer span,
+.explorer strike,
+.explorer strong,
+.explorer sub,
+.explorer summary,
+.explorer sup,
+.explorer table,
+.explorer tbody,
+.explorer td,
+.explorer tfoot,
+.explorer th,
+.explorer thead,
+.explorer time,
+.explorer tr,
+.explorer tt,
+.explorer u,
+.explorer ul,
+.explorer var,
+.explorer video,
+.explorer xmp {
   border: 0;
   margin: 0;
   padding: 0;
   font-size: 100%;
 }
-
-html,
-body {
+.explorer html,
+.explorer body {
   height: 100%;
 }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-/*
+.explorer article,
+.explorer aside,
+.explorer details,
+.explorer figcaption,
+.explorer figure,
+.explorer footer,
+.explorer header,
+.explorer hgroup,
+.explorer menu,
+.explorer nav,
+.explorer section {
+  /*
   Override the default (display: inline) for
   browsers that do not recognize HTML5 tags.
 
@@ -121,81 +120,69 @@ section {
 */
   display: block;
 }
-
-b,
-strong {
-/*
+.explorer b,
+.explorer strong {
+  /*
   Makes browsers agree.
   IE + Opera = font-weight: bold.
   Gecko + WebKit = font-weight: bolder.
 */
   font-weight: bold;
 }
-
-img {
+.explorer img {
   color: transparent;
   font-size: 0;
   vertical-align: middle;
-/*
+  /*
   For IE.
   http://css-tricks.com/ie-fix-bicubic-scaling-for-images
 */
   -ms-interpolation-mode: bicubic;
 }
-
-li {
-/*
+.explorer li {
+  /*
   For IE6 + IE7.
 */
   display: list-item;
 }
-
-table {
+.explorer table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-th,
-td,
-caption {
+.explorer th,
+.explorer td,
+.explorer caption {
   font-weight: normal;
   vertical-align: top;
   text-align: left;
 }
-
-q {
+.explorer q {
   quotes: none;
 }
-
-q:before,
-q:after {
+.explorer q:before,
+.explorer q:after {
   content: '';
   content: none;
 }
-
-sub,
-sup,
-small {
+.explorer sub,
+.explorer sup,
+.explorer small {
   font-size: 75%;
 }
-
-sub,
-sup {
+.explorer sub,
+.explorer sup {
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
-sub {
+.explorer sub {
   bottom: -0.25em;
 }
-
-sup {
+.explorer sup {
   top: -0.5em;
 }
-
-svg {
-/*
+.explorer svg {
+  /*
   For IE9.
 */
   overflow: hidden;

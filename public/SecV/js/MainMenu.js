@@ -1,9 +1,6 @@
 var SecV = SecV || {};
 
-//title screen
 SecV.MainMenu = function(){
-    GAME_WIDTH = 1280;
-	GAME_HEIGHT = 720;
 };
 
 SecV.MainMenu.prototype = {
@@ -18,7 +15,7 @@ SecV.MainMenu.prototype = {
     //start game text
     var text = "Start";
     var style = { font: "30px Arial", fill: "#FFFFFF", align: "center" };
-    var t = this.game.add.text(GAME_WIDTH/2, GAME_HEIGHT/2 - 100, text, style);
+    var t = this.game.add.text(this.game.width/2, this.game.height/2 - 100, text, style);
     t.anchor.set(0.5);
 
   },

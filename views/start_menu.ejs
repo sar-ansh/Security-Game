@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html class="no-js">
-<head>
-   <title>BootMetro Demo - Hub</title>
-
-   <meta name="robots" content="noindex, nofollow">
-   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
-   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
-   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
-   <link rel="publisher" href="https://plus.google.com/117689250782136016574">
-
-   <!-- remove or comment this line if you want to use the local fonts -->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/bootmetro.css">
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/bootmetro-responsive.css">
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/bootmetro-icons.css">
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/bootmetro-ui-light.css">
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/datepicker.css">
-
-   <!--  these two css are to use only for documentation -->
-   <link rel="stylesheet" type="text/css" href="../public/metro/assets/css/demo.css">
-  
-   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
-      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-   <script src="../public/metro/assets/js/modernizr-2.6.2.min.js"></script>
-</head>
-
-<body>
+<div class="start_menu">
     <div id="wrap">
-        
-        <div id="nav-bar" class="">
+        <div id="nav-bar">
             <div class="pull-left">
                 <div id="header-container">
                     <div class="dropdown">
@@ -55,13 +25,13 @@
                         <span class="win-commandicon win-commandring icon-user"></span>
                     </a>
                     <div class="pull-left">
-                        <h3>FirstName</h3>
-                        <h4>LastName</h4>
+                        <h3 style="color:#fff;">FirstName</h3>
+                        <h4 style="color:#fff;">LastName</h4>
                     </div>
                 </div>
             </div>
         </div>
-   
+
         <!--<div id="alerts-container">
             <div id="toast-example1" class="toast toasttext02 fade in">
                 <button type="button" class="close" data-dismiss="alert"></button>
@@ -77,9 +47,9 @@
 
         <div class="metro panorama">
             <div class="panorama-sections">
-                
+
                 <div class="panorama-section">
-                    <h2>Featured pictures</h2>
+                    <h2 style="color:#fff;">Featured pictures</h2>
                     <div class="tile-column-span-2">
                         <a class="tile wide imagetext wideimage bg-color-blue" href="#">
                             <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Darvasa_gas_crater_panorama.jpg/640px-Darvasa_gas_crater_panorama.jpg" alt=""/>
@@ -87,10 +57,10 @@
                                 <div class="text2">The Door to Hell, a burning natural gas field in Derweze, Turkmenistan</div>
                             </div>
                         </a>
-                        <a class="tile wide imagetext wideimage bg-color-green" href="#">
+                        <a class="tile wide imagetext wideimage bg-color-green" id="explorer">
                             <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lady_Elliot_Island_SVII.jpg/320px-Lady_Elliot_Island_SVII.jpg" alt=""/>
                             <div class="textover-wrapper transparent">
-                                <div class="text2">An image of the coral reef near Lady Elliot Island</div>
+                                <div class="text2">Desktop</div>
                             </div>
                         </a>
                         <a class="tile square image bg-color-red" href="#">
@@ -117,7 +87,7 @@
                 </div>
 
                 <div class="panorama-section">
-                    <h2>Featured articles</h2>
+                    <h2 style="color:#fff;">Featured articles</h2>
                     <div class="tile-column-span-3">
                         <a class="tile widepeek" href="#">
                             <div class="tile wide image">
@@ -138,7 +108,7 @@
                 </div>
 
                 <div class="panorama-section">
-                    <h2>Featured apps</h2>
+                    <h2 style="color:#fff;">Featured apps</h2>
                     <div class="tile-column-span-4">
                         <a class="tile app bg-color-orange" href="#">
                             <div class="image-wrapper">
@@ -180,7 +150,7 @@
 
                 <div class="panorama-section tile-span-4">
                     <div class="tile-column-span-4">
-                        <h2>Group two</h2>
+                        <h2 style="color:#fff;">Group two</h2>
                         <a class="tile wide imagetext bg-color-blue" href="#">
                             <div class="image-wrapper">
                                 <span class="icon icon-music-3"></span>
@@ -221,7 +191,7 @@
                         </a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <a id="panorama-scroll-prev" href="#"></a>
@@ -229,7 +199,7 @@
         <div id="panorama-scroll-prev-bkg"></div>
         <div id="panorama-scroll-next-bkg"></div>
     </div>
-    
+
     <div id="charms" class="win-ui-dark slide">
         <div id="theme-charms-section" class="charms-section">
             <div class="charms-header">
@@ -249,25 +219,23 @@
             </div>
         </div>
     </div>
-    
-    <script src="../public/metro/assets/js/jquery-1.10.0.min.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/min/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/bootmetro-panorama.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/bootmetro-pivot.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/bootmetro-charms.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/jquery.touchSwipe.min.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/holder.js"></script>
-    <script type="text/javascript" src="../public/metro/assets/js/demo.js"></script>
-    <script type="text/javascript">
-        $('.panorama').panorama({
-         //nicescroll: false,
-         showscrollbuttons: true,
-         keyboard: true,
-         parallax: true
-        });
-        $('#pivot').pivot();
-    </script>
-</body>
-</html>
+</div>
+
+<script type="text/javascript" src="metro/assets/js/bootmetro-panorama.js"></script>
+<script type="text/javascript" src="metro/assets/js/bootmetro-pivot.js"></script>
+<script type="text/javascript" src="metro/assets/js/bootmetro-charms.js"></script>
+<script type="text/javascript" src="metro/assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="metro/assets/js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="metro/assets/js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="metro/assets/js/holder.js"></script>
+<script type="text/javascript" src="metro/assets/js/demo.js"></script>
+
+<script type="text/javascript">
+    $('.panorama').panorama({
+     //nicescroll: false,
+     showscrollbuttons: true,
+     keyboard: true,
+     parallax: true
+    });
+    $('#pivot').pivot();
+</script>

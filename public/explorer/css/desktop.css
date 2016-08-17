@@ -1,56 +1,58 @@
-/* `Basic HTML
+.explorer {
+  /* `Basic HTML
 ----------------------------------------------------------------------------------------------------*/
-
-* {
+  /* `Misc
+----------------------------------------------------------------------------------------------------*/
+  /* `Icons
+----------------------------------------------------------------------------------------------------*/
+  /* `Windows
+----------------------------------------------------------------------------------------------------*/
+  /* `Table >> Data
+----------------------------------------------------------------------------------------------------*/
+  /* `Bar >> Top + Bottom
+----------------------------------------------------------------------------------------------------*/
+  /* `Bar >> Links
+----------------------------------------------------------------------------------------------------*/
+  /* `Wrapper + Wallpaper + Desktop
+----------------------------------------------------------------------------------------------------*/
+}
+.explorer * {
   cursor: default;
 }
-
-html,
-body {
+.explorer html,
+.explorer body {
   overflow: hidden;
 }
-
-body {
+.explorer body {
   background: #222;
   font: 12px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
-
-a {
+.explorer a {
   text-decoration: none;
 }
-
-li {
+.explorer li {
   list-style: none;
 }
-
-/* `Misc
-----------------------------------------------------------------------------------------------------*/
-
-.abs {
+.explorer .abs {
   position: absolute !important;
   top: auto;
   left: auto;
   right: auto;
   bottom: auto;
 }
-
-.align_center {
+.explorer .align_center {
   text-align: center;
 }
-
-.align_right {
+.explorer .align_right {
   text-align: right;
 }
-
-.float_left {
+.explorer .float_left {
   float: left;
 }
-
-.float_right {
+.explorer .float_right {
   float: right;
 }
-
-.ui-resizable-se {
+.explorer .ui-resizable-se {
   background: url(../images/gui/window_corner.gif) no-repeat right bottom;
   font-size: 0;
   overflow: hidden;
@@ -59,16 +61,11 @@ li {
   right: 0;
   bottom: 0;
 }
-
-div.ui-resizable-handle {
+.explorer div.ui-resizable-handle {
   display: none !important;
   visibility: hidden !important;
 }
-
-/* `Icons
-----------------------------------------------------------------------------------------------------*/
-
-.icon {
+.explorer .icon {
   background: url(../images/gui/trans_white.png) no-repeat -99999px -99999px;
   border-radius: 5px;
   -moz-border-radius: 5px;
@@ -83,35 +80,27 @@ div.ui-resizable-handle {
   text-shadow: #000 0 1px 2px;
   width: 80px;
 }
-
-.icon.active {
+.explorer .icon.active {
   background: url(../images/gui/trans_black.png);
 }
-
-.icon img {
+.explorer .icon img {
   background: url(../images/gui/trans_black.png) no-repeat -99999px -99999px;
   display: block;
   margin: 0 auto 5px;
   width: 32px;
   height: 32px;
 }
-
-.icon:hover,
-.icon.ui-draggable-dragging {
+.explorer .icon:hover,
+.explorer .icon.ui-draggable-dragging {
   background-position: 0 0;
   background-repeat: repeat;
   border: 1px solid #fff;
   padding: 5px 0 5px;
 }
-
-.icon.ui-draggable-dragging {
+.explorer .icon.ui-draggable-dragging {
   z-index: 20;
 }
-
-/* `Windows
-----------------------------------------------------------------------------------------------------*/
-
-.window {
+.explorer .window {
   background: #fff;
   border: 1px solid #000;
   border-radius: 5px;
@@ -126,31 +115,25 @@ div.ui-resizable-handle {
   left: 120px;
   z-index: 2;
 }
-
-.window.window_stack,
-.window.ui-draggable-dragging {
+.explorer .window.window_stack,
+.explorer .window.ui-draggable-dragging {
   z-index: 10;
 }
-
-.window.ui-draggable-dragging {
+.explorer .window.ui-draggable-dragging {
   opacity: 0.5;
 }
-
-.window.ui-draggable-dragging .window_content,
-.window.ui-draggable-dragging .window_bottom {
+.explorer .window.ui-draggable-dragging .window_content,
+.explorer .window.ui-draggable-dragging .window_bottom {
   display: none;
 }
-
-.window_full.ui-draggable-dragging {
+.explorer .window_full.ui-draggable-dragging {
   opacity: 1;
 }
-
-.window_full.ui-draggable-dragging .window_content,
-.window_full.ui-draggable-dragging .window_bottom {
+.explorer .window_full.ui-draggable-dragging .window_content,
+.explorer .window_full.ui-draggable-dragging .window_bottom {
   display: block;
 }
-
-.window_full {
+.explorer .window_full {
   border: 0;
   border-radius: 0;
   -moz-border-radius: 0;
@@ -159,12 +142,10 @@ div.ui-resizable-handle {
   width: 100%;
   height: 100%;
 }
-
-.window_full .ui-resizable-se {
+.explorer .window_full .ui-resizable-se {
   display: none;
 }
-
-.window_top {
+.explorer .window_top {
   background: #333 url(../images/gui/bar_bottom.png) repeat-x;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -181,13 +162,11 @@ div.ui-resizable-handle {
   text-shadow: #000 0 1px 1px;
   height: 30px;
 }
-
-.window_top img {
+.explorer .window_top img {
   float: left;
   margin: 6px 5px 0 0;
 }
-
-.window_bottom {
+.explorer .window_bottom {
   background: #fff url(../images/gui/bar_top.png) repeat-x left bottom;
   border-top: 1px solid #bbb;
   border-bottom-left-radius: 5px;
@@ -208,10 +187,9 @@ div.ui-resizable-handle {
   right: 1px;
   bottom: 1px;
 }
-
-.window_min,
-.window_resize,
-.window_close {
+.explorer .window_min,
+.explorer .window_resize,
+.explorer .window_close {
   background: url(../images/gui/window_buttons.gif) no-repeat;
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -223,46 +201,38 @@ div.ui-resizable-handle {
   width: 28px;
   height: 15px;
 }
-
-.window_min:hover {
+.explorer .window_min:hover {
   background-position: 0 -15px;
 }
-
-.window_resize {
+.explorer .window_resize {
   background-position: -28px 0;
 }
-
-.window_resize:hover {
+.explorer .window_resize:hover {
   background-position: -28px -15px;
 }
-
-.window_close {
+.explorer .window_close {
   background-position: -56px 0;
 }
-
-.window_close:hover {
+.explorer .window_close:hover {
   background-position: -56px -15px;
   box-shadow: #f00 0 0 10px;
   -moz-box-shadow: #f00 0 0 10px;
   -webkit-box-shadow: #f00 0 0 10px;
 }
-
-.window_min:hover,
-.window_resize:hover {
+.explorer .window_min:hover,
+.explorer .window_resize:hover {
   box-shadow: #09f 0 0 10px;
   -moz-box-shadow: #09f 0 0 10px;
   -webkit-box-shadow: #09f 0 0 10px;
 }
-
-.window_inner {
+.explorer .window_inner {
   padding: 1px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
-
-.window_content {
+.explorer .window_content {
   background: url(../images/gui/window_content.gif) repeat-y;
   line-height: 1.5;
   overflow: auto;
@@ -271,47 +241,37 @@ div.ui-resizable-handle {
   right: 1px;
   bottom: 23px;
 }
-
-.window_aside {
+.explorer .window_aside {
   float: left;
   font-size: 11px;
   padding: 10px 12px 10px 10px;
   width: 150px;
 }
-
-.window_main {
+.explorer .window_main {
   background: #fff;
   margin: 0 0 0 173px;
   min-height: 100%;
 }
-
-.window_full .window_top,
-.window_full .window_bottom {
+.explorer .window_full .window_top,
+.explorer .window_full .window_bottom {
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -webkit-background-clip: padding-box;
 }
-
-.window_full .window_inner {
+.explorer .window_full .window_inner {
   bottom: -1px;
 }
-
-/* `Table >> Data
-----------------------------------------------------------------------------------------------------*/
-
-table.data {
+.explorer table.data {
   width: 100%;
   white-space: nowrap;
 }
-
-table.data th,
-table.data td {
+.explorer table.data th,
+.explorer table.data td {
   padding: 5px 10px;
   vertical-align: middle;
 }
-
-table.data th {
+.explorer table.data th {
   background: #fff url(../images/gui/bar_top.png) repeat-x left bottom;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -319,40 +279,30 @@ table.data th {
   text-shadow: #fff 0 1px 1px;
   white-space: nowrap;
 }
-
-table.data th:first-child {
+.explorer table.data th:first-child {
   border-left: 0;
 }
-
-table.data img {
+.explorer table.data img {
   display: block;
 }
-
-table.data tbody tr:nth-child(even) td {
+.explorer table.data tbody tr:nth-child(even) td {
   background: #def;
 }
-
-table.data tbody tr.active td {
+.explorer table.data tbody tr.active td {
   background: #06c url(../images/gui/bar_top_link.png) repeat-x;
   color: #fff;
 }
-
-th.shrink {
+.explorer th.shrink {
   width: 1%;
 }
-
-/* `Bar >> Top + Bottom
-----------------------------------------------------------------------------------------------------*/
-
-#bar_top,
-#bar_bottom {
+.explorer #bar_top,
+.explorer #bar_bottom {
   font-weight: bold;
   padding: 0 10px;
   left: 0;
   right: 0;
 }
-
-#bar_top {
+.explorer #bar_top {
   background: #fff url(../images/gui/bar_top.png) repeat-x left bottom;
   border-bottom: 1px solid #333;
   color: #999;
@@ -362,8 +312,7 @@ th.shrink {
   height: 25px;
   top: 0;
 }
-
-#bar_bottom {
+.explorer #bar_bottom {
   background: #333 url(../images/gui/bar_bottom.png) repeat-x;
   border-top: 1px solid #fff;
   color: #fff;
@@ -377,40 +326,32 @@ th.shrink {
   height: 30px;
   bottom: 0;
 }
-
-/* `Bar >> Links
-----------------------------------------------------------------------------------------------------*/
-
-#bar_top li,
-#bar_bottom li {
+.explorer #bar_top li,
+.explorer #bar_bottom li {
   float: left;
 }
-
-#bar_top li a,
-#bar_bottom li a {
+.explorer #bar_top li a,
+.explorer #bar_bottom li a {
   display: block;
   padding: 0 10px;
 }
-
-#bar_top li a {
+.explorer #bar_top li a {
   background-image: url(../images/gui/bar_top_link.png);
   background-repeat: no-repeat;
   background-position: -99999px -99999px;
   color: #000;
   overflow: hidden;
-  height: 25px;
+  height: 20x;
   min-height: 1px;
 }
-
-#bar_top a.active {
+.explorer #bar_top a.active {
   background-color: #06c;
   background-position: 0 0;
   background-repeat: repeat-x;
   color: #fff;
   text-shadow: none;
 }
-
-#bar_top ul.menu {
+.explorer #bar_top ul.menu {
   background: #eee;
   border: 1px solid #333;
   border-top-width: 0;
@@ -429,18 +370,15 @@ th.shrink {
   min-width: 200px;
   z-index: 30;
 }
-
-#bar_top ul.menu li {
+.explorer #bar_top ul.menu li {
   float: none;
 }
-
-#bar_top ul.menu a {
+.explorer #bar_top ul.menu a {
   background: #fff;
   border-bottom: 1px solid #eee;
   min-width: 180px;
 }
-
-#bar_top ul.menu li:last-child a {
+.explorer #bar_top ul.menu li:last-child a {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   -moz-border-radius-bottomleft: 5px;
@@ -449,24 +387,20 @@ th.shrink {
   -webkit-border-bottom-right-radius: 5px;
   -webkit-background-clip: padding-box;
 }
-
-#bar_top ul.menu a:hover {
+.explorer #bar_top ul.menu a:hover {
   background: #06c url(../images/gui/bar_top_link.png) repeat-x;
   color: #fff;
   text-shadow: none;
 }
-
-#bar_bottom li {
+.explorer #bar_bottom li {
   display: none;
   margin: 0 0 10px 5px;
   min-width: 150px;
 }
-
-#bar_bottom li a {
+.explorer #bar_bottom li a {
   background: #333;
 }
-
-#bar_bottom a {
+.explorer #bar_bottom a {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -476,32 +410,24 @@ th.shrink {
   padding: 0 10px;
   height: 30px;
 }
-
-#bar_bottom a:hover {
+.explorer #bar_bottom a:hover {
   background: #000;
 }
-
-#bar_bottom a:active {
+.explorer #bar_bottom a:active {
   background: #c60;
   border: 1px solid #fff;
   padding: 0 9px;
 }
-
-#bar_bottom li a img {
+.explorer #bar_bottom li a img {
   float: left;
   margin: 4px 5px 0 -5px;
 }
-
-#bar_bottom .float_left img,
-#bar_bottom .float_right img {
+.explorer #bar_bottom .float_left img,
+.explorer #bar_bottom .float_right img {
   display: block;
   padding: 4px 0 0;
 }
-
-/* `Wrapper + Wallpaper + Desktop
-----------------------------------------------------------------------------------------------------*/
-
-#wallpaper {
+.explorer #wallpaper {
   top: 0;
   left: 0;
   right: 0;
@@ -509,16 +435,14 @@ th.shrink {
   width: 100%;
   height: 100%;
 }
-
-#desktop {
+.explorer #desktop {
   overflow: hidden;
   top: 26px;
   left: 0;
   right: 0;
   bottom: 41px;
 }
-
-#wrapper {
+.explorer #wrapper {
   top: 0;
   left: 0;
   right: 0;

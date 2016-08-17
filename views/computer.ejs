@@ -50,7 +50,25 @@
     </div>
 </div>
 <div class="screen" style="position: absolute; left: 200px; top: 0px; bottom: 51px; right: 0px; border:0px solid #000000;">
-        <% include hub %>
+    <div id="startc">
+        <% include start_menu %>
+    </div>
+        
+    <div id="explorerc" style="display:none;">
+        <% include explorer %>
+    </div>
+    
+    <script>
+        $('#explorer').click(function () {
+            $("#explorerc").css("display", "block");
+            $("#startc").css("display", "none");
+        });
+
+        $('#start').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "block");
+        });
+    </script>
     
 
     <!--<div id="Browse" class="screen_content" style="width: 100%; height: 100%; display: none;">
