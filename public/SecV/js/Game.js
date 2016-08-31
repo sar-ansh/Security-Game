@@ -9,6 +9,10 @@ SecV.Game = function(){
 
 SecV.Game.prototype = {
     create: function() {
+        
+        
+        
+        
         map = this.game.add.sprite(0, 0, 'map');
         
         this.game.world.setBounds(0, 0, GAME_WIDTH, GAME_HEIGHT);

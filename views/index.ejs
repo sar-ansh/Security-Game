@@ -1,8 +1,38 @@
 <% include layouts/header %>
     
     <% if (user != null) { %>
-        <div id="Gamec" style="display:none;">
-            <div id="base" style="margin: auto; height: 650px; width: 1280px; border:1px solid #000000;">
+        <div id="Gamec" style="display: none;">
+            <div id="start">
+                <button class="start_button">Start</button>
+            </div>
+            <div id="prologue" style="display: none; position: absolute; top: 50px; left: 50px; right: 50px; bottom: 100px; border:1px solid #000000;">
+                <div class="macbook_prologue">
+                    <div class="screen_prologue" style="visibility: hidden;">
+                        <div class="viewport_prologue" style="display:none;">
+                            <h3 style="color:#ffffff;">Loading...</h3>
+                            <div id="myProgress_prologue" style="display:none;">
+                                <div id="myBar_prologue"></div>
+                                <div id="label_prologue">0%</div>
+                            </div>
+                            <div id="console_prologue"></div>
+                        </div>
+                        <div id="load_prologue" style="display: none;">
+                            <div id="spn_prologue"></div> <br/>
+                            <div class="loading_prologue">Transfer in progress...</div>
+                        </div>
+                        <div id="bank_prologue" style="display: none;">
+                            Transfer completed.
+                        </div>
+                    </div>
+                    <div class="lid_prologue"></div>
+                    <div class="base_prologue"></div>
+                    <div class="notch_prologue"></div>
+                    <div id="power">
+                        <button class="start_button">Power</button>
+                    </div>
+                </div>
+            </div>
+            <div id="base" style="display: none;">
                 <script src="SecV/js/main.js"></script>
             </div>
         </div>
@@ -18,5 +48,47 @@
           <p>About the game.</p>
         </div>    
     <% } %>
+
+    <script>
+        $('#start').click(function(){
+            $("#start").css("display", "none");
+            $("#prologue").css("display", "block");
+            $("#menu").css("display", "none");
+        });
+                          
+        $('#power').click(function(){
+            $("#power").css("display", "none");
+            $(".lid_prologue").css("display", "none");
+            $(".screen_prologue").css("visibility", "visible");
+            $(".screen_prologue").css("transform", "rotateX(0deg)");
+            
+            $(".viewport_prologue").fadeIn(10000);
+            setTimeout(function(){
+                $("#myProgress_prologue").fadeIn(500);    
+            }, 10000);
+            
+            setTimeout(function(){
+                var elem = document.getElementById("myBar_prologue");
+                var width = 0;
+                var id = setInterval(frame, 50);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                    }
+                    else {
+                        width++;
+                        elem.style.width = width + '%';
+                        document.getElementById("label_prologue").innerHTML = width * 1  + '%';
+                    }
+                }
+            }, 12000);
+            
+            setTimeout(function(){
+                Typer.file = "js/new.txt";
+                Typer.init();
+                start = true;
+            }, 18000);
+        });
+    </script>
 
 <% include layouts/footer %>
