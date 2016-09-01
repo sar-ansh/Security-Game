@@ -37,11 +37,6 @@ $(function(){
       $(this).toggleClass('selected');
    });
 
-   // Datepicker
-   $('.datepicker').datepicker();
-
-
-
    // Tile ListView
    $('#tile-listview-demo').on('click', '.tile-listviewitem', function(e){
       e.preventDefault();
@@ -53,7 +48,6 @@ $(function(){
 //   // FlipView demo
 //   $('#myFlipview').carousel()
 
-   $('.bs-docs-example-commands .win-command').tooltip();
 });
 
 
@@ -114,14 +108,6 @@ $('.big, .small').each(function(){
          e.preventDefault()
       })
 
-      // side bar
-      $('.bs-docs-sidenav').affix({
-         offset: {
-            top: function () { return $window.width() <= 980 ? 290 : 210 }
-            , bottom: 270
-         }
-      })
-
       // make code pretty
       window.prettyPrint && prettyPrint()
 
@@ -140,21 +126,9 @@ $('.big, .small').each(function(){
          })
       }
 
-      // tooltip demo
-      $('.tooltip-demo').tooltip({
-         selector: "a[rel=tooltip]"
-      })
+    
 
-      $('.tooltip-test').tooltip()
-      $('.popover-test').popover()
-
-      // popover demo
-      $("a[rel=popover]")
-         .popover()
-         .click(function(e) {
-            e.preventDefault()
-         })
-
+     
       // button state demo
       $('#fat-btn')
          .click(function () {
@@ -164,9 +138,6 @@ $('.big, .small').each(function(){
                btn.button('reset')
             }, 3000)
          })
-
-      // carousel demo
-      $('#myCarousel').carousel()
 
       // javascript build logic
       var inputsComponent = $("#components.download input")

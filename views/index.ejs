@@ -2,7 +2,7 @@
     
     <% if (user != null) { %>
         <div id="Gamec" style="display: none;">
-            <div id="start">
+            <div id="start_game">
                 <button class="start_button">Start</button>
             </div>
             <div id="prologue" style="display: none; position: absolute; top: 50px; left: 50px; right: 50px; bottom: 100px; border:1px solid #000000;">
@@ -50,8 +50,8 @@
     <% } %>
 
     <script>
-        $('#start').click(function(){
-            $("#start").css("display", "none");
+        $('#start_game').click(function(){
+            $("#start_game").css("display", "none");
             $("#prologue").css("display", "block");
             $("#menu").css("display", "none");
         });

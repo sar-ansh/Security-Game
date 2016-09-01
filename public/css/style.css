@@ -100,13 +100,22 @@ ul.tab li a {
   color: #21CCFC;
 }
 
+.screen {
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    bottom: 51px; 
+    right: 0px; 
+    border:0px solid #000000;
+}
+
 .left-menu_nav {
     background: #222;
-    width: 200px;
+    width: 0px;
     position: absolute;
-    left: 0px;
     top: 0px;
     bottom: 51px;
+    display: none;
 }
 
 .left-menu_nav  a:link {color: #FFFFFF;}

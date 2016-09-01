@@ -49,7 +49,8 @@
         </div>
     </div>
 </div>
-<div class="screen" style="position: absolute; left: 200px; top: 0px; bottom: 51px; right: 0px; border:0px solid #000000;">
+<div class="screen">
+    
     <div id="startc">
         <% include start_menu %>
     </div>
@@ -58,15 +59,51 @@
         <% include explorer %>
     </div>
     
+    <div id="chatc" style="display:none;">
+        <% include chat %>
+    </div>
+    
     <script>
+        var comp_nav = false;
+        
+        $('#comp_nav').click(function(){
+                if(comp_nav){
+                    $('.left-menu_nav').animate({width:0}, function(){
+                        $('.left-menu_nav').css("display", "none");
+                    });
+                    $('.screen').animate({left:0});
+                    comp_nav = false;
+                }
+                else{
+                    $('.left-menu_nav').animate({width:200});
+                    $('.left-menu_nav').css("display", "block");
+                    $('.screen').animate({left:200});
+                    comp_nav = true;
+                }
+        });
+        
         $('#explorer').click(function () {
             $("#explorerc").css("display", "block");
             $("#startc").css("display", "none");
+            $("#chatc").css("display", "none");
         });
 
-        $('#start').click(function () {
+        $('#start_explorer').click(function () {
             $("#explorerc").css("display", "none");
             $("#startc").css("display", "block");
+            $("#chatc").css("display", "none");
+        });
+        
+        $('#chat').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "none");
+            $("#chatc").css("display", "block");
+        });
+        
+        $('#start_chat').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "block");
+            $("#chatc").css("display", "none");
         });
     </script>
     
