@@ -127,14 +127,6 @@ var JQD = (function($, window, document, undefined) {
         d.on('click', 'a', function(ev) {
           var url = $(this).attr('href');
           this.blur();
-
-          if (url.match(/^#/)) {
-            ev.preventDefault();
-            ev.stopPropagation();
-          }
-          else {
-            $(this).attr('target', '_blank');
-          }
         });
 
         // Make top menus active.
@@ -289,7 +281,7 @@ var JQD = (function($, window, document, undefined) {
       wallpaper: function() {
         // Add wallpaper last, to prevent blocking.
         if ($('#desktop').length) {
-          $('body').prepend('<img id="wallpaper" class="abs" src="" />');
+          $('.explorer').prepend('<img id="wallpaper" class="abs" src="css/images/misc/wallpaper.jpg" />');
         }
       }
     },

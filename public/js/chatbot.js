@@ -29,10 +29,10 @@ $(document).ready(function() {
     }
 
 	var submitChat = function() {
-		var input = $('.input input').val();
+		var input = $('.inputbot input').val();
 		if(input == '') 
             return;
-		$('.input input').val('');
+		$('.inputbot input').val('');
 		updateChat(you, input);
 		
 		var reply = bot.respondTo(input);
@@ -50,24 +50,30 @@ $(document).ready(function() {
 			}
 			$('.busybot').css('display', 'none');
 		}, latency);
+        $('.msg_body').scrollTop($('.msg_body')[0].scrollHeight);
 	}
 	
 	var updateChat = function(party, text) {
+        
+        var style = 'you';
+		if(party != you) {
+			style = 'robot';
+		}
 		
 		var line = $('<div><span class="party"></span> <span class="text"></span></div>');
-		line.find('.party').text(party + ':');
-		line.find('.text').text(text);
+		line.find('.party').addClass(style).text(party + ':');
+		line.find('.text').addClass(style).text(text);
 		
 		chat.append(line);
 	}
 	
-	$('.input').bind('keydown', function(e) {
+	$('.inputbot').bind('keydown', function(e) {
 		if(e.keyCode == 13) {
 			submitChat();
 		}
 	});
     
-	$('.input a').bind('click', submitChat);
+    $('.inputbot a').bind('click', submitChat);
     
     var you = 'You';
 	var robot = 'Buddy';

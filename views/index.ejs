@@ -2,14 +2,21 @@
     
     <% if (user != null) { %>
         <div id="Gamec" style="display: none;">
-            <div id="start_game">
-                <button class="start_button">Start</button>
+            <div id="menu">
+                <nav class="main_menu_nav">
+                    <ul>
+                        <li><a id="start_game" data-title="Start">Start</a></li>
+                        <li><a id="tools_game" data-title="Settings">Settings</a></li>
+                        <li><a id="sound_game" data-title="Sound">Sound</a></li>
+                        <li><a id="quit_game" data-title="Quit?">Quit</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div id="prologue" style="display: none; position: absolute; top: 50px; left: 50px; right: 50px; bottom: 100px; border:1px solid #000000;">
-                <div class="macbook_prologue">
-                    <div class="screen_prologue" style="visibility: hidden;">
+            <div id="prologue">
+                <div id="title_prologue" style="font-size: 20px; position: absolute; left: 50%; top: 50%; bottom: 50%;">Prologue</div>
+                <div class="macbook_prologue" style="display: none;">
+                    <div class="screen_prologue">
                         <div class="viewport_prologue" style="display:none;">
-                            <h3 style="color:#ffffff;">Loading...</h3>
                             <div id="myProgress_prologue" style="display:none;">
                                 <div id="myBar_prologue"></div>
                                 <div id="label_prologue">0%</div>
@@ -28,7 +35,8 @@
                     <div class="base_prologue"></div>
                     <div class="notch_prologue"></div>
                     <div id="power">
-                        <button class="start_button">Power</button>
+                        <a id="power_prologue"><i class="fa fa-power-off"></i></a>
+                        <div id="led_prologue"></div>
                     </div>
                 </div>
             </div>
@@ -46,18 +54,19 @@
         <div id="Aboutc" style="display:none;">
           <h3>About</h3>
           <p>About the game.</p>
-        </div>    
+        </div>
     <% } %>
 
     <script>
         $('#start_game').click(function(){
-            $("#start_game").css("display", "none");
-            $("#prologue").css("display", "block");
-            $("#menu").css("display", "none");
+            $("#title_prologue").css("display", "none");
+            $(".screen_prologue").css("visibility", "hidden");
+            $(".macbook_prologue").fadeIn(2000);
         });
                           
         $('#power').click(function(){
-            $("#power").css("display", "none");
+            $("#power_prologue").css("color", "white");
+            $("#led_prologue").css("background-color", "white");
             $(".lid_prologue").css("display", "none");
             $(".screen_prologue").css("visibility", "visible");
             $(".screen_prologue").css("transform", "rotateX(0deg)");
@@ -89,6 +98,16 @@
                 start = true;
             }, 18000);
         });
+        
+        var over_prologue = setInterval(function(){
+            if(access){
+                $("#prologue").fadeOut(5000);
+                setTimeout(function(){
+                    $("#base").fadeIn(5000);
+                }, 5000);
+                clearInterval(over_prologue);
+            }
+        }, 1000);
     </script>
 
 <% include layouts/footer %>

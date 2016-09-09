@@ -10,7 +10,7 @@
 
     <title>SecV</title> 
     
-    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     
     <link rel="stylesheet" type="text/css" href="metro/css/bootmetro.css">
@@ -19,36 +19,15 @@
     <link rel="stylesheet" type="text/css" href="metro/css/bootmetro-ui-light.css">
     <link rel="stylesheet" type="text/css" href="metro/css/demo.css">
     
-    <link rel="stylesheet" type="text/css" href="explorer/css/desktop.css">
-    <link rel="stylesheet" type="text/css" href="explorer/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/explorer.css">
     
-    <link rel="stylesheet" type="text/css" href="css/prologue.css">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
     
-    
-    
-    
-    
-    
-    
-    <script type="text/javascript" src="explorer/js/jquery.js"></script>
-    <script type="text/javascript" src="explorer/js/jquery.ui.js"></script>
-    <!-- When logout is clicked, new tab is opened because of jquery.desktop.js. Resolve it while refactoring. Also maximization of window is buggy.-->
-    <script type="text/javascript" src="explorer/js/jquery.desktop.js"></script>
-    
-    
-    
-    
-    
-    
-    
-    <script type="text/javascript" src="js/jquery-ui.js"></script>    
     <script type="text/javascript" src="js/prologue.js"></script>
-    <script type="text/javascript" src="js/chatbot.js"></script>
     
     <script type="text/javascript" src="SecV/libs/phaser.js"></script>
     <script type="text/javascript" src="SecV/js/Boot.js"></script>
@@ -58,7 +37,6 @@
     
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
         <div class="container"> <!-- try using container-fluid too>
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -69,12 +47,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand tablinks" href="#">SecV</a>
+                <a class="navbar-brand" href="#">SecV</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <% if (user != null) { %>
-                    <ul class="nav navbar-nav tablinks">
+                    <ul class="nav navbar-nav">
                         <li><a id="Game">Game</a></li>
                         <li><a id="Computer">Computer</a></li>
                         <li><a id="About">About</a></li>
@@ -152,32 +130,31 @@
         </div>
     </nav>
     <script>
-    $('#login-dp').click(function () {
-        $("#login-dd").css("display", "none");
-        $("#signup-dd").css("display", "block");
-    });
-        
-    $('#signup-dp').click(function () {
-        $("#login-dd").css("display", "block");
-        $("#signup-dd").css("display", "none");
-    });
-        
-    $('#Game').click(function () {
-        $("#Gamec").css("display", "block");
-        $("#Computerc").css("display", "none");
-        $("#Aboutc").css("display", "none");
-    });
-        
-    $('#Computer').click(function () {
-        $("#Gamec").css("display", "none");
-        $("#Computerc").css("display", "block");
-        $("#Aboutc").css("display", "none");
-    });
-    
-    $('#About').click(function () {
-        $("#Gamec").css("display", "none");
-        $("#Computerc").css("display", "none");
-        $("#Aboutc").css("display", "block");
-    });
-    
+        $('#login-dp').click(function () {
+            $("#login-dd").css("display", "none");
+            $("#signup-dd").css("display", "block");
+        });
+
+        $('#signup-dp').click(function () {
+            $("#login-dd").css("display", "block");
+            $("#signup-dd").css("display", "none");
+        });
+
+        $('#Game').click(function () {
+            $("#Gamec").css("display", "block");
+            $("#Computerc").css("display", "none");
+            $("#Aboutc").css("display", "none");
+        });
+
+        $('#Computer').click(function () {
+            $("#Gamec").css("display", "none");
+            $("#Computerc").css("display", "block");
+            $("#Aboutc").css("display", "none");
+        });
+
+        $('#About').click(function () {
+            $("#Gamec").css("display", "none");
+            $("#Computerc").css("display", "none");
+            $("#Aboutc").css("display", "block");
+        });
     </script>

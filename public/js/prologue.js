@@ -1,6 +1,8 @@
 var finish = false;
 var hacked = false;
 var start = false;
+var access = false;
+var timer;
 var Typer={
     text: null,
     accessCountimer:null,
@@ -14,7 +16,6 @@ var Typer={
         },1000); // inizialize timer for blinking cursor
         $.get(Typer.file,function(data){// get the text file
             Typer.text=data;// save the textfile in Typer.text
-            Typer.text = Typer.text.slice(0, Typer.text.length-1);
         });
     },
 
@@ -27,7 +28,7 @@ var Typer={
         return false;
     },
 
-    addText:function(key){
+    addText:function(){
             var cont=Typer.content(); // get the console content
             if(cont.substring(cont.length-1,cont.length)=="|") // if the last char is the blinking cursor
                 $("#console_prologue").html($("#console_prologue").html().substring(0,cont.length-1)); // remove it before adding the text
@@ -54,7 +55,7 @@ var Typer={
 var type = setInterval(function(){
     if(start){
         start = false;
-        var timer = setInterval("t();", 10);
+        timer = setInterval("t();", 10);
         clearInterval(type);
     }
 }, 1000);
@@ -70,7 +71,7 @@ function t() {
             var keycode = event.keyCode || event.which;
             if(keycode == '13' && hacked == false) {
                 $('.cursor_last_prologue').hide();
-                $('.viewport_prologue').append("<hr><div id=\"console_prologue\"><div><p id=\"c_prologue\">You\'ve accessed the mainframe. You need to brute-force the passcode...</p.</p></div><div id=\"b_prologue\" class=\"button_prologue\">Transaction Passcode</div><div class=\"password_prologue\"></div><div id=\"a_prologue\" class=\"blink_prologue granted_prologue hidden_prologue\">ACCESS GRANTED!</div></div>");
+                $('.viewport_prologue').append("<hr><div id=\"console_prologue\"><div><p id=\"c_prologue\">You\'ve accessed the mainframe. You need to brute-force the passcode...</p.</p></div><div id=\"b_prologue\" class=\"button_prologue\">Transaction Passcode:</div><div class=\"password_prologue\"></div><div id=\"a_prologue\" class=\"blink_prologue granted_prologue hidden_prologue\">ACCESS GRANTED!</div></div>");
                 $('.viewport_prologue')[0].scrollTop = $('.viewport_prologue')[0].scrollHeight;
                 hacked = true;
             }
@@ -95,6 +96,12 @@ var interval = setInterval(function(){
         $('.password_prologue').text(characters.join(''));
     }, 25);
 
+$(document).keypress(function(event) {
+    var keycode = event.keyCode || event.which;
+    if(hacked && keycode == '13' && access == false) 
+        hack();
+});
+
 function hack() {
     counter++;
     if(counter == password.length){
@@ -112,10 +119,11 @@ function hack() {
                 clearInterval(shake);
             }, 5000);
             $('#load_prologue').delay(15000).fadeIn(5000);
-            $('#load_prologue').delay(8000).fadeOut(5000);
-            $('#bank_prologue').delay(35000).fadeIn(5000);
+            $('#load_prologue').delay(5000).fadeOut(5000);
+            $('#bank_prologue').delay(30000).fadeIn(5000);
+            setTimeout(function(){
+                access = true;
+            }, 40000);
         });
     }
 }
-
-$(document).on('keydown', hack);
