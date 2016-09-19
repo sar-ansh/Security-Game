@@ -1,0 +1,77 @@
+<html> 
+    <head> 
+        <title>Jeff Weisbein</title> 
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script src="jquery.ui.js"></script>
+        <link rel=stylesheet href="prologue.css">
+        <script type="text/javascript" src="prologue.js"></script>
+    </head> 
+    <body>
+        <div id="start">
+            <button>Start</button>
+        </div>
+
+
+
+        
+        <div id="prologue">
+            <div class="macbook">
+                <div class="screen" >
+                    <div class="viewport" style="display:none;">
+                        <h3 style="color:#ffffff;">Loading...</h3>
+                        <div id="myProgress" style="display: none;">
+                            <div id="myBar"></div>
+                            <div id="label">0%</div>
+                        </div>
+                        <div id="console"></div>
+                    </div>
+                    <div id="load" style="display: none;">
+                        <div id="spn"></div> <br/>
+                        <div class="loading">Transfer in progress...</div>
+                    </div>
+                    <div id="bank" style="display: none;">
+                        Transfer completed.
+                    </div>
+                </div>
+                <div class="lid"></div>
+                <div class="base"></div>
+                <div class="notch"></div>
+            </div>
+        </div>
+         <script>
+            $('#start').click(function(){                
+                $("#start").css("display", "none");
+                $("#prologue").css("display", "block");
+                
+                $(".lid").css("display", "none");
+                $(".screen").css("display", "block");
+                $(".screen").css("transform", "rotateX(0deg)");
+                
+                $(".viewport").fadeIn(10000);
+                $("#myProgress").fadeIn(12000);
+                setTimeout(function(){
+                    var elem = document.getElementById("myBar");
+                    var width = 1;
+                    var id = setInterval(frame, 50);
+                    function frame() {
+                        if (width >= 100) {
+                            clearInterval(id);
+                        } 
+                        else {
+                            width++;
+                            elem.style.width = width + '%';
+                            document.getElementById("label").innerHTML = width * 1  + '%';
+                        }
+                    }
+                }, 12000);
+
+                setTimeout(function(){
+                    Typer.file = "new.txt";
+                    Typer.init();
+                    start = true;
+                }, 18000);
+            });
+        </script>
+    </body> 
+</html>

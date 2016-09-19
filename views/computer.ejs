@@ -8,42 +8,30 @@
             <label for="section-1"><span>Internet</span></label>
             <div class="content">
                 <ul id="ul_comp_nav">
-                    <li><i class="fa fa-globe"></i><span><a href="#" id="default" class="screen_links" onclick="selectLink(event, 'Browse')">Browse</a></span></li>
+                    <li><i class="fa fa-globe"></i><span><a href="#" id="browser">Browser</a></span></li>
                     <li><i class="fa fa-history"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'History')">History</a></span></li>
-                    <li><i class="fa fa-terminal"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Train')">Train</a></span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="section">
-            <input type="radio" name="accordion-1" id="section-2" value="toggle"/>
-            <label for="section-2"><span>Mail</span></label>
-            <div class="content">
-                <ul id="ul_comp_nav">
-                    <li><i class="fa fa-pencil-square-o"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Message')">New Message</a></span></li>
-                    <li><i class="fa fa-envelope"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Inbox')">Inbox</a></span></li>
-                    <li><i class="fa fa-share"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Sent')">Sent</a></span></li>
-                    <li><i class="fa fa-trash"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Trash')">Trash</a></span></li>
+                    <li><i class="fa fa-download"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Downloads')">Downloads</a></span></li>
                 </ul>
             </div>
         </div>
         <div class="section">
             <input type="radio" name="accordion-1" id="section-3" value="toggle"/>
-            <label for="section-3"> <span>Files</span></label>
+            <label for="section-3"> <span>Tools</span></label>
             <div class="content">
                 <ul id="ul_comp_nav">
-                    <li><i class="fa fa-file"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Explorer')">Explorer</a></span></li>
-                    <li><i class="fa fa-download"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Downloads')">Downloads</a></span></li>
+                    <li><i class="fa fa-cog"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Settings')">Settings</a></span></li>
+                    <li><i class="fa fa-terminal"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Train')">Terminal</a></span></li>
                     <li><i class="fa fa-recycle"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Bin')">Recycle Bin</a></span></li>
                 </ul>
             </div>
         </div>
         <div class="section">
             <input type="radio" name="accordion-1" id="section-4" value="toggle"/>
-            <label for="section-4"> <span>Tools</span></label>
+            <label for="section-4"> <span>Game</span></label>
             <div class="content">
                 <ul id="ul_comp_nav">
-                    <li><i class="fa fa-cog"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Settings')">Settings</a></span></li>
-                    <li><i class="fa fa-coffee"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Progress')">Progress</a></span></li>
+                    <li><i class="fa fa-tasks"></i><span><a href="#" id="tasks">Tasks</a></span></li>
+                    <li><i class="fa fa-spinner"></i><span><a href="#" id="timeline">Progress</a></span></li>
                 </ul>
             </div>
         </div>
@@ -61,6 +49,18 @@
     
     <div id="chatc" style="display:none;">
         <% include chat %>
+    </div>
+    
+    <div id="tasksc" style="display:none;">
+        <% include tasks %>
+    </div>
+    
+    <div id="timelinec" style="display:none;">
+        <% include timeline %>
+    </div>
+    
+    <div id="browserc" style="display:none;">
+        <% include browser %>
     </div>
     
     <script>
@@ -86,92 +86,97 @@
             $("#explorerc").css("display", "block");
             $("#startc").css("display", "none");
             $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
         });
 
         $('#start_explorer').click(function () {
             $("#explorerc").css("display", "none");
             $("#startc").css("display", "block");
             $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
         });
         
         $('#chat').click(function () {
             $("#explorerc").css("display", "none");
             $("#startc").css("display", "none");
             $("#chatc").css("display", "block");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
+            
+            setTimeout(function(){
+                $('.load').slideUp("slow");
+                setTimeout(function(){
+                    $('#chatbox').slideDown("slow");
+                }, 1000);
+            }, 5000);
         });
         
         $('#start_chat').click(function () {
             $("#explorerc").css("display", "none");
             $("#startc").css("display", "block");
             $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
+        });
+        
+        $('#browser').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "none");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "block");
+        });
+        
+        $('#start_browser').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "block");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
+        });
+        
+        $('#tasks').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "none");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "block");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
+        });
+        
+        $('#start_tasks').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "block");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
+        });
+        
+        $('#timeline').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "none");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "block");
+            $("#browserc").css("display", "none");
+        });
+        
+        $('#start_timeline').click(function () {
+            $("#explorerc").css("display", "none");
+            $("#startc").css("display", "block");
+            $("#chatc").css("display", "none");
+            $("#tasksc").css("display", "none");
+            $("#timelinec").css("display", "none");
+            $("#browserc").css("display", "none");
         });
     </script>
-    
-
-    <!--<div id="Browse" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe href="screens/browse.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="History" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/history.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Train" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/train.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Message" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/message.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Inbox" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/inbox.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Sent" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/sent.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Trash" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/trash.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Explorer" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/explorer.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Downloads" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/downloads.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Bin" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/bin.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Settings" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/settings.ejs" width="100%" height="100%"></iframe>
-    </div>
-    
-    <div id="Progress" class="screen_content" style="width: 100%; height: 100%; display: none;">
-        <iframe src="screens/progress.ejs" width="100%" height="100%"></iframe>
-    </div>
-
-    <script>
-        function selectLink(evt, link){
-            var i, content, scrren_links;
-            
-            screen_content = document.getElementsByClassName("screen_content");
-            for (i = 0; i < screen_content.length; i++) {
-                screen_content[i].style.display = "none";
-            }
-                
-            screen_links = document.getElementsByClassName("screen_links");
-            for(i=0; i<screen_links.length; i++){
-                screen_links[i].className = screen_links[i].className.replace(" active", "");
-            }
-                
-            document.getElementById(link).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>-->
 </div>
