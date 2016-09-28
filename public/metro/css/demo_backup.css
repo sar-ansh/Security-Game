@@ -1,3 +1,5 @@
+/*In case things go wrong.*/
+
 .start_menu{
    height:100%;
    overflow-y:hidden; /* Respect browser height */
@@ -33,8 +35,6 @@ overflow:hidden;
           transition: background-position 0.4s;
 }
 
-
-
 /* custom styles */
 .win-commandicon {
    color: #FFF;
@@ -49,7 +49,7 @@ overflow:hidden;
 }
 
 
-#nav-bar {
+#start_navbar {
    /*position: fixed;*/
    /*top: 0;*/
    /*left: 0;*/

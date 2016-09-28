@@ -7,31 +7,31 @@
             <input type="radio" name="accordion-1" id="section-1" value="toggle"/>
             <label for="section-1"><span>Internet</span></label>
             <div class="content">
-                <ul id="ul_comp_nav">
-                    <li><i class="fa fa-globe"></i><span><a href="#" id="browser">Browser</a></span></li>
-                    <li><i class="fa fa-history"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'History')">History</a></span></li>
-                    <li><i class="fa fa-download"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Downloads')">Downloads</a></span></li>
+                <ul class="ul_comp_nav">
+                    <li><i class="fa fa-globe"></i><span><a id="browser">Browser</a></span></li>
+                    <li><i class="fa fa-history"></i><span><a id="history">History</a></span></li>
+                    <li><i class="fa fa-download"></i><span><a id="downloads">Downloads</a></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <input type="radio" name="accordion-1" id="section-2" value="toggle"/>
+            <label for="section-2"> <span>Tools</span></label>
+            <div class="content">
+                <ul class="ul_comp_nav">
+                    <li><i class="fa fa-cog"></i><span><a id="options">Options</a></span></li>
+                    <li><i class="fa fa-terminal"></i><span><a id="terminal">Terminal</a></span></li>
+                    <li><i class="fa fa-recycle"></i><span><a id="recycle-bin">Recycle Bin</a></span></li>
                 </ul>
             </div>
         </div>
         <div class="section">
             <input type="radio" name="accordion-1" id="section-3" value="toggle"/>
-            <label for="section-3"> <span>Tools</span></label>
+            <label for="section-3"> <span>Game</span></label>
             <div class="content">
-                <ul id="ul_comp_nav">
-                    <li><i class="fa fa-cog"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Settings')">Settings</a></span></li>
-                    <li><i class="fa fa-terminal"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Train')">Terminal</a></span></li>
-                    <li><i class="fa fa-recycle"></i><span><a href="#" class="screen_links" onclick="selectLink(event, 'Bin')">Recycle Bin</a></span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="section">
-            <input type="radio" name="accordion-1" id="section-4" value="toggle"/>
-            <label for="section-4"> <span>Game</span></label>
-            <div class="content">
-                <ul id="ul_comp_nav">
-                    <li><i class="fa fa-tasks"></i><span><a href="#" id="tasks">Tasks</a></span></li>
-                    <li><i class="fa fa-spinner"></i><span><a href="#" id="timeline">Progress</a></span></li>
+                <ul class="ul_comp_nav">
+                    <li><i class="fa fa-tasks"></i><span><a id="tasks">Tasks</a></span></li>
+                    <li><i class="fa fa-spinner"></i><span><a id="timeline">Progress</a></span></li>
                 </ul>
             </div>
         </div>
@@ -66,47 +66,47 @@
     <script>
         var comp_nav = false;
         
-        $('#comp_nav').click(function(){
+        $('.comp_nav').click(function(){
                 if(comp_nav){
                     $('.left-menu_nav').animate({width:0}, function(){
-                        $('.left-menu_nav').css("display", "none");
+                        $('.left-menu_nav').hide();
                     });
                     $('.screen').animate({left:0});
                     comp_nav = false;
                 }
                 else{
                     $('.left-menu_nav').animate({width:200});
-                    $('.left-menu_nav').css("display", "block");
+                    $('.left-menu_nav').show();
                     $('.screen').animate({left:200});
                     comp_nav = true;
                 }
         });
         
         $('#explorer').click(function () {
-            $("#explorerc").css("display", "block");
-            $("#startc").css("display", "none");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").show();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
 
         $('#start_explorer').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "block");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
         
         $('#chat').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "none");
-            $("#chatc").css("display", "block");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").show();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
             
             setTimeout(function(){
                 $('.load').slideUp("slow");
@@ -117,66 +117,75 @@
         });
         
         $('#start_chat').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "block");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
         
         $('#browser').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "none");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "block");
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").show();
         });
         
         $('#start_browser').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "block");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
         
         $('#tasks').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "none");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "block");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#tasksc").show();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
         
         $('#start_tasks').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "block");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
         
         $('#timeline').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "none");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "block");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").show();
+            $("#browserc").hide();
         });
         
         $('#start_timeline').click(function () {
-            $("#explorerc").css("display", "none");
-            $("#startc").css("display", "block");
-            $("#chatc").css("display", "none");
-            $("#tasksc").css("display", "none");
-            $("#timelinec").css("display", "none");
-            $("#browserc").css("display", "none");
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
+        });
+        
+        $('#start_browser').click(function () {
+            $("#explorerc").hide();
+            $("#startc").show();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
         });
     </script>
 </div>

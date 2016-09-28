@@ -1,0 +1,26 @@
+[
+    {
+    "user"  : ["(hi|hello|hey|hola|howdy)(\\s|!|\\.|$)"],
+    "reply" : ["um... hi?", "hola", "not in the mood bruh, talk later?"]
+    },
+    {
+    "user"  : ["what[^ ]* up", "sup", "how are you"],
+    "reply" : ["this github thing is pretty cool, huh?", "f9, u tell."]
+    },
+    {
+    "user"  : ["l(ol)+", "(ha)+(h|$)", "lmao"],
+    "reply" : ["i am embarrassed", "haha....not!", "what's so funny?"]
+    },
+    {
+    "user"  : ["(dumb|stupid|is that all)"],
+    "reply" : ["hey i'm just a bot man, jeez!", "you can make me smarter if you'd like."]
+    },
+    {
+    "user"  : ["^no+(\\s|!|\\.|$)"],
+    "reply" : ["don't be so negative :("]
+    },
+    {
+    "user"  : ["(cya|bye|see ya|ttyl|talk to you later)"],
+    "reply" : ["alright, see you around", "good teamwork!"]
+    }    
+]

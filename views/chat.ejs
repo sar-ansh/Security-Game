@@ -97,31 +97,27 @@
     }
 </style>
 
-<div class="chat">
-    <div id="wrap">
-        <div id="nav-bar">
-            <a id="start_chat" class="win-command pull-left">
-                <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
-            </a>
-            <div class="pull-right">
-                <div id="top-info" class="pull-right">
-                    <a id="logged-user" class="win-command pull-right">
-                        <span class="win-commandicon win-commandring icon-user"></span>
-                    </a>
-                    <div class="pull-left">
-                        <h4 style="color:#fff;">John Doe</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pull-left">
-            <h2 class="header-dropdown dropdown-toggle accent-color">ChatBox</h2>
-            <div class="progress progress-indeterminate load" style="width: 120px; background-color:#ffffff;">
-                <div class="bar"></div>
-            </div>
+<div id="start_navbar">
+    <div class="pull-left">
+        <a class="win-command pull-right comp_nav">
+            <span class="win-commandicon win-commandring icon-list-2"></span>
+        </a>
+        <br>
+        <a id="start_chat" class="win-command pull-left">
+            <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+        </a>
+    </div>
+    <div class="pull-right start_name">
+        <h2>ChatBox</h2>
+        <div class="progress progress-indeterminate load" style="width: 150px; background-color:#ffffff;">
+            <div class="bar"></div>
         </div>
     </div>
-    <div id="chatbox" style="display: none; position: absolute; top: 120px; left: 50px; right: 0px; bottom: 0px; border:0px solid #ffffff;">		        
+</div>
+
+
+<div class="chat">
+    <div id="chatbox" style="position: absolute; top: 120px; left: 50px; right: 0px; bottom: 0px; border:0px solid #ffffff;">		        
         <div class="chat_box">
             <div class="chat_head"> Chat Box</div>
             <div class="chat_body">

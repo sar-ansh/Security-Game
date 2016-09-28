@@ -5772,7 +5772,7 @@ header h1 {
   display: inline;
 }
 
-#nav-bar {
+#start_navbar {
   position: relative;
   display: block;
   height: auto;
@@ -6819,7 +6819,7 @@ Back button.
   background-clip: padding-box;
 }
 
-#nav-bar .win-backbutton {
+#start_navbar .win-backbutton {
   position: absolute;
   top: 30px;
   left: 0;

@@ -1,0 +1,10 @@
+[
+    {
+    "user"  : ["(hi|hello|hey|hola|howdy)(\\s|!|\\.|$)"],
+    "reply" : ["hi there, cowboy!", "howdy!!!"]
+    },
+    {
+    "user"  : ["what[^ ]* up", "sup", "how are you"],
+    "reply" : ["i am rockin, u say.", "rain's pretty exhausting here, dude!"]
+    }
+]

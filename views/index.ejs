@@ -1,113 +1,110 @@
 <% include layouts/header %>
-    
-    <% if (user != null) { %>
-        <div id="Gamec" style="display: none;">
-            <div id="menu">
-                <nav class="main_menu_nav">
-                    <ul>
-                        <li><a id="start_game" data-title="Start">Start</a></li>
-                        <li><a id="tools_game" data-title="Settings">Settings</a></li>
-                        <li><a id="sound_game" data-title="Sound">Sound</a></li>
-                        <li><a id="quit_game" data-title="Quit?">Quit</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div id="prologue">
-                <div id="title_prologue" style="font-size: 20px; position: absolute; left: 50%; top: 50%; bottom: 50%;">Prologue</div>
-                <div class="macbook_prologue" style="display: none;">
-                    <div class="screen_prologue">
-                        <div class="viewport_prologue" style="display:none;">
-                            <div id="myProgress_prologue" style="display:none;">
-                                <div id="myBar_prologue"></div>
-                                <div id="label_prologue">0%</div>
-                            </div>
-                            <div id="console_prologue"></div>
+
+<% if (user != null) { %>
+    <div id="gamec" style="display: none;">
+        <div class="main_menu_nav">
+            <!-- Fix the main menu -->
+            <ul>
+                <li><a id="start_game" data-title="Start">Start</a></li>
+                <li><a id="tools_game" data-title="Settings">Settings</a></li>
+                <li><a id="sound_game" data-title="Sound">Sound</a></li>
+                <li><a id="quit_game" data-title="Quit?">Quit</a></li>
+            </ul>
+        </div>
+        <div id="prologue">
+            <div id="title_prologue" style="font-size: 20px; position: absolute; left: 50%; top: 50%; bottom: 50%;">Prologue</div>
+            <div class="macbook_prologue" style="display: none;">
+                <div class="screen_prologue">
+                    <div class="viewport_prologue" style="display:none;">
+                        <div id="myProgress_prologue" style="display:none;">
+                            <div id="myBar_prologue"></div>
+                            <div id="label_prologue">0%</div>
                         </div>
-                        <div id="load_prologue" style="display: none;">
-                            <div id="spn_prologue"></div> <br/>
-                            <div class="loading_prologue">Transfer in progress...</div>
-                        </div>
-                        <div id="bank_prologue" style="display: none;">
-                            Transfer completed.
-                        </div>
+                        <div id="console_prologue"></div>
                     </div>
-                    <div class="lid_prologue"></div>
-                    <div class="base_prologue"></div>
-                    <div class="notch_prologue"></div>
-                    <div id="power">
-                        <a id="power_prologue"><i class="fa fa-power-off"></i></a>
-                        <div id="led_prologue"></div>
+                    <div id="load_prologue" style="display: none;">
+                        <div id="spn_prologue"></div> <br/>
+                        <div class="loading_prologue">Transfer in progress...</div>
+                    </div>
+                    <div id="bank_prologue" style="display: none;">
+                        Transfer completed.
                     </div>
                 </div>
-            </div>
-            <div id="base" style="display: none;">
-                <script src="SecV/js/main.js"></script>
-            </div>
-        </div>
-    
-        <div id="Computerc">
-             <div id="comp"> 
-                <% include computer %>
+                <div class="lid_prologue"></div>
+                <div class="base_prologue"></div>
+                <div class="notch_prologue"></div>
+                <div id="power">
+                    <a id="power_prologue"><i class="fa fa-power-off"></i></a>
+                    <div id="led_prologue"></div>
+                </div>
             </div>
         </div>
+        <div id="base" style="display: none;">
+            <script src="SecV/js/main.js"></script>
+        </div>
+    </div>
 
-        <div id="Aboutc" style="display:none;">
-          <h3>About</h3>
-          <p>About the game.</p>
-        </div>
-    <% } %>
+    <div id="computerc">
+        <% include computer %>
+    </div>
 
-    <script>
-        $('#start_game').click(function(){
-            $("#title_prologue").css("display", "none");
-            $(".screen_prologue").css("visibility", "hidden");
-            $(".macbook_prologue").fadeIn(2000);
-        });
-                          
-        $('#power').click(function(){
-            $("#power_prologue").css("color", "white");
-            $("#led_prologue").css("background-color", "white");
-            $(".lid_prologue").css("display", "none");
-            $(".screen_prologue").css("visibility", "visible");
-            $(".screen_prologue").css("transform", "rotateX(0deg)");
-            
-            $(".viewport_prologue").fadeIn(10000);
-            setTimeout(function(){
-                $("#myProgress_prologue").fadeIn(500);    
-            }, 10000);
-            
-            setTimeout(function(){
-                var elem = document.getElementById("myBar_prologue");
-                var width = 0;
-                var id = setInterval(frame, 50);
-                function frame() {
-                    if (width >= 100) {
-                        clearInterval(id);
-                    }
-                    else {
-                        width++;
-                        elem.style.width = width + '%';
-                        document.getElementById("label_prologue").innerHTML = width * 1  + '%';
-                    }
+    <div id="aboutc" style="display:none;">
+      <h3>About</h3>
+      <p>About the game.</p>
+    </div>
+<% } %>
+
+<script>
+    $('#start_game').click(function(){
+        $("#title_prologue").css("display", "none");
+        $(".screen_prologue").css("visibility", "hidden");
+        $(".macbook_prologue").fadeIn(2000);
+    });
+
+    $('#power').click(function(){
+        $("#power_prologue").css("color", "white");
+        $("#led_prologue").css("background-color", "white");
+        $(".lid_prologue").css("display", "none");
+        $(".screen_prologue").css("visibility", "visible");
+        $(".screen_prologue").css("transform", "rotateX(0deg)");
+
+        $(".viewport_prologue").fadeIn(10000);
+        setTimeout(function(){
+            $("#myProgress_prologue").fadeIn(500);    
+        }, 10000);
+
+        setTimeout(function(){
+            var elem = document.getElementById("myBar_prologue");
+            var width = 0;
+            var id = setInterval(frame, 50);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
                 }
-            }, 12000);
-            
-            setTimeout(function(){
-                Typer.file = "js/new.txt";
-                Typer.init();
-                start = true;
-            }, 18000);
-        });
-        
-        var over_prologue = setInterval(function(){
-            if(access){
-                $("#prologue").fadeOut(5000);
-                setTimeout(function(){
-                    $("#base").fadeIn(5000);
-                }, 5000);
-                clearInterval(over_prologue);
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    document.getElementById("label_prologue").innerHTML = width * 1  + '%';
+                }
             }
-        }, 1000);
-    </script>
+        }, 12000);
+
+        setTimeout(function(){
+            Typer.file = "js/new.txt";
+            Typer.init();
+            start = true;
+        }, 18000);
+    });
+
+    var over_prologue = setInterval(function(){
+        if(access){
+            $("#prologue").fadeOut(5000);
+            setTimeout(function(){
+                $("#base").fadeIn(5000);
+            }, 5000);
+            clearInterval(over_prologue);
+        }
+    }, 1000);
+</script>
 
 <% include layouts/footer %>

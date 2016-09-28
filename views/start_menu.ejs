@@ -1,238 +1,122 @@
-<div class="start_menu">
-    <div id="wrap">
-        <div id="nav-bar">
-            <a id="comp_nav" href="#" class="win-command pull-left">
-                <span class="win-commandicon win-commandring icon-list-2"></span>
-            </a>
-            <div class="pull-right">
-                <div id="top-info" class="pull-right">
-                    <a id="settings" href="#" class="win-command pull-right">
-                        <span class="win-commandicon win-commandring icon-cog-3"></span>
-                    </a>
-                    <a id="logged-user" href="#" class="win-command pull-right">
-                        <span class="win-commandicon win-commandring icon-user"></span>
-                    </a>
-                    <div class="pull-left">
-                        <h4 style="color:#fff;">John Doe</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pull-left">
-            <h2 class="header-dropdown dropdown-toggle accent-color">Start</h2>
-        </div>
-        
-        <div class="metro panorama">
-            <div class="panorama-sections">
-                
-                <div class="panorama-section">   
-                    <div class="tile-column-span-3">
-                        <a class="tile wide imagetext wideimage bg-color-blue" href="#">
-                            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Darvasa_gas_crater_panorama.jpg/640px-Darvasa_gas_crater_panorama.jpg" alt=""/>
-                            <div class="textover-wrapper bg-color-blueDark">
-                               <div class="text2">
-                                  The Door to Hell, a burning natural gas field in Derweze, Turkmenistan
-                               </div>
-                            </div>
-                         </a>
-                         <a class="tile wide imagetext wideimage bg-color-green" id="explorer">
-                            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lady_Elliot_Island_SVII.jpg/320px-Lady_Elliot_Island_SVII.jpg" alt=""/>
-                            <div class="textover-wrapper transparent">
-                               <div class="text2">
-                                  Explorer
-                               </div>
-                            </div>
-                         </a>
-                         <a class="tile square image bg-color-red" id="chat">
-                            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Wulfenite_mexique.jpg/611px-Wulfenite_mexique.jpg" alt=""/>
-                            <div class="textover-wrapper transparent">
-                               <div class="text2">
-                                  Chat
-                               </div>
-                            </div>
-                         </a>
-                         <a class="tile square image" href="#">
-                            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/640px-Hagia_Sophia_Mars_2013.jpg" alt=""/>
-                            <div class="textover-wrapper transparent">
-                               <div class="text2">
-                                  Hagia Sophia
-                               </div>
-                            </div>
-                         </a>
-                    </div>
-                    <div class="tile-column-span-1">
-                        <a class="tile squarepeek bg-color-orange" href="#">
-                            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Anastomus_oscitans_-_Bueng_Boraphet.jpg/384px-Anastomus_oscitans_-_Bueng_Boraphet.jpg" alt=""/>
-                            <div class="text-inner">
-                                <div class="text4">
-                                    The Asian Openbill or Asian Openbill Stork (Anastomus oscitans) is a large wading bird in the stork family Ciconiidae.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="panorama-section">
-                    <div class="tile-column-span-3">
-                        <a class="tile widepeek" href="#">
-                            <div class="tile wide image">
-                                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fuso_Trial_Heading_Left.jpg/640px-Fuso_Trial_Heading_Left.jpg" alt=""/>
-                            </div>
-                            <div class="tile wide text">
-                                <div class="text-header">Fusō</div>
-                                <div class="text4">
-                                    Japanese battleship Fusō (扶桑, a classical name for Japan) was the lead ship of the two Fusō-class dreadnought battleships built for the Imperial Japanese Navy.
-                                </div>
-                            </div>
-                        </a>
+<link rel="stylesheet" type="text/css" href="metro/css/bootmetro.css">
+<link rel="stylesheet" type="text/css" href="metro/css/bootmetro-responsive.css">
+<link rel="stylesheet" type="text/css" href="metro/css/bootmetro-icons.css">
+<link rel="stylesheet" type="text/css" href="metro/css/start_menu.css">
 
-                        <a class="tile wide imagetext wideimage bg-color-green" href="#">
-                            <img src="http://upload.wikimedia.org/wikipedia/en/e/e9/Famous_Fantastic_Mysteries_August_1942_cover.jpg" alt=""/>
-                            <div class="textover-wrapper transparent">
-                                <div class="text2">
-                                    Famous Fantastic Mysteries
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+<!-- Fix the overshadowing background and metro icons appearance. -->
+<div id="start_navbar">
+    <a class="win-command pull-left comp_nav">
+        <span class="win-commandicon win-commandring icon-list-2"></span>
+    </a>
+    <div class="pull-right">
+        <a id="start_settings" class="win-command pull-right">
+            <span class="win-commandicon win-commandring icon-cog-3"></span>
+        </a>
+        <a id="start_user" class="win-command pull-right">
+            <span class="win-commandicon win-commandring icon-user"></span>
+        </a>
+        <div class="pull-left start_name">
+            <h2>John Doe</h2>
+        </div>
+    </div>
+</div>
+<div class="start_menu">
+    <div class="pull-left start_title">
+        <h2>Start</h2>
+    </div>
+
+    <div class="metro panorama">
+        <div class="panorama-sections">
+            <div class="panorama-section tile-span-4">   
+                <a class="tile wide imagetext wideimage bg-color-blue">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Darvasa_gas_crater_panorama.jpg/640px-Darvasa_gas_crater_panorama.jpg" alt=""/>
+                <div class="textover-wrapper bg-color-blueDark">
+                <div class="text2">
+                The Door to Hell, a burning natural gas field in Derweze, Turkmenistan
                 </div>
-        
-                <div class="panorama-section tile-span-3">
-                    <a class="tile app bg-color-orange" href="#">
-                        <div class="image-wrapper">
-                            <span class="icon icon-mail"></span>
-                        </div>
-                        <div class="app-label">
-                            Mail
-                        </div>
-                        <div class="app-count">
-                            12
-                        </div>
-                    </a>
-                    <a class="tile app bg-color-blue" href="#">
-                        <div class="image-wrapper">
-                            <span class="icon icon-map"></span>
-                        </div>
-                        <div class="app-label">
-                            Map
-                        </div>
-                    </a>
-                    <a class="tile wide imagetext wideimage bg-color-greenDark" href="#">
+                </div>
+                </a>
+                <a class="tile wide imagetext wideimage bg-color-green" id="explorer">
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Lady_Elliot_Island_SVII.jpg/320px-Lady_Elliot_Island_SVII.jpg" alt=""/>
+                    <div class="textover-wrapper transparent">
+                       <div class="text2">
+                          Explorer
+                       </div>
+                    </div>
+                 </a>
+                <a id="chat" class="tile square imagetext bg-color-greenDark">
                         <div class="image-wrapper">
                             <span class="icon icon-chat-2"></span>
                         </div>
                         <div class="column-text">
-                            <div class="text4">
-                                Chat with your friends
+                            <div class="text">
+                                Chat
                             </div>
-                        </div>
-                        <div class="app-label">
-                            145 friends online
                         </div>
                     </a>
-                    <a class="tile app bg-color-purple" href="#">
-                        <div class="image-wrapper">
-                            <span class="icon icon-weather"></span>
+            </div>
+            <div class="panorama-section tile-span-2">
+                <a class="tile widepeek">
+                    <div class="tile wide image">
+                        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fuso_Trial_Heading_Left.jpg/640px-Fuso_Trial_Heading_Left.jpg" alt=""/>
+                    </div>
+                    <div class="tile wide text">
+                        <div class="text-header">Fusō</div>
+                        <div class="text4">
+                            Japanese battleship Fusō (扶桑, a classical name for Japan) was the lead ship of the two Fusō-class dreadnought battleships built for the Imperial Japanese Navy.
                         </div>
-                        <div class="app-label">
-                            Weather
+                    </div>
+                </a>
+                <a class="tile wide imagetext wideimage bg-color-green">
+                        <img src="http://upload.wikimedia.org/wikipedia/en/e/e9/Famous_Fantastic_Mysteries_August_1942_cover.jpg" alt=""/>
+                        <div class="textover-wrapper transparent">
+                            <div class="text2">
+                                Famous Fantastic Mysteries
+                            </div>
                         </div>
                     </a>
-                    <a class="tile app bg-color-green" href="#">
-                        <div class="image-wrapper">
-                            <span class="icon icon-linkedin"></span>
-                        </div>
-                        <div class="app-label">
-                            LinkedIn
-                        </div>
-                    </a>
-                </div>
-        
-                <div class="panorama-section tile-span-3">
-                    <a class="tile wide imagetext bg-color-blue" href="#">
-                        <div class="image-wrapper">
-                            <span class="icon icon-music-3"></span>
-                        </div>
-                        <div class="column-text">
-                            <div class="text">
-                                Top 10
-                            </div>
-                            <div class="text">
-                                Favorites
-                            </div>
-                            <div class="text">
-                                Best choices
-                            </div>
-                        </div>
-                        <span class="app-label">
-                            MUSIC
-                        </span>
-                    </a>
-                    <a class="tile wide imagetext bg-color-blueDark" href="./base-css.html">
-                        <div class="image-wrapper">
-                            <img src="" />
-                        </div>
-                        <div class="column-text">
-                            <div class="text">
-                                Typography
-                            </div>
-                            <div class="text">
-                                Tables
-                            </div>
-                            <div class="text">
-                                Forms
-                            </div>
-                            <div class="text">
-                                Buttons
-                            </div>
-                        </div>
-                        <span class="app-label">
-                            BASE CSS
-                        </span>
-                    </a>
-                    <a class="tile app bg-color-orange" href="#">
-                        <div class="image-wrapper">
-                            <img src="" alt="" />
-                        </div>
-                        <span class="app-label">
-                            COMPONENTS
-                        </span>
-                    </a>
-                    <a class="tile app bg-color-red" href="./javascript.html">
-                        <div class="image-wrapper">
-                            <img src="" alt="" />
-                        </div>
-                        <span class="app-label">
-                            JAVASCRIPT
-                        </span>
-                    </a>
-                </div>
-
+            </div>
+            <div class="panorama-section tile-span-3">
+                <a class="tile app bg-color-blue">
+                    <div class="image-wrapper">
+                        <span class="icon icon-map"></span>
+                    </div>
+                    <div class="app-label">
+                        Map
+                    </div>
+                </a>
+                <a class="tile app bg-color-purple">
+                    <div class="image-wrapper">
+                        <span class="icon icon-weather"></span>
+                    </div>
+                    <div class="app-label">
+                        Weather
+                    </div>
+                </a>
+                <a class="tile wide bg-color-green">
+                    <div class="image-wrapper">
+                        <span class="icon icon-linkedin"></span>
+                    </div>
+                    <div class="app-label">
+                        LinkedIn
+                    </div>
+                </a>
             </div>
         </div>
-
-        <a id="panorama-scroll-prev" href="#"></a>
-        <a id="panorama-scroll-next" href="#"></a>
-        <div id="panorama-scroll-prev-bkg"></div>
-        <div id="panorama-scroll-next-bkg"></div>
     </div>
 
-    <div id="charms" class="win-ui-dark slide">
+    <a id="panorama-scroll-prev"></a>
+    <a id="panorama-scroll-next"></a>
+    <div id="panorama-scroll-prev-bkg"></div>
+    <div id="panorama-scroll-next-bkg"></div>
+
+    <div id="charms" class="slide">
         <div id="theme-charms-section" class="charms-section">
             <div class="charms-header">
-                <a class="close-charms win-backbutton"></a>
+                <a class="win-command">
+                    <span class="close-charms win-commandicon win-commandring win-backbutton"></span>
+                </a>
                 <h2>Settings</h2>
-            </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <form class="">
-                    <label for="win-theme-select">Change theme:</label>
-                        <select id="win-theme-select" class="">
-                        <option value="metro-ui-light">Light</option>
-                        <option value="metro-ui-dark">Dark</option>
-                    </select>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
@@ -246,11 +130,10 @@
 <script type="text/javascript" src="metro/js/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="metro/js/demo.js"></script>
 
-<script type="text/javascript">
+<script>
     $('.panorama').panorama({
      showscrollbuttons: true,
      keyboard: true,
      parallax: true
     });
-    $('#pivot').pivot();
 </script>

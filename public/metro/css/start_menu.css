@@ -1,0 +1,222 @@
+html,
+body {
+    background: url(../img/4.png);
+	height:100%;
+}
+
+.panorama-parallax {
+  -webkit-transition: background-position 0.4s;
+     -moz-transition: background-position 0.4s;
+       -o-transition: background-position 0.4s;
+          transition: background-position 0.4s;
+}
+
+.win-commandicon {
+    color: #FFF;
+    cursor: pointer;
+}
+
+.win-commandicon:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+#panorama-scroll-prev,
+#panorama-scroll-next {
+    border-color: #FFF;
+    color: #FFF;
+}
+
+#start_navbar {
+   height: 100px;
+   width: 100%;
+}
+
+.start_title{
+    position: relative;
+    color: #ffffff;
+    left: 40px;
+    font-size: 40px;
+}
+
+.start_name{
+    position: absolute;
+    color: #ffffff;
+    right: 120px;
+    font-size: 30px;
+}
+
+.charms-header h2{
+    font-size: 20px;
+}
+
+.comp_nav{
+    position: absolute;
+    left: 40px;
+}
+
+.left-menu_nav {
+    background: #222;
+    width: 0px;
+    position: absolute;
+    top: 0px;
+    bottom: 51px;
+    display: none;
+}
+
+.left-menu_nav  a:visited {color: #FFFFFF; text-decoration: none;}
+.left-menu_nav  a:hover {color: #21CCFC; }
+.left-menu_nav  a:focus {color: #21CCFC;}
+.left-menu_nav  a:active {color: #21CCFC; }
+
+.left-menu_nav span, a{
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.logo_nav {
+  padding: 30px 10px;
+  width: 200px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.logo_nav i {
+  font-size: 70px;
+  color: #21CCFC;
+}
+
+.accordion_nav {
+  color: #FFF;
+  width: 100%;
+}
+.accordion_nav .section {
+  width: 100%;
+}
+.accordion_nav .section input[type='radio'] {
+  display: none;
+}
+.accordion_nav .section input[type='radio']:checked + label {
+  background: #363636;
+}
+.accordion_nav .section input[type='radio']:checked + label:before {
+  content: " ";
+  position: absolute;
+  border-left: 3px solid #21CCFC;
+  height: 100%;
+  left: 0;
+}
+.accordion_nav .section input[type='radio']:checked ~ .content {
+  max-height: 300px;
+  opacity: 1;
+  z-index: 10;
+  overflow-y: auto;
+}
+.accordion_nav .section label {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: table;
+  background: #222;
+  width: 100%;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.accordion_nav .section label:before {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  border-top: 1px solid #363636;
+}
+.accordion_nav .section label:hover {
+  background: #363636;
+}
+.accordion_nav .section label span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.accordion_nav .section:last-of-type {
+  border-bottom: 1px solid #363636;
+}
+.accordion_nav .section .content {
+  max-height: 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.accordion_nav {
+  font-size: 14px;
+}
+.accordion_nav .section .content {
+  padding: 0 15px;
+}
+.accordion_nav .section input[type='radio'] {
+  display: none;
+}
+.accordion_nav .section input[type='radio']:checked ~ .content {
+  padding: 15px;
+}
+
+.ul_comp_nav {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.ul_comp_nav li {
+  padding: 10px;
+}
+.ul_comp_nav li i {
+  font-size: 13px;
+  width: 15px;
+  margin-right: 15px;
+}
+.ul_comp_nav li:hover {
+  cursor: pointer;
+}
+.ul_comp_nav li:hover i {
+  color: #21CCFC;
+}
+
+.screen {
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    bottom: 51px; 
+    right: 0px; 
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.screen::-webkit-scrollbar {
+    width: 12px;
+}
+
+.screen::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+.screen::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(105,105,105,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
