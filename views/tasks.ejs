@@ -1,214 +1,200 @@
-<style>
-    figure {
-        float: left;
-        height: 6em;
-        margin: 2em;
-        width: 10em;
-        -webkit-transform: perspective(500);
-        -webkit-transform-style: preserve-3d;
-        -webkit-transition: .5s;
-    }
-    
-    figure:hover {
-        -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
-    }
+<link rel="stylesheet" type="text/css" href="css/game.css"/>
 
-    figure img {
-        background-color: #222;
-        box-shadow: 0 20px 15px -10px hsla(0,0%,0%,.25);
-        display: block;
-        height: 100%;
-        -webkit-transition: .5s;
-        cursor: pointer;
-    }
-    
-    figure p{
-        cursor: pointer;
-    }
-
-    figcaption {
-        background-color: #222;
-        color: #fff;
-        padding: 1em;
-        -webkit-transform: rotateX(-90deg);
-        -webkit-transform-origin: 100% 0;
-        -webkit-transition: .5s;
-    }
-    
-</style>
-
-<div class="tasks">
-    <div id="wrap">
-        <div id="start_navbar">
+<div id="tasks_menu">
+    <div id="start_navbar">
+        <div class="pull-left">
+            <a class="win-command pull-right comp_nav">
+                <span class="win-commandicon win-commandring icon-list-2"></span>
+            </a>
+            <br>
             <a class="win-command pull-left goto_start">
                 <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
             </a>
         </div>
+        <div class="pull-right start_name">
+            <h2>Tasks</h2>
+        </div>
     </div>
-    <div id="chatbox" style="background-color: #ffffff; position: absolute; top: 80px; left: 0px; right: 0px; bottom: 0px; border:0px solid #ffffff; overflow-y: scroll;">
-        
-        <a href="#">
-            <figure>
-                <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-                <figcaption>
-                    <h3>Chapter 1</h3>
-                    <p>Task 1</p>
-                </figcaption>
-            </figure>
-        </a>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.1</h2>
+            <div class="taskbox_caption">
+                <h3>Chapter 1</h3>
+                <p>Task 1</p>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.2</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 2</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.3</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 3</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.4</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 4.</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.5</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 5</p>
-            </figcaption>
-        </figure>
-        
-                <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.6</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 6</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.7</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 7</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.8</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 8</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>  
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.9</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 9.</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>1.10</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 1</h3>
                 <p>Task 10</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>2.1</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 1</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>    
+    <a href="#">
+        <div class="taskbox">
+            <h2>2.2</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 2</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>2.3</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 3</p>
-            </figcaption>
-        </figure>
-
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>2.4</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 4</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>2.5</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 5</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+           <h2>2.6</h2>
+            <div class="taskbox_caption">
                 <h3>Chapter 2</h3>
                 <p>Task 6</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
-                <h3>Chapter 2</h3>
-                <p>Task 7</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
-                <h3>Chapter 2</h3>
-                <p>Task 8</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
-                <h3>Chapter 2</h3>
-                <p>Task 9</p>
-            </figcaption>
-        </figure>
-        
-        <figure>
-            <img src="http://lorempixel.com/192/96/sports/4" alt="Portfolio Item">
-            <figcaption>
-                <h3>Chapter 2</h3>
-                <p>Task 10</p>
-            </figcaption>
-        </figure>
-    </div>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>3.1</h2>
+            <div class="taskbox_caption">
+                <h3>Chapter 3</h3>
+                <p>Task 1</p>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>3.2</h2>
+            <div class="taskbox_caption">
+                <h3>Chapter 3</h3>
+                <p>Task 1</p>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>3.3</h2>
+            <div class="taskbox_caption">
+                <h3>Chapter 3</h3>
+                <p>Task 3</p>
+            </div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="taskbox">
+            <h2>3.4</h2>
+            <div class="taskbox_caption">
+                <h3>Chapter 4</h3>
+                <p>Task 4</p>
+            </div>
+        </div>
+    </a>
 </div>
 
 <script>    
