@@ -10,9 +10,9 @@
             <li><a id="mail-home" href="#"><i class="fa fa-home"></i> Home</a></li>
             <li><a id="mail-contacts" href="#"><i class="fa fa-phone"></i> Contacts</a></li>
             <li><a id="mail-compose" href="#"><i class="fa fa-plus"></i>Compose</a></li>
+            <li><a id="mail-sent" href="#"><i class="fa fa-envelope"></i> Sent Mail</a></li>
             <li><a id="mail-unread" href="#"><i class="fa fa-exclamation"></i> Unread</a></li>
             <li><a id="mail-inbox" href="#"><i class="fa fa-inbox"></i> Inbox</a></li>
-            <li><a id="mail-sent" href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a></li>
             <li><a id="mail-spam" href="#"><i class="fa fa-flag"></i> Spam</a></li>
             <hr>
         </ul>
@@ -23,9 +23,9 @@
             <h1 id="mail-homet" style="display:none;">: Home</h1>
             <h1 id="mail-contactst" style="display:none;">: Contacts</h1>
             <h1 id="mail-composet" style="display:none;">: Compose</h1>
+            <h1 id="mail-sentt" style="display:none;">: Sent Mail</h1>
             <h1 id="mail-unreadt" style="display:none;">: Unread</h1>
             <h1 id="mail-inboxt" style="display:none;">: Inbox</h1>
-            <h1 id="mail-sentt" style="display:none;">: Sent Mail</h1>
             <h1 id="mail-spamt" style="display:none;">: Spam</h1>
         </div>
         <div id="mail-landingc" class="inbox-body">
@@ -33,14 +33,17 @@
             <hr>
             <p>Instruction set...</p>
         </div>
+        
         <div id="mail-homec" class="inbox-body" style="display:none;">
             <p>Instruction set...</p>
         </div>
+        
         <div id="mail-contactsc" class="inbox-body" style="display:none;">
             <h4>Contacts List</h4>
             <hr>
             <p>Email list...</p>
         </div>
+        
         <div id="mail-composec" class="inbox-body" style="display:none;">
             <div>
                 <label for="compose_email">Email:</label>
@@ -58,6 +61,17 @@
                 <button type="submit" class="btn btn-default mail_button">Submit</button>
             </div>
         </div>
+        
+        <div id="mail-sentc" class="inbox-body" style="display:none;">
+            <table class="table table-inbox table-hover">
+                <tr class="mail_message_heading">
+                    <th>To</th>
+                    <th>Subject</th>
+                    <th>Time</th>
+                </tr>
+            </table>
+        </div>
+        
         <div id="mail-unreadc" class="inbox-body" style="display:none;">
             <table class="table table-inbox table-hover">
                 <tbody>
@@ -65,18 +79,6 @@
                         <th>From</th>
                         <th>Subject</th>
                         <th>Time</th>
-                    </tr>
-                    <tr class="mail_message">
-                        <td class="mail_message_from">John Williams</td>
-                        <td class="mail_message_subject">Stop wasting your time</td>
-                        <td class="mail_message_body">Unread Message 1</td>
-                        <td class="mail_message_time">May 23</td>
-                    </tr>
-                    <tr class="mail_message">
-                        <td class="mail_message_from">Martin Garrix</td>
-                        <td class="mail_message_subject">Free passes</td>
-                        <td class="mail_message_body">Unread Message 2</td>
-                        <td class="mail_message_time">March 14</td>
                     </tr>
                 </tbody>
             </table>
@@ -90,30 +92,6 @@
                         <th>Subject</th>
                         <th>Time</th>
                     </tr>
-                    <tr class="mail_message">
-                        <td class="mail_message_from">Hans Zimmer</td>
-                        <td class="mail_message_subject">Music is awesome!!!</td>
-                        <td class="mail_message_body">Unread Message 3</td>
-                        <td class="mail_message_time">June 03</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div id="mail-sentc" class="inbox-body" style="display:none;">
-            <table class="table table-inbox table-hover">
-                <tbody>
-                    <tr class="mail_message_heading">
-                        <th>From</th>
-                        <th>Subject</th>
-                        <th>Time</th>
-                    </tr>
-                    <tr class="mail_message">
-                        <td class="mail_message_from">Ramin Djawadi</td>
-                        <td class="mail_message_subject">Rains of Castamere</td>
-                        <td class="mail_message_body">Unread Message 4</td>
-                        <td class="mail_message_time">May 4</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -126,146 +104,10 @@
                         <th>Subject</th>
                         <th>Time</th>
                     </tr>
-                    <tr class="mail_message">
-                        <td class="mail_message_from">Stromae</td>
-                        <td class="mail_message_subject">New Album released</td>
-                        <td class="mail_message_body">Unread Message 5</td>
-                        <td class="mail_message_time">April 12</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </aside>
 </div>
 
-<script>
-    $('.mail_message').click(function() {
-        swal("It says", $(this).find('.mail_message_body').text());
-    });
-    
-    $('#mail-home').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').show();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').hide();
-        $('#mail-homet').show();
-        $('#mail-contactst').hide();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').hide();
-    });
-
-    $('#mail-contacts').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').show();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').hide();
-        $('#mail-homet').hide();
-        $('#mail-contactst').show();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').hide();
-    });
-    
-    $('#mail-compose').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').show();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').hide();
-        $('#mail-homet').hide();
-        $('#mail-contactst').hide();
-        $('#mail-composet').show();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').hide();
-    });
-    
-    $('#mail-unread').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').show();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').hide();
-        $('#mail-homet').hide();
-        $('#mail-contactst').hide();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').show();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').hide();
-    });
-
-    $('#mail-inbox').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').show();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').hide();
-        $('#mail-homet').hide();
-        $('#mail-contactst').hide();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').show();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').hide();
-    });
-
-    $('#mail-sent').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').show();
-        $('#mail-spamc').hide();
-        $('#mail-homet').hide();
-        $('#mail-contactst').hide();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').show();
-        $('#mail-spamt').hide();
-    });
-
-    $('#mail-spam').click(function(){
-        $('#mail-landingc').hide();
-        $('#mail-homec').hide();
-        $('#mail-contactsc').hide();
-        $('#mail-composec').hide();
-        $('#mail-unreadc').hide();
-        $('#mail-inboxc').hide();
-        $('#mail-sentc').hide();
-        $('#mail-spamc').show();
-        $('#mail-homet').hide();
-        $('#mail-contactst').hide();
-        $('#mail-composet').hide();
-        $('#mail-unreadt').hide();
-        $('#mail-inboxt').hide();
-        $('#mail-sentt').hide();
-        $('#mail-spamt').show();
-    });
-</script>
+<script type="text/javascript" src="js/mail.js"></script>

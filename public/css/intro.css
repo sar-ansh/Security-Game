@@ -477,7 +477,7 @@
    transform: rotateX(0deg) translateY(0) translateZ(0);
 }
 
-#base{
+#gameplay{
     position: absolute; 
     top: 100px; 
     left: 50px; 

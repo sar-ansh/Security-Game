@@ -64,10 +64,7 @@ body {
     display: none;
 }
 
-.left-menu_nav  a:visited {color: #FFFFFF; text-decoration: none;}
-.left-menu_nav  a:hover {color: #21CCFC; }
-.left-menu_nav  a:focus {color: #21CCFC;}
-.left-menu_nav  a:active {color: #21CCFC; }
+.left-menu_nav  a:hover {color: #21CCFC;}
 
 .left-menu_nav span, a{
     color: #FFFFFF;

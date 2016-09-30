@@ -1,0 +1,27 @@
+[
+    {
+    "file_name"  : ["File 1"],
+    "file_content" : ["<p style='font-weight: bold;'>Paragraph 1</p>"],
+    "file_dir" : ["old"]
+    },
+    {
+    "file_name"  : ["File 2"],
+    "file_content" : ["<p>Paragraph 2</p>"],
+    "file_dir" : ["old"]
+    },
+    {
+    "file_name"  : ["File 3"],
+    "file_content" : ["<p style='color: red;'>Paragraph 3</p><p>This data is getting imported directly from json files with all the html properties intact.</p>"],
+    "file_dir" : ["new"]
+    },
+    {
+    "file_name"  : ["File 4"],
+    "file_content" : ["<p>Paragraph 4</p>"],
+    "file_dir" : ["new"]
+    },
+    {
+    "file_name"  : ["File 5"],
+    "file_content" : ["<p style='color: blue;'>Paragraph 5</p>"],
+    "file_dir" : ["new"]
+    }
+]

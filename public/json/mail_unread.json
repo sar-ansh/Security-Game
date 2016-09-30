@@ -1,0 +1,14 @@
+[
+    {
+    "unread_from"  : ["John Williams"],
+    "unread_subject" : ["Stop wasting your time"],
+    "unread_body" : ["<p>Listen to Harry Potter Soundtrack<p><span class=\"mail_message_link\" mail_message_url=\"www.gabber.game\">Hello </span>"],
+    "unread_time" : ["December 2"]
+    },
+    {
+    "unread_from"  : ["Martin Garrix"],
+    "unread_subject" : ["Free passes"],
+    "unread_body" : ["You want them?"],
+    "unread_time" : ["December 21"]
+    }
+]

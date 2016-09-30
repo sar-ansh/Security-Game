@@ -63,6 +63,14 @@
         <% include browser %>
     </div>
     
+    <div id="historyc" style="display:none;">
+        <% include history %>
+    </div>
+    
+    <div id="downloadsc" style="display:none;">
+        <% include downloads %>
+    </div>
+    
     <script>
         var comp_nav = false;
         
@@ -89,17 +97,10 @@
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
         });
 
-        $('#start_explorer').click(function () {
-            $("#explorerc").hide();
-            $("#startc").show();
-            $("#chatc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-        });
-        
         $('#chat').click(function () {
             $("#explorerc").hide();
             $("#startc").hide();
@@ -107,6 +108,8 @@
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
             
             setTimeout(function(){
                 $('.load').slideUp("slow");
@@ -116,15 +119,6 @@
             }, 5000);
         });
         
-        $('#start_chat').click(function () {
-            $("#explorerc").hide();
-            $("#startc").show();
-            $("#chatc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-        });
-        
         $('#browser').click(function () {
             $("#explorerc").hide();
             $("#startc").hide();
@@ -132,15 +126,30 @@
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").show();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
         });
         
-        $('#start_browser').click(function () {
+        $('#history').click(function () {
             $("#explorerc").hide();
-            $("#startc").show();
+            $("#startc").hide();
             $("#chatc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
+            $("#historyc").show();
+            $("#downloadsc").hide();
+        });
+        
+        $('#downloads').click(function () {
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").show();
         });
         
         $('#tasks').click(function () {
@@ -150,15 +159,8 @@
             $("#tasksc").show();
             $("#timelinec").hide();
             $("#browserc").hide();
-        });
-        
-        $('#start_tasks').click(function () {
-            $("#explorerc").hide();
-            $("#startc").show();
-            $("#chatc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
         });
         
         $('#timeline').click(function () {
@@ -168,24 +170,19 @@
             $("#tasksc").hide();
             $("#timelinec").show();
             $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
         });
         
-        $('#start_timeline').click(function () {
+        $('.goto_start').click(function () {
             $("#explorerc").hide();
             $("#startc").show();
             $("#chatc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
-        });
-        
-        $('#start_browser').click(function () {
-            $("#explorerc").hide();
-            $("#startc").show();
-            $("#chatc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
         });
     </script>
 </div>

@@ -200,6 +200,19 @@ ul {
     font-weight: bold;
 }
 
+.mail_message_link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mail_message_link:hover {
+    color: #21CCFC;
+}
+
+.mail_message_file:after {
+    content: "\F0C6";
+    font-family: FontAwesome;
+}
 
 /* Fix this unwanted textbox error*/
 .sweet-alert fieldset input[type="text"] {
