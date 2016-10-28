@@ -1,0 +1,67 @@
+#molebuster{    
+    position: absolute;
+    height: 99%;
+    width: 100%;
+}
+
+#title_mb{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    font-size: 20px;
+    font-weight: bold;    
+    text-decoration: underline;
+}
+
+#instructions_mb{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    height: 60%;
+    width: 20%;
+    background-color: aqua;
+}
+
+#table_mb{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+
+#table_mb td{
+    padding: 10px;
+    text-align: center;
+}
+
+#message_mb{
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    height: 8%;
+    width: 30%;
+}
+
+#time_mb{
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    height: 8%;
+    width: 30%;
+}
+
+#score_mb{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    height: 8%;
+    width: 30%;
+}
+
+#startstop_mb{
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    height: 8%;
+    width: 30%;
+    border-radius: 10px;
+}

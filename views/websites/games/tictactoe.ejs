@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="css/tictactoe.css">
+
+<div id="tictactoe">
+    <!-- Modify the variable b, c, e and t in tictactoe.js -->
+    <button type="button" class="to_randomgame"><i class="fa fa-backward"></i> Play another game</button>
+    <div id="title_ttt">Tic-Tac-Toe</div>
+    <div id="instructions_ttt">
+        Test your skill. How many boxes can you check in 30 seconds?
+    </div>
+    <table id="table_ttt">
+        <tr>
+            <td><a onclick="yourChoice_ttt('A')"><img name="A"></a></td>
+            <td><a onclick="yourChoice_ttt('B')"><img name="B"></a></td>
+            <td><a onclick="yourChoice_ttt('C')"><img name="C"></a></td>
+        </tr>
+        <tr>
+            <td><a onclick="yourChoice_ttt('D')"><img name="D"></a></td>
+            <td><a onclick="yourChoice_ttt('E')"><img name="E"></a></td>
+            <td><a onclick="yourChoice_ttt('F')"><img name="F"></a></td>
+        </tr>
+        <tr>
+            <td><a onclick="yourChoice_ttt('G')"><img name="G"></a></td>
+            <td><a onclick="yourChoice_ttt('H')"><img name="H"></a></td>
+            <td><a onclick="yourChoice_ttt('I')"><img name="I"></a></td>
+        </tr>
+    </table>
+    <input id="won_ttt" name="you" placeholder="Won">
+    <input id="lost_ttt" name="computer" placeholder="Lost">
+    <input id="drawn_ttt" name="ties" placeholder="Drawn">
+    <button type="button" id="newgame_ttt" onclick="playAgain_ttt();">New Game</button>
+</div>
+
+<script type="text/javascript" src="js/websites/games/tictactoe.js"></script>

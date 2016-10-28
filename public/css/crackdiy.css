@@ -1,0 +1,205 @@
+#crackdiy{
+    background: #ffa500;
+    position: absolute;
+    height: 99%;
+    width: 100%;
+}
+
+#crackdiy_header{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top: 0%;
+    height: 15%;
+    background: #3d6f84;
+    padding: 2%;
+}
+
+#crackdiy_logo{
+    transform:scale(0.5, 0.2);
+}
+
+#crackdiy_logo .tri{
+  position:relative;
+  float:left;
+  width: 0; 
+  height: 0; 
+  border-bottom: 120px solid #00a2e4; 
+  border-left: 60px solid transparent; 
+  border-right: 60px solid transparent; 
+  opacity:0.8;
+}
+
+#crackdiy_logo .tri1{
+  top:-35px;
+  left:45px;
+  border-bottom: 170px solid #00a2e4; 
+  border-left: 40px solid transparent; 
+  border-right: 150px solid transparent; 
+  transform:rotate(-45deg);
+}
+
+#crackdiy_logo .tri2{
+  top:31px;
+  left:-50px;
+  transform:rotate(-60deg);
+}
+
+#crackdiy_logo .tri3{
+  top:90px;
+  left:-180px;
+  transform:rotate(100deg);
+}
+
+#crackdiy_logo .tri4{
+  border-bottom: 500px solid #00a2e4; 
+  border-left: 60px solid transparent; 
+  border-right: 60px solid transparent; 
+  top:-60px;
+  left:-115px;
+  transform:rotate(100deg);
+}
+
+#crackdiy_nav{
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#crackdiy_main{
+    position: absolute;
+    left: 3%;
+    width: 94%;
+    top: 15%;
+    height: 85%;
+    background: #B0E0E6;
+    font-size: 16px;
+    padding: 1%;
+}
+
+#crackdiy_download{
+    position: absolute;
+    left: 90%;
+    top: 20%;
+    opacity: 0.7;
+}
+
+#crackdiy_download:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+#crackdiy_main a {
+  text-decoration: none;
+}
+
+#crackdiy_green {
+    position: absolute;
+    left: 1%; 
+    top: 1%;
+    width: 25%;
+    height: 20%;
+    background: #00AE68;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    padding: 2%;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 1s ;
+}
+
+#crackdiy_green span{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    font-size: 12px;
+}
+
+
+#crackdiy_purple {
+    position: absolute;
+    left: 28%;
+    top: 1%;
+    width: 25%;
+    height: 20%;
+    background: #A74982;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    padding: 2%;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+#crackdiy_purple span{
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    font-size: 12px;
+}
+
+#crackdiy_green:hover {
+  background: #21825B;
+}
+
+#crackdiy_purple:hover {
+  background: #6D184B;
+}
+
+#crackdiy_info{
+    position: absolute;
+    left: 60%;
+    text-align: center;
+}
+
+#crackdiy_ad2{
+    position: absolute;
+    left: 1%;
+    top: 40%;
+}
+
+#crackdiy_ad3{
+    position: absolute;
+    left: 1%;
+    top: 90%;
+}
+
+#crackdiy_ad4 p{
+    position: absolute;
+    left: 80%;
+    top: 35%;
+}
+
+#crackdiy_red {
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    background: #ff0000;
+    width: 120px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    border-radius: 50px;
+    transition: all 0.2s ;
+    opacity: 0.5;
+}
+
+#crackdiy_red:hover {
+  opacity: 1;
+}
+
+#crackdiy_ad5{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+}
+
+#crackdiy_message{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}

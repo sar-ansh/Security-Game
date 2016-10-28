@@ -1,4 +1,4 @@
-$.getJSON('../json/downloads_file.json', function(json_data){
+$.getJSON('../../json/downloads_file.json', function(json_data){
     var downloads_file = json_data;
     
     for(var i=0; i<downloads_file.length; i++){

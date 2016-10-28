@@ -38,37 +38,41 @@
     </div>
 </div>
 <div class="screen">
-    
+        
     <div id="startc">
         <% include start_menu %>
     </div>
         
     <div id="explorerc" style="display:none;">
-        <% include explorer %>
+        <% include apps/explorer %>
     </div>
     
     <div id="chatc" style="display:none;">
-        <% include chat %>
+        <% include apps/chat %>
+    </div>
+    
+    <div id="looknmeetc" style="display:none;">
+        <% include apps/looknmeet %>
     </div>
     
     <div id="tasksc" style="display:none;">
-        <% include tasks %>
+        <% include nav/tasks %>
     </div>
     
     <div id="timelinec" style="display:none;">
-        <% include timeline %>
+        <% include nav/timeline %>
     </div>
     
     <div id="browserc" style="display:none;">
-        <% include browser %>
+        <% include nav/browser %>
     </div>
     
     <div id="historyc" style="display:none;">
-        <% include history %>
+        <% include nav/history %>
     </div>
     
     <div id="downloadsc" style="display:none;">
-        <% include downloads %>
+        <% include nav/downloads %>
     </div>
     
     <script>
@@ -94,6 +98,7 @@
             $("#explorerc").show();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
@@ -105,6 +110,7 @@
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").show();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
@@ -119,10 +125,23 @@
             }, 5000);
         });
         
+        $('#looknmeet').click(function () {
+            $("#explorerc").hide();
+            $("#startc").hide();
+            $("#chatc").hide();
+            $("#looknmeetc").show();
+            $("#tasksc").hide();
+            $("#timelinec").hide();
+            $("#browserc").hide();
+            $("#historyc").hide();
+            $("#downloadsc").hide();
+        });
+        
         $('#browser').click(function () {
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").show();
@@ -134,6 +153,7 @@
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
@@ -145,6 +165,7 @@
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();
@@ -156,6 +177,7 @@
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").show();
             $("#timelinec").hide();
             $("#browserc").hide();
@@ -167,6 +189,7 @@
             $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").show();
             $("#browserc").hide();
@@ -178,6 +201,7 @@
             $("#explorerc").hide();
             $("#startc").show();
             $("#chatc").hide();
+            $("#looknmeetc").hide();
             $("#tasksc").hide();
             $("#timelinec").hide();
             $("#browserc").hide();

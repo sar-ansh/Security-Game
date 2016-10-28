@@ -1,4 +1,6 @@
-$.getJSON('../json/mail_sent.json', function(json_data){
+var file$2_2 = 0;
+
+$.getJSON('../../json/mail_sent.json', function(json_data){
     var mail_sent = json_data;
     for(var i=0; i<mail_sent.length; i++){
         $("#mail-sentc tr:first").after("<tr class=\"message_sent\"><td class=\"mail_message_to\">" + mail_sent[i].sent_to + "</td><td class=\"mail_message_subject\">" + mail_sent[i].sent_subject + "</td><td class=\"mail_message_body\">" + mail_sent[i].sent_body + "</td><td class=\"mail_message_time\">" + mail_sent[i].sent_time + "</td></tr>");
@@ -23,7 +25,7 @@ $.getJSON('../json/mail_sent.json', function(json_data){
      });
 });
 
-$.getJSON('../json/mail_unread.json', function(json_data){
+$.getJSON('../../json/mail_unread.json', function(json_data){
     var mail_unread = json_data;
     for(var i=0; i<mail_unread.length; i++){
         $("#mail-unreadc tr:first").after("<tr class=\"message_unread\"><td class=\"mail_message_from\">" + mail_unread[i].unread_from + "</td><td class=\"mail_message_subject\">" + mail_unread[i].unread_subject + "</td><td class=\"mail_message_body\">" + mail_unread[i].unread_body + "</td><td class=\"mail_message_time\">" + mail_unread[i].unread_time + "</td></tr>");
@@ -37,18 +39,32 @@ $.getJSON('../json/mail_unread.json', function(json_data){
         });
 
         $('.mail_message_link').click(function() {
-            if($(this).hasClass('mail_message_file'))
+            if($(this).hasClass('mail_message_file')){
+                $('#downloads').effect('highlight', 3000);
                 $.notify("Download completed.", "success");
+                if(file$2_2==1)
+                    check2_2($(this).text());
+            }
             else{
                 swal.close();
-                $('#browser-url').val($(this).attr('mail_message_url'));
-                urltosite();
+                if($(this).attr('mail_message_url') == "www.musicfiles.game"){
+                    if(task$3_4 == 1){
+                        $('#browser-url').val($(this).attr('mail_message_url'));
+                        urltosite();
+                    }
+                    else
+                        $.notify("Unfortunately, you aren't allowed to visit this website now. You need to initiate the task 3.4 for this.", "error");
+                }
+                else{
+                    $('#browser-url').val($(this).attr('mail_message_url'));
+                    urltosite();
+                }
             }
         });
      });
 });
 
-$.getJSON('../json/mail_inbox.json', function(json_data){
+$.getJSON('../../json/mail_inbox.json', function(json_data){
     var mail_inbox = json_data;
     for(var i=0; i<mail_inbox.length; i++){
         $("#mail-inboxc tr:first").after("<tr class=\"message_inbox\"><td class=\"mail_message_from\">" + mail_inbox[i].inbox_from + "</td><td class=\"mail_message_subject\">" + mail_inbox[i].inbox_subject + "</td><td class=\"mail_message_body\">" + mail_inbox[i].inbox_body + "</td><td class=\"mail_message_time\">" + mail_inbox[i].inbox_time + "</td></tr>");
@@ -62,8 +78,10 @@ $.getJSON('../json/mail_inbox.json', function(json_data){
         });
 
         $('.mail_message_link').click(function() {
-            if($(this).hasClass('mail_message_file'))
+            if($(this).hasClass('mail_message_file')){
+                $('#downloads').effect('highlight', 3000);
                 $.notify("Download completed.", "success");
+            }
             else{
                 swal.close();
                 $('#browser-url').val($(this).attr('mail_message_url'));
@@ -73,7 +91,7 @@ $.getJSON('../json/mail_inbox.json', function(json_data){
      });
 });
 
-$.getJSON('../json/mail_spam.json', function(json_data){
+$.getJSON('../../json/mail_spam.json', function(json_data){
     var mail_spam = json_data;
     for(var i=0; i<mail_spam.length; i++){
         $("#mail-spamc tr:first").after("<tr class=\"message_spam\"><td class=\"mail_message_from\">" + mail_spam[i].spam_from + "</td><td class=\"mail_message_subject\">" + mail_spam[i].spam_subject + "</td><td class=\"mail_message_body\">" + mail_spam[i].spam_body + "</td><td class=\"mail_message_time\">" + mail_spam[i].spam_time + "</td></tr>");

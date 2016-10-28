@@ -1,3 +1,17 @@
+.fa{
+    cursor: pointer;
+}
+
+/* Fix this unwanted textbox error*/
+.sweet-alert fieldset input[type="text"] {
+    display: none;
+}
+
+.sweet-alert {
+    max-height : 60% !important;
+    overflow-y : auto !important;
+}
+
 .navbar a{
     cursor: pointer;
 }
@@ -477,11 +491,109 @@
    transform: rotateX(0deg) translateY(0) translateZ(0);
 }
 
-#gameplay{
+#base{
     position: absolute; 
     top: 100px; 
     left: 50px; 
     right: 50px;
     bottom: 100px; 
     border:1px solid #000000;
+}
+
+.convo_button {
+    position: absolute;
+    right: 0%;
+    overflow: hidden;
+    width: 20%;
+    height: 50%;
+    border: 2px solid rgba(0,0,0,0.8);
+    border-radius: 4px;
+    padding: 2px;
+    background: -webkit-linear-gradient(top, rgba(144,144,144,0.8), rgba(111,111,111,0.8));
+    box-shadow: inset 0 0 2px #FFF, 0 0 3px #000;
+    text-align: center;
+    cursor: default;
+}
+    
+#convo_prev{
+    top: 0%;
+}
+    
+#convo_next{
+    top: 50%;
+}
+
+#convo_prev .convo_button_icon{
+    float: left;
+}
+    
+#convo_next .convo_button_icon{
+    float: right;
+}
+  
+.convo_button_icon {
+    width: 30%;
+    height: 100%;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 150%;
+    font-size: 20px;
+    font-family: Times New Roman;
+    cursor: pointer;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(top, rgba(44,44,44,0.8), rgba(11,11,11,0.8));
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    color: rgba(231,255,245,0.91);
+    box-shadow: inset 1px -1px 0 rgba(0,0,0,0.4);
+}
+
+.convo_button_icon:hover {
+    background: linear-gradient(top, rgba(11,11,11,0.8), rgba(44,44,44,0.8));
+}
+
+.convo_button span.convo_button_text {
+    font-size: 20px;
+    line-height: 150%;
+    font-family: Arial Narrow, sans-serif;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+
+.convo_button_prev {
+    transition: width 0.3s ease;
+}
+
+.convo_button_prev:hover {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.convo_button_next {
+    font-size: 18px;
+    transition: width 0.3s ease;
+}
+
+.convo_button_next:hover {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+#about_game{
+    background: radial-gradient(#d3d3d3 50%, #aaa) fixed;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+}
+
+#about_game h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+#about_game p{
+    font-size: 20px;
+    text-align: center;
 }

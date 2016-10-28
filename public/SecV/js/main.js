@@ -1,6 +1,6 @@
 var Game = SecV || {};
 
-SecV.game = new Phaser.Game(1280, 720, Phaser.AUTO, 'gameplay');
+SecV.game = new Phaser.Game(1280, 720, Phaser.AUTO, 'base');
 
 SecV.game.state.add('Boot', SecV.Boot);
 SecV.game.state.add('Preload', SecV.Preload);

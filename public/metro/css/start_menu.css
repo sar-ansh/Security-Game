@@ -4,6 +4,11 @@ body {
 	height:100%;
 }
 
+.tile_center{
+    position: absolute;
+    left: 40%;
+}
+
 .panorama-parallax {
   -webkit-transition: background-position 0.4s;
      -moz-transition: background-position 0.4s;

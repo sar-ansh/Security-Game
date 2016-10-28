@@ -1,6 +1,3 @@
-//
-// Namespace - Module Pattern.
-//
 var JQD = (function($, window, document, undefined) {
   // Expose innards of JQD.
   return {
@@ -130,21 +127,13 @@ var JQD = (function($, window, document, undefined) {
         });
 
         // Make top menus active.
-        d.on('mousedown', 'a.menu_trigger', function() {
+        d.on('mouseover', 'a.menu_trigger', function() {
           if ($(this).next('ul.menu').is(':hidden')) {
             JQD.util.clear_active();
             $(this).addClass('active').next('ul.menu').show();
           }
           else {
             JQD.util.clear_active();
-          }
-        });
-
-        // Transfer focus, if already open.
-        d.on('mouseenter', 'a.menu_trigger', function() {
-          if ($('ul.menu').is(':visible')) {
-            JQD.util.clear_active();
-            $(this).addClass('active').next('ul.menu').show();
           }
         });
 
@@ -265,11 +254,6 @@ var JQD = (function($, window, document, undefined) {
           }
         });
 
-        $('table.data').each(function() {
-          // Add zebra striping, ala Mac OS X.
-          $(this).find('tbody tr:odd').addClass('zebra');
-        });
-
         d.on('mousedown', 'table.data tr', function() {
           // Clear active state.
           JQD.util.clear_active();
@@ -277,11 +261,19 @@ var JQD = (function($, window, document, undefined) {
           // Highlight row, ala Mac OS X.
           $(this).closest('tr').addClass('active');
         });
+          
+        d.on('dblclick', 'table.data tr', function() {
+          swal({
+              title: "Sweet!",
+              text: "Here's a custom image.",
+              imageUrl: "../../assets/images/map.png"
+            });
+        });
       },
       wallpaper: function() {
         // Add wallpaper last, to prevent blocking.
         if ($('#desktop').length) {
-          $('.explorer').prepend('<img id="wallpaper" class="abs" src="css/images/misc/wallpaper.jpg" />');
+          $('#explorer_app').prepend('<img id="wallpaper" class="abs" src="css/images/misc/wallpaper.jpg" />');
         }
       }
     },

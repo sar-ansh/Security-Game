@@ -1,0 +1,245 @@
+#bank_header {
+    position: absolute;
+    top: 0%;
+    height: 8%;
+    left: 0%;
+    width: 100%;
+    background-color: #5428A1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1%;
+    color: azure;
+}
+
+#bank_nav {
+    position: absolute;
+    top: 8%;
+    height: 8%;
+    left: 0%;
+    width: 100%;
+    background-color: #764AC3;	
+}
+
+#bank_nav ul li {
+    list-style: none;
+    overflow: none;
+	float : left;
+	transition: 0.7s;
+}
+
+#bank_nav ul li:hover {
+	background-color: #986CE5;
+	transition: 0.7s; 
+}
+
+#bank_nav ul li a {
+	display: inline-block;
+    padding: 0.8em;
+	text-decoration: none;
+	color: azure;
+}
+
+#bank_main {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    top: 16%;
+    height: 79%;
+    max-height: 79%; 
+	background-color: #5428A1;
+    padding: 1%;
+    color: azure;
+}
+
+.bank_content{
+    background: #764AC3;
+    height: 100%;
+    padding: 1%;
+    overflow-y: auto;
+}
+
+.bank_content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.bank_content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+.bank_content::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: 5428A1; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.bank_content h1{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#bank_accountsc select{
+    position: absolute;
+    top: 30%;
+    height: 8%;
+    left: 10%;
+    width: 80%;
+    cursor: pointer;
+}
+
+#bank_accountsc table{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 80%;
+    background: #012B39;
+    border-radius: 0.5em;
+}
+
+#bank_accountsc th{
+    border-bottom: 1px solid #364043;
+    color: #E2B842;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+#bank_accountsc td{
+    color: #fff;
+    text-align: center;
+    padding: 0.65em 1em;
+}
+
+#bank_footer {
+    position: absolute;
+    top: 94%;
+    height: 5%;
+    left: 0%;
+    width: 100%;
+    background: #764AC3;
+    text-align: center;
+    padding: 5px;
+    color: azure;
+}
+
+#account_select {
+    position: absolute;
+    padding: 0.5%;
+    margin: 0.5%;
+    left: 10%;
+    width: 80%;
+    cursor: pointer;
+    border-left: 4px solid #E2B842;
+    background: #012B39;
+    color: #E2B842;
+    font-weight: bold;
+    transition: all 0.15s linear;
+}
+
+#account_select:hover {
+    background-color: #5428A1; 
+}
+
+#account_select.open {
+  background-color: #5428A1; 
+  color: #986CE5;
+  border-left-color: #986CE5;
+}
+
+#account_select #account_select1 { 
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 20%;
+  padding: 5px 0px;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#account_select #account_select2 { 
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  width: 20%;
+  padding: 5px 0px;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+#account_select #account_select3 { 
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  width: 20%;
+  padding: 5px 0px;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#account_select #account_select4 { 
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  width: 20%;
+  padding: 5px 0px;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#account_select #account_select5 { 
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  width: 20%;
+  padding: 5px 0px;
+  display: none;
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#account_select ul li a { 
+  text-decoration: none;
+  display: block;
+  color: #5428A1;
+  padding: 7px 15px;
+}
+
+#account_select ul li a:hover {
+  color: #ffffff;
+  background: #986CE5;
+}
+
+#bank_billsc table{
+    position: relative;
+    top: 0%;
+    left: 10%;
+    width: 80%;
+    margin: 0.5%;
+    background: #012B39;
+    border-radius: 0.5em;
+}
+
+#bank_billsc th{
+    border-bottom: 1px solid #364043;
+    color: #E2B842;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
+#bank_billsc td{
+    color: #fff;
+    text-align: center;
+    padding: 0.65em 1em;
+    cursor: pointer;
+}
+
+#bank_billsc tr:hover{
+    opacity: 0.5;
+}

@@ -1,4 +1,5 @@
 var gabber_conv;
+var conv$2_1 = 4;
 
 function chatBot() {
     this.input;
@@ -87,7 +88,7 @@ $('#gabber_start').click(function(){
 
     var gabber_file = Math.floor(Math.random()*3+1);
 
-    $.getJSON('../json/gabber_chat'+ gabber_file +'.json', function(chat_data){
+    $.getJSON('../../json/gabber_chat'+ gabber_file +'.json', function(chat_data){
         gabber_conv = chat_data;
     });
 
@@ -114,4 +115,6 @@ $('#gabber_end').click(function(){
     $('#gabber_body').hide();
     $('#gabber_chat').empty();
     $('#gabber_inputbox').val('');
+    conv$2_1++;
+    check2_1(conv$2_1);
 });

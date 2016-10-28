@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="css/guesswhat.css">
+
+<div id="guesswhat">
+    <button type="button" class="to_randomgame"><i class="fa fa-backward"></i> Play another game</button>
+    <div id="title_gw">Guess What</div>
+    <div id="instructions_gw">
+        Test your skill. How many boxes can you check in 30 seconds?
+    </div>
+    <input id="message_gw" type=text name=message_gw readonly placeholder="Set a range of numbers and press the start button.">
+    <input id="from_gw" type=text name=from_gw placeholder="From">
+    <input id="to_gw" type=text name=to_gw placeholder="To">
+     <input id="start_gw" type=button value="Start" onclick="start_gw()">
+    <input id="number_gw" type=text name=number_gw placeholder="Enter the number here.">
+    <input id="guess_gw" type=button value="Guess" onclick="guess_gw()">
+    <input id="count_gw" type=text name=count_gw placeholder="Number of guesses" readonly>
+    <input id="giveup_gw" type=button value="Give up" onclick="end_gw()">
+</div>
+
+<script type="text/javascript" src="js/websites/games/guesswhat.js"></script>

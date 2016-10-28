@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="css/looknmeet.css">
+
+<div id="app_looknmeet">
+    <div id="start_navbar">
+        <div class="pull-left">
+            <a class="win-command pull-right comp_nav">
+                <span class="win-commandicon win-commandring icon-list-2"></span>
+            </a>
+            <br>
+            <a class="win-command pull-left goto_start">
+                <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+            </a>
+        </div>
+        <div class="pull-right start_name">
+            <h2>Look n Meet</h2>
+        </div>
+    </div>
+    <div id="looknmeet_modal">
+        <h1>Registration</h1>
+        <label class="looknmeet_icon" id="looknmeet_name_icon" for="looknmeet_name"><i class="fa fa-user"></i></label>
+        <input type="text" id="looknmeet_name" placeholder="Name" required/>
+        <label class="looknmeet_icon" id="looknmeet_password_icon" for="looknmeet_password"><i class="fa fa-shield"></i></label>
+        <input type="password" id="looknmeet_password" placeholder="Password" required/>
+        <div id="looknmeet_gender">
+            <input type="radio" id="looknmeet_male_icon" name="looknmeet_gender"/>
+            <label for="looknmeet_male_icon" class="radio">Male</label>
+            <input type="radio" id="looknmeet_female_icon" name="looknmeet_gender" />
+            <label for="looknmeet_female_icon" class="radio">Female</label>
+        </div>
+        <a id="looknmeet_register" class="button">Register</a>
+    </div>
+</div>
+
+<script src="js/apps/looknmeet.js"></script>

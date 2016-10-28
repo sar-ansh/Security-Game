@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/explorer.css">
 
-<div class="explorer">
+<div id="explorer_app">
     <div class="abs" id="wrapper">
         <div class="abs" id="desktop">
             <a class="abs icon" style="left:20px;top:20px;" href="#icon_dock_computer">
@@ -36,7 +36,6 @@
                             <table class="data">
                                 <thead>
                                     <tr>
-                                        <th class="shrink">&nbsp;</th>
                                         <th>Name</th>
                                         <th>Date Modified</th>
                                         <th>Date Created</th>
@@ -46,7 +45,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_drive.png" /></td>
                                         <td>Hard Drive</td>
                                         <td>Today</td>
                                         <td>&mdash;</td>
@@ -54,7 +52,6 @@
                                         <td>Volume</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_disc.png" /></td>
                                         <td>Audio CD</td>
                                         <td>&mdash;</td>
                                         <td>&mdash;</td>
@@ -62,7 +59,6 @@
                                         <td>Media</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_network.png" /></td>
                                         <td>Network</td>
                                         <td>&mdash;</td>
                                         <td>&mdash;</td>
@@ -70,38 +66,18 @@
                                         <td>LAN</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder_remote.png" /></td>
                                         <td>Shared Project Files</td>
                                         <td>Yesterday</td>
                                         <td>12/29/08</td>
                                         <td>524 MB</td>
-                                        <td>Folder
-                                        </td>
+                                        <td>Folder</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_documents.png" /></td>
                                         <td>Documents</td>
                                         <td>Yesterday</td>
                                         <td>12/29/08</td>
                                         <td>524 MB</td>
-                                        <td>Folder
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_system.png" /></td>
-                                        <td>Preferences</td>
-                                        <td>&mdash;</td>
-                                        <td>&mdash;</td>
-                                        <td>&mdash;</td>
-                                        <td>System</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_trash.png" /></td>
-                                        <td>Trash</td>
-                                        <td>Today</td>
-                                        <td>&mdash;</td>
-                                        <td>&mdash;</td>
-                                        <td>Bin</td>
+                                        <td>Folder</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -135,7 +111,6 @@
                             <table class="data">
                                 <thead>
                                     <tr>
-                                        <th class="shrink">&nbsp;</th>
                                         <th>Name</th>
                                         <th>Date Modified</th>
                                         <th>Date Created</th>
@@ -145,7 +120,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_page.png" /></td>
                                         <td>.DS_Store</td>
                                         <td>Yesterday</td>
                                         <td>&mdash;</td>
@@ -153,7 +127,6 @@
                                         <td>Hidden</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder_home.png" /></td>
                                         <td>Default User</td>
                                         <td>Today</td>
                                         <td>&mdash;</td>
@@ -161,7 +134,6 @@
                                         <td>Folder</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder.png" /></td>
                                         <td>Applications</td>
                                         <td>Yesterday</td>
                                         <td>&mdash;</td>
@@ -169,7 +141,6 @@
                                         <td>Folder</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder.png" /></td>
                                         <td>Developer</td>
                                         <td>12/29/08</td>
                                         <td>&mdash;</td>
@@ -177,7 +148,6 @@
                                         <td>Folder</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder.png" /></td>
                                         <td>Library</td>
                                         <td>09/11/09</td>
                                         <td>&mdash;</td>
@@ -185,7 +155,6 @@
                                         <td>Folder</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder.png" /></td>
                                         <td>System</td>
                                         <td>Yesterday</td>
                                         <td>&mdash;</td>
@@ -225,90 +194,41 @@
                             <table class="data">
                                 <thead>
                                     <tr>
-                                        <th class="shrink">&nbsp;</th>
-                                        <th class="shrink">Track</th>
-                                        <th>Song Name</th>
-                                        <th class="shrink">Length</th>
+                                        <th class="align_center shrink">Track</th>
+                                        <th class="align_center">Song Name</th>
+                                        <th class="align_center">Length</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">01</td>
-                                        <td>Track One</td>
-                                        <td class="align_right">3:50</td>
+                                        <td class="align_center">Track One</td>
+                                        <td class="align_center">3:50</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">02</td>
-                                        <td>Track Two</td>
-                                        <td class="align_right">3:50</td>
+                                        <td class="align_center">Track Two</td>
+                                        <td class="align_center">3:50</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">03</td>
-                                        <td>Track Three</td>
-                                        <td class="align_right">4:02</td>
+                                        <td class="align_center">Track Three</td>
+                                        <td class="align_center">4:02</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">04</td>
-                                        <td>Track Four</td>
-                                        <td class="align_right">3:47</td>
+                                        <td class="align_center">Track Four</td>
+                                        <td class="align_center">3:47</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">05</td>
-                                        <td>Track Five</td>
-                                        <td class="align_right">4:38</td>
+                                        <td class="align_center">Track Five</td>
+                                        <td class="align_center">4:38</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
                                         <td class="align_center">06</td>
-                                        <td>Track Six</td>
-                                        <td class="align_right">3:16</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">07</td>
-                                        <td>Track Seven</td>
-                                        <td class="align_right">3:53</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">08</td>
-                                        <td>Track Eight</td>
-                                        <td class="align_right">1:41</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">09</td>
-                                        <td>Track Nine</td>
-                                        <td class="align_right">3:40</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">10</td>
-                                        <td>Track Ten</td>
-                                        <td class="align_right">4:33</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">11</td>
-                                        <td>Track Eleven</td>
-                                        <td class="align_right">3:49</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">12</td>
-                                        <td>Track Twelve</td>
-                                        <td class="align_right">1:11</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="shrink"><img src="css/images/icons/icon_16_music.png" /></td>
-                                        <td class="align_center">13</td>
-                                        <td>Track Thirteen</td>
-                                        <td class="align_right">6:17</td>
+                                        <td class="align_center">Track Six</td>
+                                        <td class="align_center">3:16</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -341,7 +261,6 @@
                             <table class="data">
                                 <thead>
                                     <tr>
-                                        <th class="shrink">&nbsp;</th>
                                         <th>Name</th>
                                         <th class="shrink">Operating System</th>
                                         <th class="shrink">Version</th>
@@ -349,127 +268,106 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_server.png" /></td>
                                         <td>Urban Terror - <em>Game Server</em></td>
                                         <td>Linux</td>
                                         <td>Ubuntu</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_folder_remote.png" /></td>
                                         <td>Shared Project Files</td>
                                         <td>Linux</td>
                                         <td>Red Hat</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_vpn.png" /></td>
                                         <td>Remote Desktop VPN</td>
                                         <td>Windows</td>
                                         <td>XP</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Michael Scott</td>
                                         <td>Mac OS</td>
                                         <td>10.5</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Dwight Schrute</td>
                                         <td>Mac OS</td>
                                         <td>10.6</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Jim Halpert</td>
                                         <td>Mac OS</td>
                                         <td>10.6</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Pam Beesly</td>
                                         <td>Mac OS</td>
                                         <td>10.5</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Ryan Howard</td>
                                         <td>Mac OS</td>
                                         <td>10.5</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Jan Levinson</td>
                                         <td>Mac OS</td>
                                         <td>10.5</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Roy Anderson</td>
                                         <td>Windows</td>
                                         <td>7</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Stanley Hudson</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Kevin Malone</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Angela Martin</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Oscar Martinez</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Phyllis Lapin</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Creed Bratton</td>
                                         <td>Windows</td>
                                         <td>7</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Meredith Palmer</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Toby Flenderson</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Darryl Philbin</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Kelly Kapoor</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
                                     </tr>
                                     <tr>
-                                        <td><img src="css/images/icons/icon_16_computer.png" /></td>
                                         <td>Andy Bernard</td>
                                         <td>Windows</td>
                                         <td>Vista</td>
@@ -489,51 +387,39 @@
         <div class="abs" id="bar_top">
             <ul>
                 <li>
-                    <a class="menu_trigger" href="#">File</a>
+                    <a class="menu_trigger">Appearance</a>
                     <ul class="menu">
                         <li>
-                            <a href="#">New</a>
+                            <a>Wallpaper</a>
                         </li>
                         <li>
-                            <a href="#">Open</a>
+                            <a>Icons</a>
                         </li>
                         <li>
-                            <a href="#">Close</a>
+                            <a>Time</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a class="menu_trigger" href="#">Options</a>
+                    <a class="menu_trigger">Options</a>
                     <ul class="menu">
                         <li>
-                            <a href="#">Settings</a>
+                            <a>Settings</a>
                         </li>
                         <li>
-                            <a href="#">Control Panel</a>
+                            <a>Control Panel</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a class="menu_trigger" href="#">Appearance</a>
-                    <ul class="menu">
-                        <li>
-                            <a href="#">Wallpaper</a>
-                        </li>
-                        <li>
-                            <a href="#">Icons</a>
-                        </li>
-                        <li>
-                            <a href="#">Time</a>
-                        </li>
-                    </ul>
+                    <a class="menu_trigger">Help</a>
                 </li>
             </ul>
+            <span class="float_right" id="clock"></span>
         </div>
 
         <div class="abs" id="bar_bottom">
-            <a class="float_left goto_start">
-              <img src="css/images/icons/icon_22_desktop.png" />
-            </a>
+            <a class="float_left goto_start">Start</a>
             <ul id="dock">
                 <li id="icon_dock_computer">
                     <a href="#window_computer">
@@ -560,12 +446,9 @@
                     </a>
                 </li>
             </ul>
-            <a class="float_right" id="show_desktop" title="Show Desktop">
-                <img src="css/images/icons/icon_22_desktop.png" />
-            </a>
-            <span class="float_right" id="clock"></span>
+            <a class="float_right" id="show_desktop" title="Show Desktop">Desktop</a>
         </div>
     </div>
 </div>
 
-<script src="js/explorer.js"></script>
+<script src="js/apps/explorer.js"></script>

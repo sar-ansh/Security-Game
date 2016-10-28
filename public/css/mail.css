@@ -210,11 +210,6 @@ ul {
 }
 
 .mail_message_file:after {
-    content: "\F0C6";
+    content: " \F0C6";
     font-family: FontAwesome;
-}
-
-/* Fix this unwanted textbox error*/
-.sweet-alert fieldset input[type="text"] {
-display: none;
 }

@@ -1,0 +1,76 @@
+#tictactoe{
+    position: absolute;
+    height: 99%;
+    width: 100%;
+}
+
+#title_ttt{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    font-size: 20px;
+    font-weight: bold;    
+    text-decoration: underline;
+}
+
+#instructions_ttt{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    height: 60%;
+    width: 20%;
+    background-color: aqua;
+}
+
+#table_ttt {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 1px solid black;
+}
+
+#table_ttt td {
+    border: 1px solid black;
+}
+
+#table_ttt img{
+    height: 64px;
+    width: 64px;
+    background-image: url("../js/websites/games/blank.png");
+}
+
+#won_ttt {
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    height: 8%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+#lost_ttt {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    height: 8%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+#drawn_ttt {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    height: 8%;
+    width: 20%;
+    border-radius: 10px;
+}
+
+#newgame_ttt{
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    height: 8%;
+    width: 20%;
+    border-radius: 10px;
+}

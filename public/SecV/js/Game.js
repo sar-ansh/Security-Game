@@ -8,25 +8,42 @@ SecV.Game = function(){
 };
 
 SecV.Game.prototype = {
-    create: function() {
-        
-        
-        
-        
+    create: function() {        
         map = this.game.add.sprite(0, 0, 'map');
-        
         this.game.world.setBounds(0, 0, GAME_WIDTH, GAME_HEIGHT);
+        
+        computer = this.game.add.sprite(GAME_WIDTH/2 - 300, GAME_HEIGHT/2, 'computer');
+        computer.anchor.setTo(0.5, 1);
+        computer.scale.setTo(0.3, 0.3);
+        this.game.physics.enable(computer, Phaser.Physics.ARCADE);
+        computer.body.immovable = true;
+        
+        person = this.game.add.sprite(GAME_WIDTH/2 + 300, GAME_HEIGHT/2, 'person');
+        person.scale.setTo(0.3, 0.3);
+        this.game.physics.enable(person, Phaser.Physics.ARCADE);
+        person.body.immovable = true;
 
         hero = this.game.add.sprite(GAME_WIDTH/2, GAME_HEIGHT/2, 'hero');
         hero.anchor.setTo(0.5, 1);
         this.game.physics.enable(hero, Phaser.Physics.ARCADE);
-        
         hero.body.collideWorldBounds = true;
         
         this.game.camera.follow(hero);
     },
+    
+    collision1: function(h, p) {   
+        hero.body.velocity.setTo(0, 0);
+        $('#conversations').show();
+    },
+    
+    collision2: function(h, c) {
+        hero.body.velocity.setTo(0, 0);
+        $('#conversations').hide();
+        $('#gamec').fadeOut(1000);
+        $('#computerc').fadeIn(1000);
+    },
 
-    update: function() {  
+    update: function() {
         hero_x1 = hero.body.x;
         hero_y1 = hero.body.y;
         hero_x2 = hero_x1 + hero.width;
@@ -104,10 +121,9 @@ SecV.Game.prototype = {
                 //console.log("2");
             }
         }
-    },
-    
-    render: function() {
-        this.game.debug.cameraInfo(this.game.camera, 500, 32);
-        this.game.debug.spriteCoords(hero, 32, 32);
+        
+        this.game.physics.arcade.collide(hero, person, this.collision1, null, this);
+        
+        this.game.physics.arcade.collide(hero, computer, this.collision2, null, this);
     }
 };

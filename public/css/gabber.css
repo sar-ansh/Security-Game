@@ -86,7 +86,7 @@
 }
 
 #gabber_input {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 #gabber_input input{
@@ -94,6 +94,16 @@
 	border: 2px solid #ccc;
 	padding: 5px;
     left: 5px;
-	width: 60%;
+	width: 80%;
 	border-radius: 5px;
+    font-size: 12px;
+    padding: 9px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid rgba(230, 230, 230, 1);
+    cursor: text;
+}
+
+#gabber_input button{
+    border-radius: 5px;
 }

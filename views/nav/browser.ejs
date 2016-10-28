@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="css/internet.css">
+<link rel="stylesheet" type="text/css" href="css/game_ads.css">
+<script src="js/websites/marquee.min.js"></script>
+<script src="js/websites/game_ads.js"></script>
+
+<div class="browser-mockup">
+    <!--  Add the actual refresh functionality -->
+    <div class="browser-title">
+        <button type="button" class="btn btn-default browser-button goto_start" style="left: 10px;" ><i class="fa fa-arrow-left"></i></button>
+        <button type="button" id="url-refresh" class="btn btn-default browser-button" style="left: 60px;" ><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="address_bar" >
+        <input type="text" id="browser-url" name="browser-url" placeholder="Browser">
+        <button type="button" id="url-go" class="btn btn-default browser-button" style="right: 60px;" ><i class="fa fa-arrow-right"></i></button>
+        <button type="button" id="url-index" class="btn btn-default browser-button" style="right: 10px;" ><i class="fa fa-book"></i></button>
+    </div>
+    <div class="browser-body">
+        <div id="url-loaderc" style="display:none;">
+          <div id="url-loader_1" class="url-loader"></div>
+          <div id="url-loader_2" class="url-loader"></div>
+          <div id="url-loader_3" class="url-loader"></div>
+          <div id="url-loader_4" class="url-loader"></div>
+          <div id="url-loader_5" class="url-loader"></div>
+          <div id="url-loader_6" class="url-loader"></div>
+          <div id="url-loader_7" class="url-loader"></div>
+          <div id="url-loader_8" class="url-loader"></div>
+          <div id="url-loader_9" class="url-loader"></div>
+          <div id="url-loader_10" class="url-loader"></div>
+          <div id="url-loader_11" class="url-loader"></div>
+          <div id="url-loader_12" class="url-loader"></div>
+        </div>
+        <div id="url-gabberc" style="display:none;">
+            <% include ../websites/gabber %>
+        </div>
+        <div id="url-mailc" style="display:none;">
+            <% include ../websites/mail %>
+        </div>
+        <div id="url-gamereviewsc" style="display:none;">
+            <% include ../websites/gamereviews %>
+        </div>
+        <div id="url-blogc" style="display:none;">
+            <% include ../websites/blog %>
+        </div>
+        <div id="url-bankc" style="display:none;">
+            <% include ../websites/bank %>
+        </div>
+        <div id="url-randomgamec" style="display:none;">
+            <% include ../websites/randomgame %>
+        </div>
+        <div id="url-tictactoec" style="display:none;">
+            <% include ../websites/games/tictactoe %>
+        </div>
+        <div id="url-molebusterc" style="display:none;">
+            <% include ../websites/games/molebuster %>
+        </div>
+        <div id="url-guesswhatc" style="display:none;">
+            <% include ../websites/games/guesswhat %>
+        </div>
+        <div id="url-travelc" style="display:none;">
+            <% include ../websites/travel %>
+        </div>
+        <div id="url-shopc" style="display:none;">
+            <% include ../websites/shop %>
+        </div>
+        <div id="url-crackdiyc" style="display:none;">
+            <% include ../websites/crackdiy %>
+        </div>
+        <div id="url-musicfilesc" style="display:none;">
+            <% include ../websites/musicfiles %>
+        </div>
+        <div id="url-indexc">
+            <% include ../websites/url_index %>
+        </div>
+        <div id="url-errorc" style="display:none;">
+            <% include ../websites/url_error %>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/nav/browser.js"></script>

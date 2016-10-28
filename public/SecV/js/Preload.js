@@ -14,6 +14,8 @@ SecV.Preload.prototype = {
   	//load game assets      
     this.load.image('map', 'assets/images/map.png');
     this.load.spritesheet('hero', 'assets/images/hero.png', 90, 140);
+    this.load.image('person', 'assets/images/person.png');
+    this.load.image('computer', 'assets/images/computer.png');
   },
   create: function() {
   	this.state.start('MainMenu');

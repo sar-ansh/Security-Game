@@ -2,7 +2,7 @@
     {
     "spam_from"  : ["Stromae"],
     "spam_subject" : ["New Album released"],
-    "spam_body" : ["<p>You wanna buy it?<p><span class=\"mail_message_link mail_message_file\" mail_message_url=\"www.gabber.game\">Hello </span>"],
+    "spam_body" : ["<p>You wanna buy it?<p><span class=\"mail_message_link\" mail_message_url=\"www.gabber.game\">Hello</span>"],
     "spam_time" : ["April 14"]
     }
 ]

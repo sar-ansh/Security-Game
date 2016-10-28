@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var conv;
-    $.getJSON('../json/chat.json', function(chat_data){
+    $.getJSON('../../json/chat.json', function(chat_data){
         conv = chat_data;
     });
     function chatBot() {

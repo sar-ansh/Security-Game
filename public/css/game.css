@@ -1,3 +1,90 @@
+#tasks_bar{
+    position: absolute;
+    bottom: 5px;
+    left: 35%;
+    width: 400px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: inherit;
+    display: none;
+}
+
+#score_icon{
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    right: 15%;
+    background-color:inherit;
+    width: 50px;
+    height: 40px;
+    border-radius: 100%;
+    color: gold;
+    font-size: 36px;
+    text-align: left;
+}
+
+#score_value{
+    position: absolute;
+    top: 10px;
+    left: 15%;
+    right: 50%;
+    background-color:inherit;
+    color: gold;
+    font-size: 30px;
+    text-align: left;
+}
+
+#money_icon{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    right: 65%;
+    background-color:inherit;
+    width: 50px;
+    height: 40px;
+    border-radius: 100%;
+    color: gold;
+    font-size: 36px;
+    text-align: center;
+}
+
+#money_value{
+    position: absolute;
+    top: 10px;
+    left: 65%;
+    right: 100%;
+    background-color:inherit;
+    color: gold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#score_icon:hover, #money_icon:hover {
+  background-color:lightgoldenrodyellow;
+}
+
+#tasks_help{
+    position: absolute;
+    bottom: 5px;
+    left: 10%;
+    background-color: #F44336;
+    width: 50px;
+    height: 40px;
+    border-radius: 100%;
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#tasks_help:hover {
+  transform: rotate(360deg);
+}
+
+#tasks_help:active {
+  background-color: #d3d3d3;
+}
+
 #tasks_menu{
     background-color: #778899; 
     position: absolute; 
@@ -7,7 +94,6 @@
     bottom: 0px; 
     overflow-y: auto;
 }
-
 
 #tasks_menu::-webkit-scrollbar {
     width: 12px;

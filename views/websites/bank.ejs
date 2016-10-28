@@ -1,0 +1,239 @@
+<link rel="stylesheet" type="text/css" href="css/bank.css" />
+
+<div id="bank">
+    <div id="bank_header">
+        BANK
+    </div>
+    <div id="bank_nav">
+        <ul>
+            <li>
+                <a id="bank_home">
+                    <i class="fa fa-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <a id="bank_accounts">
+                    <i class="fa fa-user"></i> Accounts
+                </a>
+            </li>
+            <li>
+                <a id="bank_bills">
+                    <i class="fa fa-shopping-bag"></i> Bills &amp; Transactions
+                </a>
+            </li>
+            <li>
+                <a id="bank_cards">
+                    <i class="fa fa-credit-card-alt"></i> Cards
+                </a>
+            </li>
+            <li>
+                <a id="bank_transfer">
+                    <i class="fa fa-money"></i> Transfer
+                </a>
+            </li>
+            <li>
+                <a id="bank_recharge">
+                    <i class="fa fa-bolt"></i> Recharge
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="bank_main">
+        <div class="bank_content" id="bank_homec">
+            <h1>Home</h1>
+            <p>Welcome to the bank.</p>
+        </div>
+        <div class="bank_content" id="bank_accountsc" style="display:none;">
+            <h1>Accounts</h1>
+            <p>Select an account to examine it in detail.</p>
+            <div id="account_select">
+                Select an account
+                <ul id="account_select1">
+                    <li><a id="account1">6320-4856-1256-1356</a></li>
+                    <li><a id="account2">4623-1326-1987-7956</a></li>
+                    <li><a id="account3">1003-2323-6565-8461</a></li>
+                    <li><a id="account4">1564-5555-0050-0039</a></li>
+                </ul>
+                <ul id="account_select2">
+                    <li><a id="account1">6320-4856-1256-1356</a></li>
+                    <li><a id="account2">4623-1326-1987-7956</a></li>
+                    <li><a id="account3">1003-2323-6565-8461</a></li>
+                    <li><a id="account4">1564-5555-0050-0039</a></li>
+                </ul>
+                <ul id="account_select3">
+                    <li><a id="account1">6320-4856-1256-1356</a></li>
+                    <li><a id="account2">4623-1326-1987-7956</a></li>
+                    <li><a id="account3">1003-2323-6565-8461</a></li>
+                    <li><a id="account4">1564-5555-0050-0039</a></li>
+                </ul>
+                <ul id="account_select4">
+                    <li><a id="account1">6320-4856-1256-1356</a></li>
+                    <li><a id="account2">4623-1326-1987-7956</a></li>
+                    <li><a id="account3">1003-2323-6565-8461</a></li>
+                    <li><a id="account4">1564-5555-0050-0039</a></li>
+                </ul>
+                <ul id="account_select5">
+                    <li><a id="account1">6320-4856-1256-1356</a></li>
+                    <li><a id="account2">4623-1326-1987-7956</a></li>
+                    <li><a id="account3">1003-2323-6565-8461</a></li>
+                    <li><a id="account4">1564-5555-0050-0039</a></li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Account Number</th>
+                    <th>Account Type</th>
+                    <th>Currency</th>
+                    <th>Available Balance</th>
+                </tr>
+                <tr id="account_defaultc">
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr id="account1c" style="display:none;">
+                    <td>John Doe</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>Savings</td>
+                    <td>USD</td>
+                    <td>10,000,000</td>
+                </tr>
+                <tr id="account2c" style="display:none;">
+                    <td>Antonio</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>Savings</td>
+                    <td>USD</td>
+                    <td>10,000,000</td>
+                </tr>
+                <tr id="account3c" style="display:none;">
+                    <td>Maria</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>Savings</td>
+                    <td>USD</td>
+                    <td>10,000,000</td>
+                </tr>
+                <tr id="account4c" style="display:none;">
+                    <td>Flora</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>Savings</td>
+                    <td>USD</td>
+                    <td>10,000,000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bank_content" id="bank_billsc" style="display:none;">
+            <h1>Bills &amp; Transactions</h1>
+            <p>View all Transactions.</p>
+            <table>
+                <tr>
+                    <th>Sl No.</th>
+                    <th>Account No.</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Cr/Dr</th>
+                    <th>Transaction Amount</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>22-10-2016</td>
+                    <td>Burger King</td>
+                    <td>Dr</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>15-05-2016</td>
+                    <td>Vatsana Corp</td>
+                    <td>Cr</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>14-03-2016</td>
+                    <td>Dominos</td>
+                    <td>Dr</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>05-02-2016</td>
+                    <td>McDonalds</td>
+                    <td>Dr</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>19-01-2016</td>
+                    <td>Subway</td>
+                    <td>Dr</td>
+                    <td>999</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>07-01-2016</td>
+                    <td>Mainland China</td>
+                    <td>Dr</td>
+                    <td>579</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>31-12-2015</td>
+                    <td>Burger King</td>
+                    <td>Dr</td>
+                    <td>500</td>
+                </tr>
+                <tr  id="hack_transaction">
+                    <td>8</td>
+                    <td>1003-2323-6565-8461</td>
+                    <td>25-12-2015</td>
+                    <td>H4X0R</td>
+                    <td>Dr</td>
+                    <td>80000000</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>1564-5555-0050-0039</td>
+                    <td>15-08-2015</td>
+                    <td>ABC Groups</td>
+                    <td>Cr</td>
+                    <td>10189</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>6320-4856-1256-1356</td>
+                    <td>11-07-2015</td>
+                    <td>XYZ Ltd.</td>
+                    <td>Cr</td>
+                    <td>100240</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bank_content" id="bank_cardsc" style="display:none;">
+            <h1>Cards</h1>
+            <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        </div>
+        <div class="bank_content" id="bank_transferc" style="display:none;">
+            <h1>Transfer</h1>
+            <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        </div>
+        <div class="bank_content" id="bank_rechargec" style="display:none;">
+            <h1>Recharge</h1>
+            <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        </div>
+    </div>
+    <div id="bank_footer">
+        <p>© Copyright 2016 Bank. All rights reserved.</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/websites/bank.js"></script>

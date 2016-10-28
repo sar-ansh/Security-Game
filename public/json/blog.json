@@ -1,0 +1,32 @@
+[
+    {
+    "article_title"  : ["The Deception"],
+    "article_body" : ["And the story 1 goes here."],
+    "article_date" : ["28-011-2013"],
+    "article_author" : ["gabbynutshell"]
+    },
+    {
+    "article_title"  : ["Learn to make a pancake"],
+    "article_body" : ["And the story 2 goes here.<p> Click on the link below to download the file.</p><span class='blog_link' blog_link_url='www.randomgame.game'>Download now!!!</span>"],
+    "article_date" : ["9-02-2014"],
+    "article_author" : ["Akram"]
+    },
+    {
+    "article_title"  : ["Here's where you should Travel next"],
+    "article_body" : ["<p>Look what I found.</p>"],
+    "article_date" : ["12-06-2015"],
+    "article_author" : ["shadowymist"]
+    },
+    {
+    "article_title"  : ["Mystical Adventures"],
+    "article_body" : ["And the story 4 goes here."],
+    "article_date" : ["14-03-2016"],
+    "article_author" : ["1337-h4x0r"]
+    },
+    {
+    "article_title"  : ["How to crack any game"],
+    "article_body" : ["<p>Finally! No need to wait for a new 'release' of cracked games anymore! We are aware it might be very hard sometimes, especially if the game is something along the lines of GTA or Assassins Creed. This is why CrackDIY 3 was created. To make you self sufficient. To make you Do It Yourself. Using this you can crack any game anywhere anytime.This third version, has updated algorithms and functions, new looks and works like a charm!</p><p>To crack any game just open its .exe file with this application and click start! Once it is done, replace the original file with newly generated one and enjoy the game.</p><p> Click on the link below to download the file.</p><span class='blog_link' blog_link_url='www.crackdiy.game'>Download now!!!</span>"],
+    "article_date" : ["19-09-2016"],
+    "article_author" : ["Anonymous"]
+    }
+]
