@@ -1,4 +1,5 @@
 var task$2_6 = 0;
+var task$3_3 = 0;
 
 $('#randomgame_back').click(function(){
     $('#url-randomgamec').hide();

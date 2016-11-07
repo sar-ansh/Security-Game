@@ -200,6 +200,42 @@ function check2_6(){
     task$2_6 = 0;
 }
 
+function task3_1(){
+    task$3_1 = 1;
+    swal({
+        html: true,
+        title: "Instructions",
+        text: "In order to know more about your past, try visiting the explorer app. You may find some old diary pages that you got scanned recently. Hard Drive is the file manager."
+    });
+}
+
+function check3_1(file$3_1){
+    if(file$3_1 == "diary.png"){
+        swal("Great discovery!", "You had visited the downloads section before. Explorer is another place where you can find several files lying on the hard disk. In addition you might find some important info about the computer and some essential data about your past as well.\nHappy exploring!", "success");
+        $('#tasks_help').hide();
+        score += 100;
+        task$3_1 = 0;
+    }
+}
+
+function task3_3(){
+    task$3_3 = 1;
+    swal({
+        html: true,
+        title: "Instructions",
+        text: "Clickjacking"
+    });
+}
+
+function check3_3(){
+    if(1){
+        swal("Great discovery!", "Clickjacking", "success");
+        $('#tasks_help').hide();
+        score += 100;
+        task$3_3 = 0;
+    }
+}
+
 function task3_4(){
     task$3_4 = 1;
     swal({
@@ -239,7 +275,7 @@ $('.taskbox p').click(function(){
     var task_file = $(this).parent('div').parent('div').attr('id');     
     $('#tasks_help').bind('click', function(){
         eval(task_file + "()");
-    });                       
+    });
     $('#tasks_help').show();
     eval(task_file + "()");
 });

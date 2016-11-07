@@ -136,6 +136,7 @@ var urltosite = function(){
                 $('#url-indexc').show();
                 break;
             default:
+                errormessage();
                 hidesites();
                 $('#url-errorc').show();
                 break;

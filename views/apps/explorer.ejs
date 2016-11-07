@@ -119,19 +119,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>.DS_Store</td>
+                                    <tr hidden_link="#icon_dock_file" file_name="diary.png">
+                                        <td>diary.png</td>
                                         <td>Yesterday</td>
                                         <td>&mdash;</td>
                                         <td>6 KB</td>
-                                        <td>Hidden</td>
+                                        <td>File</td>
                                     </tr>
-                                    <tr>
-                                        <td>Default User</td>
+                                    <tr hidden_link="#icon_dock_file" file_name="new.png">
+                                        <td>new.png</td>
                                         <td>Today</td>
                                         <td>&mdash;</td>
                                         <td>&mdash;</td>
-                                        <td>Folder</td>
+                                        <td>File</td>
                                     </tr>
                                     <tr>
                                         <td>Applications</td>
@@ -382,6 +382,32 @@
                 </div>
                 <span class="abs ui-resizable-handle ui-resizable-se"></span>
             </div>
+            <div id="window_file" class="abs window">
+                <div class="abs window_inner">
+                    <div class="window_top">
+                        <span class="float_left">
+                            <img src="css/images/icons/icon_22_drive.png" />
+                            File
+                        </span>
+                        <span class="float_right">
+                            <a href="#" class="window_min"></a>
+                            <a href="#" class="window_resize"></a>
+                            <a href="#icon_dock_file" class="window_close"></a>
+                        </span>
+                    </div>
+                    <div class="abs window_content">
+                        <div class="window_aside">
+                            For a better view of the file, close this window and then open another file.
+                        </div>
+                        <div class="window_main">
+                        </div>
+                    </div>
+                    <div class="abs window_bottom">
+                        File
+                    </div>
+                </div>
+                <span class="abs ui-resizable-handle ui-resizable-se"></span>
+            </div>
         </div>
 
         <div class="abs" id="bar_top">
@@ -417,7 +443,6 @@
             </ul>
             <span class="float_right" id="clock"></span>
         </div>
-
         <div class="abs" id="bar_bottom">
             <a class="float_left goto_start">Start</a>
             <ul id="dock">
@@ -443,6 +468,12 @@
                     <a href="#window_network">
                         <img src="css/images/icons/icon_22_network.png" />
                         Network
+                    </a>
+                </li>
+                <li id="icon_dock_file">
+                    <a href="#window_file">
+                        <img src="css/images/icons/icon_22_drive.png" />
+                        File
                     </a>
                 </li>
             </ul>
