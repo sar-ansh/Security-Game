@@ -1,0 +1,65 @@
+<div id="main_game">
+    <div id="conversations" style="display: none; position: absolute; left: 50px; top: 1vh; width: 55vw; height:10vh; border: 1px solid #fff;">
+        <div style="background-color: #fff; position: absolute; left: 0%; top: 0%; width: 10%; height:100%;">
+        </div>
+        <div style="background-color: #000; color:#fff; font-weight: bold; padding: 1px 3px; position: absolute; left: 10%; top: 0%; width: 80%; height:100%;">
+            Prologue
+        </div>
+        <div class="convo_button" id="convo_prev">
+            <div class="convo_button_icon convo_button_prev">
+                <i class="fa fa-step-backward"></i>
+            </div>
+            <span class="convo_button_text convo_button_prev">Previous</span>
+        </div>
+        <div class="convo_button" id="convo_next">
+            <div class="convo_button_icon convo_button_next">
+                <i class="fa fa-step-forward"></i>
+            </div>
+            <span class="convo_button_text convo_button_next">Next</span>
+        </div>
+    </div>
+
+    <div class="main_menu_nav">
+        <ul>
+            <li><a id="start_game" data-title="Start">Start</a></li>
+            <li><a id="tools_game" data-title="Settings">Settings</a></li>
+            <li><a id="sound_game" data-title="Sound">Sound</a></li>
+            <li><a id="quit_game" data-title="Really?">Quit</a></li>
+        </ul>
+    </div>
+
+    <div id="prologue">
+        <div id="title_prologue" style="font-size: 20px; position: absolute; left: 50%; top: 50%; bottom: 50%;">Prologue</div>
+        <div class="macbook_prologue" style="display: none;">
+            <div class="screen_prologue">
+                <div class="viewport_prologue" style="display:none;">
+                    <div id="myProgress_prologue" style="display:none;">
+                        <div id="myBar_prologue"></div>
+                        <div id="label_prologue">0%</div>
+                    </div>
+                    <div id="console_prologue"></div>
+                </div>
+                <div id="load_prologue" style="display: none;">
+                    <div id="spn_prologue"></div> <br/>
+                    <div class="loading_prologue">Transfer in progress...</div>
+                </div>
+                <div id="bank_prologue" style="display: none;">
+                    Transfer completed.
+                </div>
+            </div>
+            <div class="lid_prologue"></div>
+            <div class="base_prologue"></div>
+            <div class="notch_prologue"></div>
+            <div id="power">
+                <a id="power_prologue"><i class="fa fa-power-off"></i></a>
+                <div id="led_prologue"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="base" style="display: none;">
+        <script src="SecV/js/main.js"></script>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/prologue.js"></script>

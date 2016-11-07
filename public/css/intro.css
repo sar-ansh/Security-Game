@@ -578,6 +578,13 @@
     transition: width 0.3s ease;
 }
 
+#main_game{
+    background: #000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 #about_game{
     background: radial-gradient(#d3d3d3 50%, #aaa) fixed;
     position: absolute;

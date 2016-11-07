@@ -2,6 +2,8 @@ var finish = false;
 var hacked = false;
 var start = false;
 var access = false;
+var power_button = false;
+var start_game = false;
 var timer;
 var Typer={
     text: null,
@@ -55,12 +57,12 @@ var Typer={
 var type = setInterval(function(){
     if(start){
         start = false;
-        timer = setInterval("t();", 10);
+        timer = setInterval("timtom();", 10);
         clearInterval(type);
     }
 }, 1000);
 
-function t() {
+var timtom = function() {
     Typer.addText();
     if (Typer.index > Typer.text.length) {
         finish = true;
@@ -77,7 +79,7 @@ function t() {
             }
         });
     }
-}
+};
 
 var passwords = ['password123', 'qwertyuiop', 'admin2015', 'trustno1', 'letmein6969'];
 var indexOld;
@@ -127,3 +129,64 @@ function hack() {
         });
     }
 }
+
+$('#start_game').click(function(){
+    if(start_game == false){
+        start_game = true;
+        $("#title_prologue").css("display", "none");
+        $(".screen_prologue").css("visibility", "hidden");
+        $(".macbook_prologue").fadeIn(2000);
+        $(this).html("Pause");
+        $(this).attr('data-title', "Pause");
+    }
+    else{
+        // add pause functionality;
+        swal("Add pause functionality");
+    }
+});
+
+$('#power').click(function(){
+    if(power_button == false){
+        power_button = true;
+        $("#power_prologue").css("color", "white");
+        $("#led_prologue").css("background-color", "white");
+        $(".lid_prologue").css("display", "none");
+        $(".screen_prologue").css("visibility", "visible");
+        $(".screen_prologue").css("transform", "rotateX(0deg)");
+        $(".viewport_prologue").fadeIn(10000);
+        setTimeout(function(){
+            $("#myProgress_prologue").fadeIn(500);    
+        }, 10000);
+        setTimeout(function(){
+            var elem = document.getElementById("myBar_prologue");
+            var width = 0;
+            var id = setInterval(frame, 50);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                }
+                else {
+                    width++;
+                    elem.style.width = width + '%';
+                    document.getElementById("label_prologue").innerHTML = width * 1  + '%';
+                }
+            }
+        }, 12000);
+        setTimeout(function(){
+            Typer.file = "js/new.txt";
+            Typer.init();
+            start = true;
+        }, 18000);
+    }
+});
+
+var over_prologue = setInterval(function(){
+    if(access){
+        $("#prologue").fadeOut(5000);
+        setTimeout(function(){
+            $("#base").fadeIn(5000);
+        }, 5000);
+        clearInterval(over_prologue);
+    }
+}, 1000);
+    
