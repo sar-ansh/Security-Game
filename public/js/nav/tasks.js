@@ -1,5 +1,33 @@
 var score = 0;
 
+function scoreAnim(task_score){
+    $({score_value: 0}).animate({score_value: task_score},{
+        duration: 1000,
+        easing:"linear",
+        step: function(now, fx){
+            $("#score_value").html(score + Math.floor(now));
+        },
+        queue:false,
+        complete: function(now, fx){
+            score += task_score;
+        }
+    });
+    
+    $('#score_tag').text("+" + task_score);
+    $("#score_tag").fadeIn({
+        duration:700,
+        easing:"linear",
+        step:function(now, fx){
+            $(this).css("top", -55 * now  +"px");
+        }
+      }).fadeOut({
+        duration:300,
+        step:function(now, fx){
+            $(this).css("top",-55 * ( 2 - now) + "px");
+        }
+      });
+}
+
 function task2_1(){
     conv$2_1 = 0;
     swal({
@@ -10,10 +38,12 @@ function task2_1(){
 }
 
 function check2_1(conv$2_1){
+    var score$2_1 = 0;
     if(conv$2_1 == 3){
         swal("Nice!", "You got to meet 3 strangers. Found anyone interesting?\nYou can come here at any time to have engaging conversations.", "success");
         $('#tasks_help').hide();
-        score += 150;
+        score$2_1 = 150;
+        scoreAnim(score$2_1);
     }
 }
 
@@ -27,11 +57,13 @@ function task2_2(){
 }
 
 function check2_2(file_name$2_2){
+    var score$2_2 = 0;
     if(file_name$2_2 === "letter.txt"){
         swal("Good job!", "You can access the downloaded files in the Downloads section.", "success");
-        $('#tasks_help').hide();
         file$2_2 = 0;
-        score += 100;
+        $('#tasks_help').hide();
+        score$2_2 = 100;
+        scoreAnim(score$2_2);
     }
 }
 
@@ -40,14 +72,16 @@ function task2_3(){
     swal({
         html: true,
         title: "Instructions",
-        text: "You need to check when your account (1003-2323-6565-8461) was used last time. You can access your bank account using the internet. Remember, clicks are your friends, albeit often they are deceitful."
+        text: "You need to check when your account (1003-2323-6565-8461) was used last time. You can access your bank account using the internet. Click on the transaction that you don't remember doing. Remember, clicks are your friends, albeit often they are deceitful."
     });
 }
 
 function check2_3(){
+    var score$2_4 = 0;
     swal("You are getting a hang of this.", "So, this click was safe, huh? I must remind you, if you click on a malicious link, you'll fail the task. But you seem to be smart enough to do that. So no worries. Now, you know the exact figure that the hacker stole from you. You need to start planning your vengeance soon.", "success");
     $('#tasks_help').hide();
-    score += 100;
+    score$2_4 = 100;
+    scoreAnim(score$2_4);
     task$2_3 = 0;
 }
 
@@ -59,26 +93,6 @@ function task2_4(){
         text: "Create a new account on the 'Look n Meet' beta app in order to exapnd your social network. Hope you know the traits of a good password. There's no provision to recover it though. So you better freeze it in your memory. And remember, same password on multiple accounts is not a safe bet."
     });
 }
-
-function checkPassStrength(pass) {
-    var score = scorePassword(pass);
-    if (score > 80)
-        return "strong";
-    if (score > 60)
-        return "good";
-    if (score >= 30)
-        return "weak";
-
-    return "";
-}
-
-$(document).ready(function() {
-    $("#password").on("keypress keyup keydown", function() {
-        var pass = $(this).val();
-        $("#strength_human").text(checkPassStrength(pass));
-        $("#strength_score").text(scorePassword(pass));
-    });
-});
 
 function check2_4(password$2_4){
     //Add common passwords check as well.
@@ -135,16 +149,15 @@ function check2_4(password$2_4){
         },
         function(isConfirm){   
             if (isConfirm) {
-                swal("Here you go!", "List of tips.\n\nYou can always go through these tips in the progress section as well by clicking on the appropriate task there. ", "info");  
+                swal("Here you go!", "1. 8 characters minimum is good, 12 even better.\n2. Mix it up with numbers, symbols, Capital letters and lower case letters.\n3. Try not including a dictionary word.\n4. Don't use obvious substitutions like 0 for o.\n5. If you get bored try googling most common passwords just to make sure yours isn't one of them.\n\nYou can always go through these tips in the progress section as well by clicking on the appropriate task there. ", "info");  
             }
             else
                 swal("Hint", "It's alright. You can always read those tricks in the progress section by clicking on the appropriate task there.", "info")
         });
         
         $('#tasks_help').hide();
-        
-        score += score$2_4;
-        task$2_4 = 0; 
+        scoreAnim(score$2_4);
+        task$2_4 = 0;
     }
 }
 
@@ -159,27 +172,31 @@ function task2_5(){
 }
 
 function check2_5(register$2_5){
+    var score$2_5 = 0;
     if(register$2_5 == -1){
         swal("Oops, you fail!", "That was an advertisement. You shouldn't have clicked that. You can still continue the task, but you'll score only half of the points now, if you pass.", "error");
-        result$2_5 = 0;
     }
     else if(register$2_5 == 1){
         if(result$2_5 == 1){
             swal("Great instincts!", "You are smart. Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. You can move on to the next task.", "success");
             $('#tasks_help').hide();
-            score += 200;
+            score$2_5 = 200;
+            scoreAnim(score$2_5);
+            task$2_5 = 0;
         }
         else{
             swal("Good work!", "You are learning. Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. You can move on to the next task.", "success");
             $('#tasks_help').hide();
-            score += 100;
+            score$2_5 = 100;
+            scoreAnim(score$2_5);
+            task$2_5 = 0;
         }
-        task$2_5 = 0;
     }
     else{
         swal("Oops, you fail!", "Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. So you need to run away as fast as you can from them. You don't get any points. Hope, you learnt something.", "error");
         $('#tasks_help').hide();
-        score += 0;
+        score$2_5 = 0;
+        scoreAnim(score$2_5);
         task$2_5 = 0;
     }
 }
@@ -194,9 +211,11 @@ function task2_6(){
 }
 
 function check2_6(){
-    swal("Awesome!", "This one looked safe. I am guessing, they did take measures to not include virus prone games this time. You can always come here to boost your total score.", "success");
+    var score$2_6 = 0;
+    swal("Awesome!", "This game looks safe. I am guessing, they did take better measures this time to not include virus prone games. You can always come back here to boost your total score.", "success");
     $('#tasks_help').hide();
-    score += 100;
+    score$2_6 = 100;
+    scoreAnim(score$2_6);
     task$2_6 = 0;
 }
 
@@ -210,11 +229,33 @@ function task3_1(){
 }
 
 function check3_1(file$3_1){
+    var score$3_1 = 0;
     if(file$3_1 == "diary.png"){
         swal("Great discovery!", "You had visited the downloads section before. Explorer is another place where you can find several files lying on the hard disk. In addition you might find some important info about the computer and some essential data about your past as well.\nHappy exploring!", "success");
         $('#tasks_help').hide();
-        score += 100;
+        score$3_1 = 100;
+        scoreAnim(score$3_1);
         task$3_1 = 0;
+    }
+}
+
+function task3_2(){
+    task$3_2 = 1;
+    swal({
+        html: true,
+        title: "Instructions",
+        text: ""
+    });
+}
+
+function check3_2(){
+    var score$3_2 = 0;
+    if(1){
+        swal("", "", "success");
+        $('#tasks_help').hide();
+        score += 100;
+        scoreAnim();
+        task$3_2 = 0;
     }
 }
 
@@ -223,15 +264,16 @@ function task3_3(){
     swal({
         html: true,
         title: "Instructions",
-        text: "Clickjacking"
+        text: "Remember when you went to the arcade game parlour, there used to be this game called MoleBuster where all you had to do was pick up the rubber hammer and mash into the moles on the console. Apparently there exists a similar game on the internet. Go squash some bugs and and whack some moles. See if www.randomgame.game serves you the right game. Have fun!"
     });
 }
 
 function check3_3(){
     if(1){
-        swal("Great discovery!", "Clickjacking", "success");
+        swal("", "Clickjacking", "success");
         $('#tasks_help').hide();
         score += 100;
+        scoreAnim();
         task$3_3 = 0;
     }
 }
@@ -246,6 +288,7 @@ function task3_4(){
 }
 
 function check3_4(){
+    var score$3_4 = 0;
     swal({
         title: "",
         text: "Are you sure you want to download?",
@@ -260,13 +303,14 @@ function check3_4(){
     function(isConfirm){  
         if (isConfirm) {
             swal("Poor choice!", "You see, no music file ever ends with .exe extension. It's clearly an executable and surely a virus. Always read the name of the files carefully before downloading them. No points for you.", "error");
-            score += 0;
+            score$3_4 = 0;
         }
         else{
             swal("Naaaice!", "You must have noticed the wrong file extension and smartly decided to not download the file. Very wise, I must say. It was clearly an executable and surely a virus. Of course, no music file ever ends with a .exe extension.", "success");
-            score += 200;
+            score$3_4 = 200;
         }
         $('#tasks_help').hide();
+        scoreAnim(score$3_4);
         task$3_4 = 0;
     });
 }

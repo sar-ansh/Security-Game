@@ -1,90 +1,3 @@
-#tasks_bar{
-    position: absolute;
-    bottom: 5px;
-    left: 35%;
-    width: 400px;
-    height: 40px;
-    box-sizing: border-box;
-    background-color: inherit;
-    display: none;
-}
-
-#score_icon{
-    position: absolute;
-    top: 0px;
-    left: 0%;
-    right: 15%;
-    background-color:inherit;
-    width: 50px;
-    height: 40px;
-    border-radius: 100%;
-    color: gold;
-    font-size: 36px;
-    text-align: left;
-}
-
-#score_value{
-    position: absolute;
-    top: 10px;
-    left: 15%;
-    right: 50%;
-    background-color:inherit;
-    color: gold;
-    font-size: 30px;
-    text-align: left;
-}
-
-#money_icon{
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    right: 65%;
-    background-color:inherit;
-    width: 50px;
-    height: 40px;
-    border-radius: 100%;
-    color: gold;
-    font-size: 36px;
-    text-align: center;
-}
-
-#money_value{
-    position: absolute;
-    top: 10px;
-    left: 65%;
-    right: 100%;
-    background-color:inherit;
-    color: gold;
-    font-size: 30px;
-    text-align: center;
-}
-
-#score_icon:hover, #money_icon:hover {
-  background-color:lightgoldenrodyellow;
-}
-
-#tasks_help{
-    position: absolute;
-    bottom: 5px;
-    left: 10%;
-    background-color: #F44336;
-    width: 50px;
-    height: 40px;
-    border-radius: 100%;
-    color: #FFF;
-    font-size: 30px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-#tasks_help:hover {
-  transform: rotate(360deg);
-}
-
-#tasks_help:active {
-  background-color: #d3d3d3;
-}
-
 #tasks_menu{
     background-color: #778899; 
     position: absolute; 
@@ -130,13 +43,11 @@
     color: #fff;
     text-align: center;
     -webkit-transition: .5s;
-    cursor: pointer;
 }
 
 .taskbox p{
     cursor: pointer;
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .taskbox_caption {
@@ -146,6 +57,90 @@
     -webkit-transform: rotateX(-90deg);
     -webkit-transform-origin: 100% 0;
     -webkit-transition: .5s;
+}
+
+#marcus{
+    font-weight: bold;
+    color: #4B0082;
+}
+
+.taskbox p #marcush:hover{
+    font-weight: bold;
+    color: #4B0082;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#antonio{
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.taskbox p #antonioh:hover{
+    font-weight: bold;
+    color: #FF0000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#maria{
+    font-weight: bold;
+    color: #FFFF00;
+}
+
+.taskbox p #mariah:hover{
+    font-weight: bold;
+    color: #FFFF00;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#flora{
+    font-weight: bold;
+    color: #ff1493;
+}
+
+.taskbox p #florah:hover{
+    font-weight: bold;
+    color: #ff1493;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#tony{
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.taskbox p #tonyh:hover{
+    font-weight: bold;
+    color: #0000FF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#ricky{
+    font-weight: bold;
+    color: #00FFFF;
+}
+
+.taskbox p #rickyh:hover{
+    font-weight: bold;
+    color: #00FFFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#sam{
+    font-weight: bold;
+    color: #00FF00;
+}
+
+.taskbox p #samh:hover{
+    font-weight: bold;
+    color: #00FF00;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .timeline{

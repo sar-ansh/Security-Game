@@ -1,7 +1,7 @@
 #gabber {
     position: absolute;
-    top: 10%;
-    height: 80%;
+    top: 5%;
+    height: 94%;
     left: 10%;
 	width: 80%;
 }
@@ -20,7 +20,6 @@
     font-family: "Comic Sans MS", cursive, sans-serif;
 	text-shadow: #ccc 2px 2px 1px;
     padding-bottom: 10px;
-	padding-bottom: 20px;
 }
 
 #gabber_about p{
@@ -28,7 +27,6 @@
     font-family: "Comic Sans MS", cursive, sans-serif;
 	text-shadow: #ccc 2px 2px 1px;
     padding-bottom: 10px;
-	padding-bottom: 20px;
 }
 
 .gabber-button{

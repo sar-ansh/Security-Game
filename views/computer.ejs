@@ -76,22 +76,26 @@
     </div>
     
     <script>
-        var comp_nav = false;
+        var comp_nav = true;
         
+        $('.left-menu_nav').animate({width:200});
+        $('.left-menu_nav').show();
+        $('.screen').animate({left:200});
+
         $('.comp_nav').click(function(){
-                if(comp_nav){
-                    $('.left-menu_nav').animate({width:0}, function(){
-                        $('.left-menu_nav').hide();
-                    });
-                    $('.screen').animate({left:0});
-                    comp_nav = false;
-                }
-                else{
-                    $('.left-menu_nav').animate({width:200});
-                    $('.left-menu_nav').show();
-                    $('.screen').animate({left:200});
-                    comp_nav = true;
-                }
+            if(comp_nav){
+                $('.left-menu_nav').animate({width:0}, function(){
+                    $('.left-menu_nav').hide();
+                });
+                $('.screen').animate({left:0});
+                comp_nav = false;
+            }
+            else{
+                $('.left-menu_nav').animate({width:200});
+                $('.left-menu_nav').show();
+                $('.screen').animate({left:200});
+                comp_nav = true;
+            }
         });
         
         $('#explorer').click(function () {

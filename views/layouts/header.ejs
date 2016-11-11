@@ -36,27 +36,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" data-toggle="tooltip" title="Welcome to the security game.">SecV</a>
+                <div class="navbar-brand">
+                    <span id="game_title" data-toggle="tooltip" title="Welcome to the security game.">SecV</span>
+                    <% if (user != null) { %>
+                        <span id="tasks_help" style="display:none;" data-toggle="tooltip" title="Hint"><i class="fa fa-info-circle"></i></span>
+                        <div id="score_board">
+                            <span id="score_icon" data-toggle="tooltip" title="Current Score"><i class="fa fa-trophy"></i></span>
+                            <span id="score_tag"></span>
+                            <span id="score_value">0</span>
+                        </div>
+                    <% } %>
+                </div>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <% if (user != null) { %>
                     <ul class="nav navbar-nav">
-                        <li><a data-toggle="tooltip" title="Go to game." id="game">Game</a></li>
-                        <li><a data-toggle="tooltip" title="Use the computer." id="computer">Computer</a></li>
-                        <li><a data-toggle="tooltip" title="Read about SecV." id="about">About</a></li>
+                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Go to game." id="game">Game</a></li>
+                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Use the computer." id="computer">Computer</a></li>
+                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Read about SecV." id="about">About</a></li>
                     </ul>
                 <% } %>
                 <ul class="nav navbar-nav navbar-right">
                     <% if (user == null) { %>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" >
-                                <b>Login</b> 
+                                <b>Login</b>
                                 <span class="caret"></span>
                             </a>
                             <div id="login_intro" class="dropdown-menu">
                                     <% if (message != null) { %>
-                                        <!-- SweetAlert the error message.-->
-                                        <div class="alert-danger"><%= message %></div>
+                                        <!-- Fix the error message position-->
+                                        <div class="alert-danger" style="text-align: center;"><%= message %></div>
                                     <% } %>
                                 <div class="col-md-12">Login via
                                     <div class="social-buttons">
@@ -107,20 +117,10 @@
                         </li>
                     <% } 
                     else { %>
-                        <!-- Fix cursor when hovered over logout.-->
-                        <li><a href="/logout"><b>Logout</b> </a></li>
-                        <li style="margin: 10px 10px; color:#fff;"><b>email</b>: <%= user.local.email %><br></li>
+                        <li><a href="/logout"><b style="cursor: pointer;">Logout</b> </a></li>
+                        <li style="margin: 15px; color:#fff;"><b>email</b>: <%= user.local.email %><br></li>
                     <% } %>
                 </ul>        
-            </div>
-            <div id="tasks_help" style="display:none;">
-                <i class="fa fa-info-circle"></i>
-            </div>
-            <div id="tasks_bar" style="display:none;">
-                <span id="score_icon"><i class="fa fa-trophy"></i></span>
-                <span id="score_value">1500</span>
-                <span id="money_icon"><i class="fa fa-money"></i></span>
-                <span id="money_value">20000</span>
             </div>
         </div>
     </nav>
