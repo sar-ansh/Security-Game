@@ -32,7 +32,7 @@ body {
     color: #FFF;
 }
 
-#start_navbar {
+.start_navbar {
    height: 100px;
    width: 100%;
 }

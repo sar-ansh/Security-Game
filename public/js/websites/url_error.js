@@ -17,7 +17,7 @@ var error_messages = ["A dog ate your web page. Yeah, that's it.",
 
 var errormessage = function() {
     var random_message = Math.floor(Math.random()*error_messages.length);
-    $('#url-error-message').html(error_messages[random_message]);
+    $('#url-error-message').html("<p>" + error_messages[random_message] + "</p><p>This may as well have been a malicious web page. Enter the url carefully.</p>");
 };
 
 $('#url-error-button').click(function(){

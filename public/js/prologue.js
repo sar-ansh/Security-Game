@@ -73,7 +73,7 @@ var timtom = function() {
             var keycode = event.keyCode || event.which;
             if(keycode == '13' && hacked == false) {
                 $('.cursor_last_prologue').hide();
-                $('.viewport_prologue').append("<hr><div id=\"console_prologue\"><div><p id=\"c_prologue\">You\'ve accessed the mainframe. You need to brute-force the passcode...</p.</p></div><div id=\"b_prologue\" class=\"button_prologue\">Transaction Passcode:</div><div class=\"password_prologue\"></div><div id=\"a_prologue\" class=\"blink_prologue granted_prologue hidden_prologue\">ACCESS GRANTED!</div></div>");
+                $('.viewport_prologue').append("<hr><div id=\"console_prologue\"><div><p id=\"c_prologue\">You\'ve accessed the mainframe. You need to brute-force the passcode. Press enter to start breaking the key...</p.</p></div><div id=\"b_prologue\" class=\"button_prologue\">Transaction Passcode:</div><div class=\"password_prologue\"></div><div id=\"a_prologue\" class=\"blink_prologue granted_prologue hidden_prologue\">ACCESS GRANTED!</div></div>");
                 $('.viewport_prologue')[0].scrollTop = $('.viewport_prologue')[0].scrollHeight;
                 hacked = true;
             }

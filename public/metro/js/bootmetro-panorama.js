@@ -44,7 +44,7 @@
          var $this = this
 
          // arrange the panorama height
-         this.$element.height( this.$element.parent().height() - $('#start_navbar').outerHeight() )
+         this.$element.height( this.$element.parent().height() - $('.start_navbar').outerHeight() )
 
          // arrange the section container width
          $this.resize();

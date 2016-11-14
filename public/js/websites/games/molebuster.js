@@ -3,6 +3,8 @@ var timerID=null;
 var playing=false;
 var numholes=6*10;
 var currentpos=-1;
+var timer_mb = null;
+var click$3_3 = false;
 
 function clrholes() {
     for(var k=0; k<document.dmz.elements.length; k++)
@@ -34,20 +36,35 @@ function stopgame() {
     $('input[name="timeleft"]').val("Time: " + 0);
     clrholes();
     $('input[name="state"]').val("Game over. Press start to play again.");
-    swal("Game Over!", "Your score is:  " + totalhits, "info");
+    if(task$3_3 == 1){
+        swal({title: "Game Over!", text: "Your score is: " + totalhits, type: "info", showCancelButton: false, closeOnConfirm: false },function(){
+            clearTimeout(timer_mb);
+            check3_3();
+        });
+    }
+    else{
+        swal("Game Over!", "Your score is:  " + totalhits, "info");
+    }
+    scoreAnim(totalhits);
 }
 
 function play() {
-    stoptimer();
-    if(playing) {
-        stopgame();
+    if(playing) 
         return;
+    $('#layer_mb').hide();
+    if(task$3_3 == 1){
+        setTimeout(function(){
+            timer_mb = setInterval(function(){
+                $('#layer_mb').fadeToggle(500); 
+            }, 3000);
+        }, 3000);
     }
+    stoptimer();
     playing=true;
     clrholes();
     totalhits=0;
     $('input[name="score"]').val("Score: " + totalhits);
-    $('input[name="state"]').val("Game in progress. Press stop to stop the game.");
+    $('input[name="state"]').val("Game in progress.");
     launch();
     showtime(gamelength);
 }
@@ -80,3 +97,23 @@ function hithead(id) {
     $('input[name="score"]').val("Score: " + totalhits);
     document.dmz.elements[id].checked=false;
 }
+
+$('#layer_mb').click(function(){
+    if(task$3_3 == 1){
+        $(this).css("opacity", "1");
+        clearTimeout(timer_mb);
+        click$3_3 = true;
+        swal({title: "Oops!", text: "This was a layered advertisement.", type: "error", showCancelButton: false, closeOnConfirm: false },function(){
+            clearTimeout(timer_mb);
+            check3_3();
+        });
+        stoptimer();
+        playing=false;
+        $('input[name="timeleft"]').val("Time: " + 0);
+        clrholes();
+        $('input[name="state"]').val("Game over. Press start to play again.");
+    }
+    else{
+        swal("Oops", "This was a layered advertisement.", "error")
+    }
+});

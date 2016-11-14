@@ -232,7 +232,7 @@
   background-image: none;
 }
 
-#start_navbar {
+.start_navbar {
   position: relative;
   display: block;
   height: auto;
@@ -273,7 +273,7 @@
   background-clip: padding-box;
 }
 
-#start_navbar .win-backbutton {
+.start_navbar .win-backbutton {
   position: absolute;
   top: 30px;
   left: 0;

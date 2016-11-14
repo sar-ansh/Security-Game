@@ -19,7 +19,7 @@
     left: 3%;
     height: 60%;
     width: 20%;
-    background-color: aqua;
+    background-color: #d3d3d3;
 }
 
 #table_mb{
@@ -31,6 +31,10 @@
 #table_mb td{
     padding: 10px;
     text-align: center;
+}
+
+#table_mb input[type=radio]{
+    cursor: pointer;
 }
 
 #message_mb{
@@ -64,4 +68,22 @@
     height: 8%;
     width: 30%;
     border-radius: 10px;
+}
+
+#layer_mb {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    height: 40%;
+    width: 25%;
+    background-color: #a0ffcb;
+    opacity: 0.4;
+}
+
+#layer_mb span {
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+    cursor: pointer;
 }

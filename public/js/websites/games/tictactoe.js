@@ -161,7 +161,7 @@ function yourChoice_ttt(chName) {
 }
 
 function taken_ttt() {
-    alert("This cell in not empty! Try another")
+    $.notify("This cell in not empty! Try another one.", "error");
     pause_ttt=1;
 }
 
@@ -191,18 +191,18 @@ function myChoice_ttt() {
 }
 
 function ended_ttt() {
-    alert("Game over! To play once more press a button 'New Game'")
+    $.notify("Game over! To play once more start a new game.", "error")
 }
 
 function process_ttt() {
     logicOne_ttt();
-    if (all_ttt==1){ alert("You win!"); wn_ttt++; }
-    if (all_ttt==2){ alert("You lose!"); ls_ttt++; }
-    if (all_ttt==3){ alert("Draw!"); ts_ttt++; }
+    if (all_ttt==1){ swal("Well played!", "You win!", "info"); wn_ttt++; scoreAnim(2); }
+    if (all_ttt==2){ swal("Better luck next time!", "You lose!", "info"); ls_ttt++; scoreAnim(0); }
+    if (all_ttt==3){ swal("Not bad!", "Draw!", "info"); ts_ttt++; scoreAnim(1); }
     if (all_ttt!=0) {
-        $('input[name="you"]').val(wn_ttt);
-        $('input[name="computer"]').val(ls_ttt);
-        $('input[name="ties"]').val(ts_ttt);
+        $('input[name="you"]').val("Wins: " + wn_ttt);
+        $('input[name="computer"]').val("Losses: " + ls_ttt);
+        $('input[name="ties"]').val("Draws: " + ts_ttt);
     }
 }
 
@@ -245,9 +245,9 @@ function reset_ttt() {
 }
 
 function clearOut_ttt() {
-    $('input[name="you"]').val("0");
-    $('input[name="computer"]').val("0");
-    $('input[name="ties"]').val("0");
+    $('input[name="you"]').val("Wins: 0");
+    $('input[name="computer"]').val("Losses: 0");
+    $('input[name="ties"]').val("Draws: 0");
 }
 
 clearOut_ttt();

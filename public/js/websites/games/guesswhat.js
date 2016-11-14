@@ -11,6 +11,7 @@ function start_gw() {
 }
 
 function guess_gw() {
+    var score_gw = 0;
     var input_gw = $('input[name="number_gw"]').val();
     count++;
     $('input[name="count_gw"]').val("Number of guesses: " + count);
@@ -20,20 +21,38 @@ function guess_gw() {
         $('input[name="message_gw"]').val("My number is less than " + input_gw + ".");
     else{
         if(task$2_6 == 1){
-            if(count == 1)
-                swal({title: "Outstanding!", text: "You guessed the number in a single go.", type: "info", showCancelButton: false, closeOnConfirm: false },function(){   
+            if(count == 1){
+                swal({title: "Outstanding!", text: "You guessed the number in a single go.", type: "info", showCancelButton: false, closeOnConfirm: false },function(){
                     check2_6();
                 });
-            else
+                score_gw = 10;
+                scoreAnim(score_gw);
+            }
+            else{
                 swal({title: "Good enough!", text: "It took you " + count + " attempts to guess the number.", type: "info", showCancelButton: false, closeOnConfirm: false },function(){   
                     check2_6();
                 });
+                if(count>9)
+                    score_gw = 1;
+                else
+                    score_gw = 10 - count;
+                scoreAnim(score_gw);
+            }
         }
         else{
-            if(count == 1)
+            if(count == 1){
                 swal("Outstanding!", "You guessed the number in a single go.", "info");
-            else
+                score_gw = 10;
+                scoreAnim(score_gw);
+            }
+            else{
                 swal("Good enough!", "It took you " + count + " attempts to guess the number.", "info");
+                if(count>9)
+                    score_gw = 1;
+                else
+                    score_gw = 10 - count;
+                scoreAnim(score_gw);
+            }
         }
         $('input[name="message_gw"]').val("");
         $('input[name="from_gw"]').val("");

@@ -149,10 +149,10 @@ function check2_4(password$2_4){
         },
         function(isConfirm){   
             if (isConfirm) {
-                swal("Here you go!", "1. 8 characters minimum is good, 12 even better.\n2. Mix it up with numbers, symbols, Capital letters and lower case letters.\n3. Try not including a dictionary word.\n4. Don't use obvious substitutions like 0 for o.\n5. If you get bored try googling most common passwords just to make sure yours isn't one of them.\n\nYou can always go through these tips in the progress section as well by clicking on the appropriate task there. ", "info");  
+                swal("Here you go!", "1. 8 characters minimum is good, 12 even better.\n2. Mix it up with numbers, symbols, Capital letters and lower case letters.\n3. Try not including a dictionary word.\n4. Don't use obvious substitutions like 0 for o.\n5. If you get bored try googling most common passwords just to make sure yours isn't one of them.\n\nYou can always go through these tips in the timeline section as well by clicking on the appropriate task there. ", "info");  
             }
             else
-                swal("Hint", "It's alright. You can always read those tricks in the progress section by clicking on the appropriate task there.", "info")
+                swal("Hint", "It's alright. You can always read those tricks in the timeline section by clicking on the appropriate task there.", "info")
         });
         
         $('#tasks_help').hide();
@@ -261,21 +261,27 @@ function check3_2(){
 
 function task3_3(){
     task$3_3 = 1;
+    click$3_3 = false;
     swal({
         html: true,
         title: "Instructions",
-        text: "Remember when you went to the arcade game parlour, there used to be this game called MoleBuster where all you had to do was pick up the rubber hammer and mash into the moles on the console. Apparently there exists a similar game on the internet. Go squash some bugs and and whack some moles. See if www.randomgame.game serves you the right game. Have fun!"
+        text: "Remember when you went to the arcade game parlour, there used to be this game called MoleBuster where all you had to do was pick up the rubber hammer and mash into the moles on the console. Apparently there exists a similar game on the internet. Go squash some bugs and and whack some moles for the sake of nostalgia. See if www.randomgame.game serves you the right game. Have fun!"
     });
 }
 
 function check3_3(){
-    if(1){
-        swal("", "Clickjacking", "success");
-        $('#tasks_help').hide();
-        score += 100;
-        scoreAnim();
-        task$3_3 = 0;
+    var score$3_3 = 0;
+    if(click$3_3){
+        swal("Failed!", "Well, this was an example of clickjacking. This is the phenomenon where often advertisements and malicious links are layered over or under normal appearing links or buttons. The user of course is oblivious to this fact and hence clicks the hidden link and thus enables harmful possibilites. Hope you learnt something new at the cost of the score.", "error");
+        score$3_3 = 0;
     }
+    else{
+        swal("Perfect!", "You see, this was an example of clickjacking. This is the phenomenon where often advertisements and malicious links are layered over or under normal appearing links or buttons. The user of course is oblivious to this fact and hence clicks the hidden link and thus enables harmful possibilites. You safely avoided them. You deserve a cookie! However all I can provide are points, so you'll need to manage your own cookie. Go ahead!", "success");
+        score$3_3 = 200;
+    }
+    $('#tasks_help').hide();
+    scoreAnim(score$3_3);
+    task$3_3 = 0;
 }
 
 function task3_4(){
