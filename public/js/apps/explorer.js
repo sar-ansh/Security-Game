@@ -286,7 +286,7 @@ var JQD = (function($, window, document, undefined) {
             wallpaper: function() {
                 // Add wallpaper last, to prevent blocking.
                 if ($('#desktop').length) {
-                $('#explorer_app').prepend('<img id="wallpaper" class="abs" src="css/images/misc/wallpaper.jpg" />');
+                $('#explorer_app').prepend('<img id="wallpaper" class="abs" src="assets/computer/misc/wallpaper.jpg" />');
                 }
             }
         },

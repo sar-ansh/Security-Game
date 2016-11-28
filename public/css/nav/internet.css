@@ -310,7 +310,7 @@ input[type=text], select {
     overflow: hidden;
 }
 .url_error div{
-    background-image: url(../images/error_url.jpg);
+    background-image: url(../../assets/computer/error_url.jpg);
     background-repeat: repeat;
     background-position: 0 0;
     width: 100%;

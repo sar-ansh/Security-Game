@@ -56,7 +56,7 @@
   color: #999999;
 }
 
-#tasks_help{
+#task_help{
     position: absolute;
     left: 1%;
     top: 5%;
@@ -72,11 +72,59 @@
     padding: 0.3%;
 }
 
-#tasks_help:hover {
+#task_help:hover {
   transform: rotate(360deg);
 }
 
-#tasks_help:active {
+#task_help:active {
+  background-color: #d3d3d3;
+}
+
+#task_direction{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 3%;
+    height: 80%;
+    font-size: 30px;
+    background-color: #F44336;
+    border-radius: 100%;
+    color: #FFF;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0.3%;
+}
+
+#task_direction:hover {
+  transform: rotate(360deg);
+}
+
+#task_direction:active {
+  background-color: #d3d3d3;
+}
+
+#task_unlock{
+    position: absolute;
+    left: 96%;
+    top: 5%;
+    width: 3%;
+    height: 80%;
+    font-size: 30px;
+    background-color: #F44336;
+    border-radius: 100%;
+    color: #FFF;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 0.3%;
+}
+
+#task_unlock:hover {
+  transform: rotate(360deg);
+}
+
+#task_unlock:active {
   background-color: #d3d3d3;
 }
 

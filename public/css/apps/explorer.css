@@ -135,7 +135,7 @@ li {
 }
 
 .ui-resizable-se {
-  background: url(images/gui/window_corner.gif) no-repeat right bottom;
+  background: url(../../assets/computer/gui/window_corner.gif) no-repeat right bottom;
   font-size: 0;
   overflow: hidden;
   width: 15px;
@@ -150,7 +150,7 @@ div.ui-resizable-handle {
 }
 
 .icon {
-  background: url(images/gui/trans_white.png) no-repeat -99999px -99999px;
+  background: url(../../assets/computer/gui/trans_white.png) no-repeat -99999px -99999px;
   border-radius: 5px;
   color: #fff;
   font-size: 11px;
@@ -163,11 +163,11 @@ div.ui-resizable-handle {
 }
 
 .icon.active {
-  background: url(images/gui/trans_black.png);
+  background: url(../../assets/computer/gui/trans_black.png);
 }
 
 .icon img {
-  background: url(images/gui/trans_black.png) no-repeat -99999px -99999px;
+  background: url(../../assets/computer/gui/trans_black.png) no-repeat -99999px -99999px;
   display: block;
   margin: 0 auto 5px;
   width: 32px;
@@ -234,7 +234,7 @@ div.ui-resizable-handle {
 }
 
 .window_top {
-  background: #333 url(images/gui/bar_bottom.png) repeat-x;
+  background: #333 url(../../assets/computer/gui/bar_bottom.png) repeat-x;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   color: #fff;
@@ -252,7 +252,7 @@ div.ui-resizable-handle {
 }
 
 .window_bottom {
-  background: #fff url(images/gui/bar_top.png) repeat-x left bottom;
+  background: #fff url(../../assets/computer/gui/bar_top.png) repeat-x left bottom;
   border-top: 1px solid #bbb;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -271,7 +271,7 @@ div.ui-resizable-handle {
 .window_min,
 .window_resize,
 .window_close {
-  background: url(images/gui/window_buttons.gif) no-repeat;
+  background: url(../../assets/computer/gui/window_buttons.gif) no-repeat;
   border-radius: 2px;
   float: left;
   font-size: 0;
@@ -315,7 +315,7 @@ div.ui-resizable-handle {
 }
 
 .window_content {
-  background: url(images/gui/window_content.gif) repeat-y;
+  background: url(../../assets/computer/gui/window_content.gif) repeat-y;
   line-height: 1.5;
   overflow: auto;
   top: 32px;
@@ -358,7 +358,7 @@ table.data td {
 }
 
 table.data th {
-  background: #fff url(images/gui/bar_top.png) repeat-x left bottom;
+  background: #fff url(../../assets/computer/gui/bar_top.png) repeat-x left bottom;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   font-weight: bold;
@@ -379,7 +379,7 @@ table.data tbody tr:nth-child(even) td {
 }
 
 table.data tbody tr.active td {
-  background: #06c url(images/gui/bar_top_link.png) repeat-x;
+  background: #06c url(../../assets/computer/gui/bar_top_link.png) repeat-x;
   color: #fff;
 }
 
@@ -390,13 +390,13 @@ th.shrink {
 #bar_top,
 #bar_bottom {
   font-weight: bold;
-  padding: 0 10px;
+  padding: 0.3% 1%;
   left: 0;
   right: 0;
 }
 
 #bar_top {
-  background: #fff url(images/gui/bar_top.png) repeat-x left bottom;
+  background: #fff url(../../assets/computer/gui/bar_top.png) repeat-x left bottom;
   border-bottom: 1px solid #333;
   padding-right: 20px;
   text-shadow: #fff 0 1px 1px;
@@ -405,11 +405,11 @@ th.shrink {
 }
 
 #bar_bottom {
-  background: #333 url(images/gui/bar_bottom.png) repeat-x;
+  background: #333 url(../../assets/computer/gui/bar_bottom.png) repeat-x;
   color: #fff;
   font-size: 16px;
   line-height: 40px;
-  opacity: 0.8;
+  opacity: 1;
   overflow: hidden;
   text-shadow: #000 0 1px 1px;
   height: 40px;
@@ -428,7 +428,7 @@ th.shrink {
 }
 
 #bar_top li a {
-  background-image: url(images/gui/bar_top_link.png);
+  background-image: url(../../assets/computer/gui/bar_top_link.png);
   background-repeat: no-repeat;
   background-position: -99999px -99999px;
   color: #000;
@@ -476,7 +476,7 @@ th.shrink {
 }
 
 #bar_top ul.menu a:hover {
-  background: #06c url(images/gui/bar_top_link.png) repeat-x;
+  background: #06c url(../../assets/computer/gui/bar_top_link.png) repeat-x;
   color: #fff;
   text-shadow: none;
 }

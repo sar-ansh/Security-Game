@@ -12,10 +12,10 @@ SecV.Preload.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
   	//load game assets      
-    this.load.image('map', 'assets/images/map.png');
-    this.load.spritesheet('hero', 'assets/images/hero.png', 90, 140);
-    this.load.image('person', 'assets/images/person.png');
-    this.load.image('computer', 'assets/images/computer.png');
+    this.load.image('map', 'assets/game/map.png');
+    this.load.spritesheet('hero', 'assets/game/hero.png', 90, 140);
+    this.load.image('person', 'assets/game/person.png');
+    this.load.image('computer', 'assets/game/computer.png');
   },
   create: function() {
   	this.state.start('MainMenu');

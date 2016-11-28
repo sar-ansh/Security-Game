@@ -1,0 +1,72 @@
+[
+    {
+    "task_name" : ["task0_1"],
+    "task_help" : [""],
+    "task_direction" : [""]
+    },
+    {
+    "task_name" : ["task1_1"],
+    "task_help" : [""],
+    "task_direction" : [""]
+    },
+    {
+    "task_name" : ["task2_1"],
+    "task_help" : ["You are bored out of your mind. You need to go on the internet to have random conversations with strangers. Meet at least 3 new people from around the world. Remember, the internet is full of advertisements. Some are genuine, others are malicious. Don't ever click on them unless you know exactly what you are doing. You never know where they may lead you."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.gabber.game' in the address bar to visit the required website.</p><p>3. Chat with at least 3 strangers to complete the task.</p>"]
+    },
+    {
+    "task_name" : ["task2_2"],
+    "task_help" : ["You have recieved a new mail. You need to check it out ASAP. Just be cautious. Not all mails and websites are safe."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.mail.game' in the address bar to visit the required website.</p><p>3. Check the unread mails and open the appropriate message to proceed.</p>"]
+    },
+    {
+    "task_name" : ["task2_3"],
+    "task_help" : ["You need to check when your account (1003-2323-6565-8461) was used last time. You can access your bank account using the internet. Click on the transaction that you don't remember doing. Remember, clicks are your friends, albeit often they are deceitful."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.bank.game' in the address bar to visit the required website.</p><p>3. Click on the appropriate entry to complete the task.</p>"]
+    },
+    {
+    "task_name" : ["task2_4"],
+    "task_help" : ["Create a new account on the 'Look n Meet' beta app in order to exapnd your social network. Hope you know the traits of a good password. There's no provision to recover it though. So you better freeze it in your memory. And remember, same password on multiple accounts is not a safe bet."],
+    "task_direction" : ["<p>1. Go to the 'Apps' section.</p><p>2. Open the 'Look n Meet' app.</p><p>3. Enter the personal details and register on the Beta app.</p>"]
+    },
+    {
+    "task_name" : ["task2_5"],
+    "task_help" : ["That pirated version of 'Immortal Enemies' is sitting on your desktop and yet you are unable to play it. Only if they could release the crack sooner. Why don't you try searching the internet for cracks. If you need any help, remember blog writers have much more experience than you."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.blog.game' in the address bar to visit the required website.</p><p>3. Open the appropriate blog post and proceed.</p>"]
+    },
+    {
+    "task_name" : ["task2_6"],
+    "task_help" : ["Check out the new 'www.randomgame.game' website. Last time, it was up, it was forced down as it indexed way too many malicious websites. I hope they have taken better precautions this time. You need to play at least one game to complete this task."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.randomgame.game' in the address bar to visit the required website.</p><p>3. Start playing.</p>"]
+    },
+    {
+    "task_name" : ["task3_1"],
+    "task_help" : ["In order to know more about your past, try visiting the explorer app. You may find some old diary pages that you got scanned recently. Hard Drive is the file manager."],
+    "task_direction" : ["<p>1. Go to the 'Apps' section.</p><p>2. Open explorer app.</p><p>3. Open hard drive and open the appropriate file to complete the task.</p>"]
+    },
+    {
+    "task_name" : ["task3_2"],
+    "task_help" : [""],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.mail.game' in the address bar to visit the required website.</p><p>3. Check the unread mails and open the appropriate message to complete the task.</p>"]
+    },
+    {
+    "task_name" : ["task3_3"],
+    "task_help" : ["Remember when you went to the arcade game parlour, there used to be this game called MoleBuster where all you had to do was pick up the rubber hammer and mash into the moles on the console. Apparently there exists a similar game on the internet. Go squash some bugs and and whack some moles for the sake of nostalgia. See if www.randomgame.game serves you the right game. Have fun!"],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.randomgame.game' in the address bar to visit the required website.</p><p>3. Play.</p>"]
+    },
+    {
+    "task_name" : ["task3_4"],
+    "task_help" : ["Remember when few weeks back you had given out your mail id to numerous websites when you were searching for Natalie Coria's new album desperately? Now that the album is finally released, expect a wave of replies from at least some of those websites. You need to download the album ASAP. I read the reviews. It's supposed to be really promising."],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.mail.game' in the address bar to visit the required website.</p><p>3. Check the unread mails, open the appropriate message and proceed.</p>"]
+    },
+    {
+    "task_name" : ["task3_5"],
+    "task_help" : [""],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.mail.game' in the address bar to visit the required website.</p><p>3. Check the unread mails and open the appropriate message to complete the task.</p>"]
+    },
+    {
+    "task_name" : ["task3_6"],
+    "task_help" : [""],
+    "task_direction" : ["<p>1. Go to the 'Browser' in the 'Internet' section on the left navigation pane.</p><p>2. Type 'www.mail.game' in the address bar to visit the required website.</p><p>3. Check the unread mails and open the appropriate message to complete the task.</p>"]
+    }
+]

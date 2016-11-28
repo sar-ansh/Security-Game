@@ -37,23 +37,25 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <span id="game_title" data-toggle="tooltip" title="Welcome to the security game.">SecV</span>
+                    <span id="game_title" title="Welcome to the security vigilante game.">SecV</span>
                     <% if (user != null) { %>
-                        <span id="tasks_help" style="display:none;" data-toggle="tooltip" title="Hint"><i class="fa fa-info-circle"></i></span>
-                        <div id="score_board">
-                            <span id="score_icon" data-toggle="tooltip" title="Current Score"><i class="fa fa-trophy"></i></span>
+                        <span id="task_help" style="display:none;" title="Help"><i class="fa fa-question-circle"></i></span>
+                        <span id="task_direction" style="display:none;" title="Direction"><i class="fa fa-compass"></i></span>
+                        <div title="Current Score" id="score_board">
+                            <span id="score_icon"><i class="fa fa-trophy"></i></span>
                             <span id="score_tag"></span>
                             <span id="score_value">0</span>
                         </div>
+                        <span id="task_unlock" style="display:none;" title="Unlock tasks"><i class="fa fa-unlock"></i></span>
                     <% } %>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <% if (user != null) { %>
                     <ul class="nav navbar-nav">
-                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Go to game." id="game">Game</a></li>
-                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Use the computer." id="computer">Computer</a></li>
-                        <li><a style="font-weight: bold;" data-toggle="tooltip" title="Read about SecV." id="about">About</a></li>
+                        <li><a style="font-weight: bold;" title="Go to the game." id="game">Game</a></li>
+                        <li><a style="font-weight: bold;" title="Use the computer." id="computer">Computer</a></li>
+                        <li><a style="font-weight: bold;" title="Read about SecV." id="about">About</a></li>
                     </ul>
                 <% } %>
                 <ul class="nav navbar-nav navbar-right">
@@ -115,8 +117,8 @@
                         </li>
                     <% } 
                     else { %>
-                        <li><a href="/logout"><b style="cursor: pointer;">Logout</b> </a></li>
-                        <li style="margin: 15px; color:#fff;"><b>email</b>: <%= user.local.email %><br></li>
+                        <li><a title="Log out of the game." href="/logout"><b style="cursor: pointer;">Logout</b> </a></li>
+                        <li style="margin: 15px; color:#fff;" title="Email id used to register."><b>email</b>: <%= user.local.email %><br></li>
                     <% } %>
                 </ul>        
             </div>
@@ -150,6 +152,6 @@
         });
         
         $('.oauth_buttons').click(function(){
-            swal("Info", "Facebook and Google authorization haven't been integrated yet. You'll need to register first in order to login. Apologies for the incovenience caused.\n\n P.S. In case you are worried about spams, we assure you, you won't be bothered by them at all.", "info") 
+            swal("Info", "Facebook and Google authorization haven't been integrated yet. You'll need to register first in order to login. Apologies for the incovenience caused.\n\n P.S. In case you are worried about spams, we assure you, you won't receive any.", "info") 
         });
     </script>

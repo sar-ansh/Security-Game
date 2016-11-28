@@ -19,9 +19,9 @@
             <label for="section-2"> <span>Tools</span></label>
             <div class="content">
                 <ul class="ul_comp_nav">
-                    <li><i class="fa fa-cog"></i><span><a id="options">Options</a></span></li>
-                    <li><i class="fa fa-terminal"></i><span><a id="terminal">Terminal</a></span></li>
-                    <li><i class="fa fa-recycle"></i><span><a id="recycle-bin">Recycle Bin</a></span></li>
+                    <li style="opacity: .5; pointer-events:none;"><i class="fa fa-cog"></i><span><a id="options">Options</a></span></li>
+                    <li style="opacity: .5; pointer-events:none;"><i class="fa fa-terminal"></i><span><a id="terminal">Terminal</a></span></li>
+                    <li style="opacity: .5; pointer-events:none;"><i class="fa fa-recycle"></i><span><a id="recycle-bin">Recycle Bin</a></span></li>
                 </ul>
             </div>
         </div>
@@ -187,6 +187,12 @@
             $("#browserc").hide();
             $("#historyc").hide();
             $("#downloadsc").hide();
+            $.notify("Prologue and Chapter 1 based tasks haven't been implementd yet. \nIn order to play a task, you need to complete all the previous ones. \nClick the button with lock on it below to unlock all the tasks for this session.\n P.S. Click on me to hide me.", {
+              className:'info',
+              autoHide: false,
+            });
+            if(!task_unlock)
+                $('#task_unlock').show();
         });
         
         $('#timeline').click(function () {

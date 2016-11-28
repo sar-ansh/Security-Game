@@ -6,7 +6,7 @@ SecV.Boot = function(){};
 SecV.Boot.prototype = {
   preload: function() {
   	//assets we'll use in the loading screen
-    this.load.image('preloadbar', 'assets/images/preloader_bar.png');
+    this.load.image('preloadbar', 'assets/game/preloader_bar.png');
   },
   create: function() {
   	//loading screen will have a white background

@@ -9,7 +9,7 @@ var Typer={
     text: null,
     accessCountimer:null,
     index:0, // current cursor position
-    speed:1, // speed of the Typer
+    speed:2, // speed of the Typer
     file:null, //file, must be setted
     
     init: function(){
@@ -173,7 +173,7 @@ $('#power').click(function(){
             }
         }, 12000);
         setTimeout(function(){
-            Typer.file = "js/new.txt";
+            Typer.file = "js/prologue.txt";
             Typer.init();
             start = true;
         }, 18000);
@@ -184,8 +184,8 @@ var over_prologue = setInterval(function(){
     if(access){
         $("#prologue").fadeOut(5000);
         setTimeout(function(){
-            $("#base").fadeIn(5000);
-        }, 5000);
+            $("#base").fadeIn(1000);
+        }, 6000);
         clearInterval(over_prologue);
     }
 }, 1000);

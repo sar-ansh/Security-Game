@@ -1,0 +1,168 @@
+#tasks_menu{
+    background-color: #778899; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+    overflow-y: auto;
+}
+
+#tasks_menu::-webkit-scrollbar {
+    width: 12px;
+}
+
+#tasks_menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#tasks_menu::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(105,105,105,0.9); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.taskbox {
+    float: left;
+    height: 6em;
+    margin: 2em;
+    width: 10em;
+    -webkit-transform: perspective(500);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: .5s;
+}
+
+.taskbox:hover {
+    -webkit-transform: perspective(500) rotateX(90deg) translateY(-3em) translateZ(3em);
+}
+
+.taskbox h2 {
+    color: #fff;
+    text-align: center;
+    -webkit-transition: .5s;
+}
+
+.taskbox p{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.taskbox_caption {
+    background-color: #000;
+    color: #778899;
+    padding: 1em;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin: 100% 0;
+    -webkit-transition: .5s;
+}
+
+#anonymous{
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+.taskbox p #anonymoush:hover{
+    font-weight: bold;
+    color: #2F4F4F;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#player{
+    font-weight: bold;
+    color: #783D48;
+}
+
+.taskbox p #playerh:hover{
+    font-weight: bold;
+    color: #783D48;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#marcus{
+    font-weight: bold;
+    color: #4B0082;
+}
+
+.taskbox p #marcush:hover{
+    font-weight: bold;
+    color: #4B0082;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#antonio{
+    font-weight: bold;
+    color: #FF0000;
+}
+
+.taskbox p #antonioh:hover{
+    font-weight: bold;
+    color: #FF0000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#maria{
+    font-weight: bold;
+    color: #FFFF00;
+}
+
+.taskbox p #mariah:hover{
+    font-weight: bold;
+    color: #FFFF00;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#flora{
+    font-weight: bold;
+    color: #ff1493;
+}
+
+.taskbox p #florah:hover{
+    font-weight: bold;
+    color: #ff1493;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#tony{
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.taskbox p #tonyh:hover{
+    font-weight: bold;
+    color: #0000FF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#ricky{
+    font-weight: bold;
+    color: #00FFFF;
+}
+
+.taskbox p #rickyh:hover{
+    font-weight: bold;
+    color: #00FFFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#sam{
+    font-weight: bold;
+    color: #00FF00;
+}
+
+.taskbox p #samh:hover{
+    font-weight: bold;
+    color: #00FF00;
+    cursor: pointer;
+    text-decoration: underline;
+}

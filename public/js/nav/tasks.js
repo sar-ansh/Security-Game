@@ -1,4 +1,14 @@
 var score = 0;
+var task_unlock = false;
+
+function unlockTask(next_task){
+    $('#task' +next_task).css({"opacity": "1", "pointer-events":"auto"});
+}
+
+function hideHelp(){
+    $('#task_help').hide();
+    $('#task_direction').hide();
+}
 
 function scoreAnim(task_score){
     $({score_value: 0}).animate({score_value: task_score},{
@@ -41,9 +51,10 @@ function check2_1(conv$2_1){
     var score$2_1 = 0;
     if(conv$2_1 == 3){
         swal("Nice!", "You got to meet 3 strangers. Found anyone interesting?\nYou can come here at any time to have engaging conversations.", "success");
-        $('#tasks_help').hide();
+        hideHelp();
         score$2_1 = 150;
         scoreAnim(score$2_1);
+        unlockTask("2_2");
     }
 }
 
@@ -61,9 +72,10 @@ function check2_2(file_name$2_2){
     if(file_name$2_2 === "letter.txt"){
         swal("Good job!", "You can access the downloaded files in the Downloads section.", "success");
         file$2_2 = 0;
-        $('#tasks_help').hide();
+        hideHelp();
         score$2_2 = 100;
         scoreAnim(score$2_2);
+        unlockTask("2_3");
     }
 }
 
@@ -79,10 +91,11 @@ function task2_3(){
 function check2_3(){
     var score$2_4 = 0;
     swal("You are getting a hang of this.", "So, this click was safe, huh? I must remind you, if you click on a malicious link, you'll fail the task. But you seem to be smart enough to do that. So no worries. Now, you know the exact figure that the hacker stole from you. You need to start planning your vengeance soon.", "success");
-    $('#tasks_help').hide();
+    hideHelp();
     score$2_4 = 100;
     scoreAnim(score$2_4);
     task$2_3 = 0;
+    unlockTask("2_4");
 }
 
 function task2_4(){
@@ -155,9 +168,10 @@ function check2_4(password$2_4){
                 swal("Hint", "It's alright. You can always read those tricks in the timeline section by clicking on the appropriate task there.", "info")
         });
         
-        $('#tasks_help').hide();
+        hideHelp();
         scoreAnim(score$2_4);
         task$2_4 = 0;
+        unlockTask("2_5");
     }
 }
 
@@ -179,25 +193,28 @@ function check2_5(register$2_5){
     else if(register$2_5 == 1){
         if(result$2_5 == 1){
             swal("Great instincts!", "You are smart. Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. You can move on to the next task.", "success");
-            $('#tasks_help').hide();
+            hideHelp();
             score$2_5 = 200;
             scoreAnim(score$2_5);
             task$2_5 = 0;
+            unlockTask("2_6");
         }
         else{
             swal("Good work!", "You are learning. Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. You can move on to the next task.", "success");
-            $('#tasks_help').hide();
+            hideHelp();
             score$2_5 = 100;
             scoreAnim(score$2_5);
             task$2_5 = 0;
+            unlockTask("2_6");
         }
     }
     else{
         swal("Oops, you fail!", "Most of the websites that offer free softwares don't ask for registration. If they do, most probably it's a spyware. So you need to run away as fast as you can from them. You don't get any points. Hope, you learnt something.", "error");
-        $('#tasks_help').hide();
+        hideHelp();
         score$2_5 = 0;
         scoreAnim(score$2_5);
         task$2_5 = 0;
+        unlockTask("2_6");
     }
 }
 
@@ -213,10 +230,11 @@ function task2_6(){
 function check2_6(){
     var score$2_6 = 0;
     swal("Awesome!", "This game looks safe. I am guessing, they did take better measures this time to not include virus prone games. You can always come back here to boost your total score.", "success");
-    $('#tasks_help').hide();
+    hideHelp();
     score$2_6 = 100;
     scoreAnim(score$2_6);
     task$2_6 = 0;
+    unlockTask("3_1");
 }
 
 function task3_1(){
@@ -232,10 +250,11 @@ function check3_1(file$3_1){
     var score$3_1 = 0;
     if(file$3_1 == "diary.png"){
         swal("Great discovery!", "You had visited the downloads section before. Explorer is another place where you can find several files lying on the hard disk. In addition you might find some important info about the computer and some essential data about your past as well.\nHappy exploring!", "success");
-        $('#tasks_help').hide();
+        hideHelp();
         score$3_1 = 100;
         scoreAnim(score$3_1);
         task$3_1 = 0;
+        unlockTask("3_2");
     }
 }
 
@@ -252,10 +271,11 @@ function check3_2(){
     var score$3_2 = 0;
     if(1){
         swal("", "", "success");
-        $('#tasks_help').hide();
+        hideHelp();
         score += 100;
         scoreAnim();
         task$3_2 = 0;
+        unlockTask("3_3");
     }
 }
 
@@ -276,12 +296,13 @@ function check3_3(){
         score$3_3 = 0;
     }
     else{
-        swal("Perfect!", "You see, this was an example of clickjacking. This is the phenomenon where often advertisements and malicious links are layered over or under normal appearing links or buttons. The user of course is oblivious to this fact and hence clicks the hidden link and thus enables harmful possibilites. You safely avoided them. You deserve a cookie! However all I can provide are points, so you'll need to manage your own cookie. Go ahead!", "success");
+        swal("Perfect!", "By the way, this was an example of clickjacking. This is the phenomenon where often advertisements and malicious links are layered over or under normal appearing links or buttons. The user of course is oblivious to this fact and hence clicks the hidden link and thus enables harmful possibilites. You safely avoided them. You deserve a cookie! However all I can provide are points, so you'll need to manage your own cookie. Go ahead!", "success");
         score$3_3 = 200;
     }
-    $('#tasks_help').hide();
+    hideHelp();
     scoreAnim(score$3_3);
     task$3_3 = 0;
+    unlockTask("3_4");
 }
 
 function task3_4(){
@@ -289,7 +310,7 @@ function task3_4(){
     swal({
         html: true,
         title: "Instructions",
-        text: "Remember, few weeks back you had given out your mail id to numerous websites when you were searching for Natalie Coria's new album desperately. Now that the album is finally released, expect a wave of replies from at least some of those websites. You need to download the album ASAP. I read the reviews. It's supposed to be really promising."
+        text: "Remember when few weeks back you had given out your mail id to numerous websites when you were searching for Natalie Coria's new album desperately? Now that the album is finally released, expect a wave of replies from at least some of those websites. You need to download the album ASAP. I read the reviews. It's supposed to be really promising."
     });
 }
 
@@ -315,17 +336,86 @@ function check3_4(){
             swal("Naaaice!", "You must have noticed the wrong file extension and smartly decided to not download the file. Very wise, I must say. It was clearly an executable and surely a virus. Of course, no music file ever ends with a .exe extension.", "success");
             score$3_4 = 200;
         }
-        $('#tasks_help').hide();
+        hideHelp();
         scoreAnim(score$3_4);
         task$3_4 = 0;
+        unlockTask("3_5");
     });
 }
 
-$('.taskbox p').click(function(){
-    var task_file = $(this).parent('div').parent('div').attr('id');     
-    $('#tasks_help').bind('click', function(){
-        eval(task_file + "()");
+$.getJSON('../../json/tasks.json', function(json_data){
+    var tasks_data = json_data;
+    
+    function task_help(name){
+        for(var i=0; i<tasks_data.length; i++){
+            if(tasks_data[i].task_name==name){
+                swal({
+                    html: true,
+                    title: "Instructions",
+                    text: tasks_data[i].task_help
+                });
+                break;
+            }
+        }
+    }
+    
+    function task_direction(name){
+        for(var i=0; i<tasks_data.length; i++){
+            if(tasks_data[i].task_name==name){
+                swal({
+                    html: true,
+                    title: "Directions",
+                    text: tasks_data[i].task_direction
+                });
+                break;
+            }
+        }
+    }
+    
+    $('.taskbox p').click(function(){
+        var task_name = $(this).parent('div').parent('div').attr('id');     
+        $('#task_help').bind('click', function(){
+            task_help(task_name);
+        });
+        $('#task_direction').bind('click', function(){
+            task_direction(task_name);
+        });
+        $('#task_help').show();
+        $('#task_direction').show();
+        eval(task_name + "()");
     });
-    $('#tasks_help').show();
-    eval(task_file + "()");
+});
+
+$('#task_unlock').click(function(){
+    swal({
+            title: "Warning!",
+            text: "This will unlock all the tasks at once. Mind you, this option won't be available when story will be integrated and you'll be bound to play task by task. So, we recommend not unlocking the tasks together for a better game experience.\n\nDo you wish to unlock the tasks anyway?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes! I just wish to explore the game for now.",
+            cancelButtonText: "No! I prefer the story mode.",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+        function(isConfirm){
+            if (isConfirm) {
+                swal("All tasks unlocked.", "We still recommend, you go task by task, or else you might feel lost.", "success");
+                $('#task2_2').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task2_3').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task2_4').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task2_5').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task2_6').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_1').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_2').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_3').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_4').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_5').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task3_6').css({"opacity": "1", "pointer-events":"auto"});
+                $('#task_unlock').hide();
+                task_unlock = true;
+            }
+            else
+                swal("Respect buddy.", "Great that you decided to proceed task by task. You won't really feel lost now.", "success");
+        });
 });
