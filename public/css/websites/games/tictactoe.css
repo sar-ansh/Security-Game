@@ -36,7 +36,7 @@
 #table_ttt img{
     height: 64px;
     width: 64px;
-    background-image: url("../js/websites/games/blank.png");
+    background-image: url("../../../js/websites/games/blank.png");
 }
 
 #won_ttt {
@@ -57,7 +57,7 @@
     border-radius: 10px;
 }
 
-#drawn_ttt {
+#draws_ttt {
     position: absolute;
     top: 50%;
     left: 65%;

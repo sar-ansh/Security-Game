@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     var conv;
-    $.getJSON('../../json/chat.json', function(chat_data){
+    $.getJSON('../../json/chatbox.json', function(chat_data){
         conv = chat_data;
     });
     function chatBot() {
@@ -86,5 +86,21 @@ $(document).ready(function() {
 	$('.busybot').text(robot + ' is typing...');
 	
 	updateChat(robot, 'Hi there. Type something!');
+    
+    $('.chat_head').click(function(){
+        $('.chat_body').slideToggle('slow');
+    });
 
+    $('.msg_head').click(function(){
+        $('.inputbot').slideToggle('fast');
+        $('.msg_wrap').slideToggle('slow');
+    });
+
+    $('.close').click(function(){
+        $('.msg_box').hide();
+    });
+
+    $('.user').click(function(){
+        $('.msg_box').show();
+    });
 });

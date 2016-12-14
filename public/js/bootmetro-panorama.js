@@ -99,22 +99,6 @@
             $('#panorama-scroll-next').hide()
          }
 
-
-         //Enable swiping...
-         $(".panorama").swipe( {
-            //Generic swipe handler for all directions
-            swipe:function(event, direction, distance, duration, fingerCount) {
-               if (direction=='right'){
-                  $this.prev()
-               }
-               if (direction=='left'){
-                  $this.next()
-               }
-            }
-            ,threshold: 0
-            //ingers: 'all'
-         });
-
          $this.setButtons()
 
 

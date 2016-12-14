@@ -114,6 +114,6 @@ $('#layer_mb').click(function(){
         $('input[name="state"]').val("Game over. Press start to play again.");
     }
     else{
-        swal("Oops", "This was a layered advertisement.", "error")
+        swal("Oops", "This was a layered advertisement. You can start a new game or another task to continue.", "error");
     }
 });

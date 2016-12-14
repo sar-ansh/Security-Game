@@ -48,7 +48,7 @@
     </div>
     
     <div id="chatc" style="display:none;">
-        <% include apps/chat %>
+        <% include apps/chatbox %>
     </div>
     
     <div id="looknmeetc" style="display:none;">
@@ -98,8 +98,8 @@
             }
         });
         
-        $('#explorer').click(function () {
-            $("#explorerc").show();
+        function hide_sections(){
+            $("#explorerc").hide();
             $("#startc").hide();
             $("#chatc").hide();
             $("#looknmeetc").hide();
@@ -108,85 +108,41 @@
             $("#browserc").hide();
             $("#historyc").hide();
             $("#downloadsc").hide();
+        }
+        
+        $('#explorer').click(function () {
+            hide_sections();
+            $("#explorerc").show();
         });
 
         $('#chat').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
+            hide_sections();
             $("#chatc").show();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
-            
-            setTimeout(function(){
-                $('.load').slideUp("slow");
-                setTimeout(function(){
-                    $('#chatbox').slideDown("slow");
-                }, 1000);
-            }, 5000);
         });
         
         $('#looknmeet').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
+            hide_sections();
             $("#looknmeetc").show();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
         });
         
         $('#browser').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
+            hide_sections();
             $("#browserc").show();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
         });
         
         $('#history').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
+            hide_sections();
             $("#historyc").show();
-            $("#downloadsc").hide();
         });
         
         $('#downloads').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-            $("#historyc").hide();
+            hide_sections();
             $("#downloadsc").show();
         });
         
         $('#tasks').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
+            hide_sections();
             $("#tasksc").show();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
             $.notify("Prologue and Chapter 1 based tasks haven't been implementd yet. \nIn order to play a task, you need to complete all the previous ones. \nClick the button with lock on it below to unlock all the tasks for this session.\n P.S. Click on me to hide me.", {
               className:'info',
               autoHide: false,
@@ -196,27 +152,13 @@
         });
         
         $('#timeline').click(function () {
-            $("#explorerc").hide();
-            $("#startc").hide();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
+            hide_sections();
             $("#timelinec").show();
-            $("#browserc").hide();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
         });
         
         $('.goto_start').click(function () {
-            $("#explorerc").hide();
+            hide_sections();
             $("#startc").show();
-            $("#chatc").hide();
-            $("#looknmeetc").hide();
-            $("#tasksc").hide();
-            $("#timelinec").hide();
-            $("#browserc").hide();
-            $("#historyc").hide();
-            $("#downloadsc").hide();
         });
     </script>
 </div>

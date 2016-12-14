@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/websites/games/tictactoe.css">
 
 <div id="tictactoe">
-    <!-- Modify the variable b, c, e and t in tictactoe.js -->
     <button type="button" class="to_randomgame"><i class="fa fa-backward"></i> Play another game</button>
     <div id="title_ttt">Tic-Tac-Toe</div>
     <div id="instructions_ttt">
@@ -9,25 +8,25 @@
     </div>
     <table id="table_ttt">
         <tr>
-            <td><a onclick="yourChoice_ttt('A')"><img name="A"></a></td>
-            <td><a onclick="yourChoice_ttt('B')"><img name="B"></a></td>
-            <td><a onclick="yourChoice_ttt('C')"><img name="C"></a></td>
+            <td><a onclick="yourChoice_ttt('A')"><img name=A></a></td>
+            <td><a onclick="yourChoice_ttt('B')"><img name=B></a></td>
+            <td><a onclick="yourChoice_ttt('C')"><img name=C></a></td>
         </tr>
         <tr>
-            <td><a onclick="yourChoice_ttt('D')"><img name="D"></a></td>
-            <td><a onclick="yourChoice_ttt('E')"><img name="E"></a></td>
-            <td><a onclick="yourChoice_ttt('F')"><img name="F"></a></td>
+            <td><a onclick="yourChoice_ttt('D')"><img name=D></a></td>
+            <td><a onclick="yourChoice_ttt('E')"><img name=E></a></td>
+            <td><a onclick="yourChoice_ttt('F')"><img name=F></a></td>
         </tr>
         <tr>
-            <td><a onclick="yourChoice_ttt('G')"><img name="G"></a></td>
-            <td><a onclick="yourChoice_ttt('H')"><img name="H"></a></td>
-            <td><a onclick="yourChoice_ttt('I')"><img name="I"></a></td>
+            <td><a onclick="yourChoice_ttt('G')"><img name=G></a></td>
+            <td><a onclick="yourChoice_ttt('H')"><img name=H></a></td>
+            <td><a onclick="yourChoice_ttt('I')"><img name=I></a></td>
         </tr>
     </table>
-    <input id="won_ttt" name="you" placeholder="Won">
-    <input id="lost_ttt" name="computer" placeholder="Lost">
-    <input id="drawn_ttt" name="ties" placeholder="Drawn">
-    <button type="button" id="newgame_ttt" onclick="playAgain_ttt();">New Game</button>
+    <input id="won_ttt" name="you_ttt">
+    <input id="lost_ttt" name="computer_ttt">
+    <input id="draws_ttt" name="ties_ttt">
+    <button type="button" id="newgame_ttt" onclick="playAgain_ttt();">New Game</button>          
 </div>
 
 <script type="text/javascript" src="js/websites/games/tictactoe.js"></script>

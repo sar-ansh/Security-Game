@@ -416,6 +416,6 @@ $('#task_unlock').click(function(){
                 task_unlock = true;
             }
             else
-                swal("Respect buddy.", "Great that you decided to proceed task by task. You won't really feel lost now.", "success");
+                swal("Respect buddy!", "Great that you decided to proceed task by task. You won't really feel lost now.", "success");
         });
 });

@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="css/apps/chatbox.css">
+
+<div id="chatbox">
+    <div class="start_navbar">
+        <div class="pull-left">
+            <a class="win-command pull-right comp_nav">
+                <span class="win-commandicon win-commandring icon-list-2"></span>
+            </a>
+            <br>
+            <a class="win-command pull-left goto_start">
+                <span class="win-commandicon win-commandring icon-arrow-left-12"></span>
+            </a>
+        </div>
+        <div class="pull-right start_name">
+            <h2>ChatBox <i class="fa fa-comments section_hint" hint_message="Come once, come again! This app is your personal chatbox as the name suggests."></i></h2>
+        </div>
+    </div>
+    <div class="chatbox_names">
+        <div class="chat_head"> Chat Box</div>
+        <div class="chat_body">
+            <div id="gred" class="user">Gred</div>
+            <div id="forge" class="user">Forge</div>
+        </div>
+    </div>
+    <div class="msg_box">
+        <div class="msg_head">Gred
+            <div class="close">x</div>
+        </div>
+        <div class="msg_wrap">
+            <div class="msg_body">
+                <div class="textbot">
+                    <div class="chatbot"></div>
+                    <div class="busybot" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="inputbot">
+                <input id ="msg_input" type="text" placeholder="Chat with me!" />
+                <a id="msg_send"><i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/apps/chatbox.js"></script>

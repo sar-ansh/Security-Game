@@ -1,0 +1,21 @@
+1. Install node with npm installed globally.
+2. In case you want a local database, install mongodb and run its instance. Else register on www.mlab.com and you'll receive a url with a username and password.
+3. As per the selection in step 2, the database intergration line in main/config/database.js
+4. This is hte only change in both setups. Everything else is same as described below.
+5. Here onwards whatever is required can be referred to on the 2 links mentioned in documentation.docx
+6. Create a new folder and initiate node into it by calling node init when inside the folder from terminal.
+7. Replace the package.json file that appeared with the package.json file of the project directory.
+8. Type npm install in command prompt when inside the folder to install all the packages and dependencies mentioned in package.json.
+9. Now, copy the following files and folders from the project directory in your working directory.
+	a. app.js
+	b. config
+	c. models
+	d. public
+	e. routes
+	f. views
+
+Note: The only thing that might need a change is main/config/database.js as mentioned in step 2 and step 3.
+
+10. Right now, the game is hosted at http://35.163.128.228/.
+11. The project files can be downloaded from https://github.com/sar-ansh/Security-Game
+12. node_modules folder need not be downloaded.
